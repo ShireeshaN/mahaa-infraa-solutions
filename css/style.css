@@ -73,7 +73,7 @@
 }
 
 .btn.btn-primary {
-    background: var(--bs-primary) !important;
+    background:#DEBB3B !important;
     color: var(--bs-white) !important;
     font-family: 'Roboto', sans-serif;
     border: none;
@@ -115,8 +115,8 @@
 }
 /*** Topbar Start ***/
 .topbar {
-    padding: 2px 10px 2px 20px;
-    background: var(--bs-dark) !important;
+    /* padding: 2px 10px 2px 20px; */
+    background:white !important;
 }
 
 @media (max-width: 768px) {
@@ -134,7 +134,7 @@
 
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
-    color: var(--bs-dark) !important;
+    color: white !important;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -173,7 +173,7 @@
 .navbar .navbar-nav .nav-link.active,
 .sticky-top .navbar .navbar-nav .nav-link:hover,
 .sticky-top .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-primary) !important;
+    color: #DEBB3B !important;
 }
 
 .navbar .dropdown-toggle::after {
@@ -954,3 +954,8 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+.mahalogo{
+    height:70px;
+    width:100%;
+}
