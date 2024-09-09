@@ -148,7 +148,95 @@
                     <h4 class="text-primary">Our Services</h4>
                     <h1 class="display-4"> Offering the Best Consulting & Investa Services</h1>
                 </div>
-                <div class="row g-4 justify-content-center text-center">
+
+
+                <section class="pb-5" style="background-color:white;">
+                    <div class="row justify-content-center pt-3 pb-5">
+                        <div class="cl-xl-7 col-lg-8 col-md-10">
+                       
+                            <h3 class="fw-bold col_brow font-14 heads text-center"> Residential</h3>
+            
+                
+                <div class="section-tittle">
+                    <p class="text-center">From Concept to Completion, We've Got Your Home Covered</p>
+                </div>
+                       
+                            
+                        </div>
+                    </div>
+                        
+                    
+                    <div class="container containers pt-5">
+                        <div class="text-section pb-5">
+                            
+                          
+                            <h6 class="renohead">Consultation and Planning</h6>
+                            <div class="d-flex ">
+                            <img src="img/service-imgs/Picture1.png" class="pr-2  img-li">
+                            <p class="paras2">At Ordell Interiors, we believe that every successful project begins with a deep understanding of your vision and needs.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="image-section pb-5 pt-5 mb-5">
+                            <img src="img/service-imgs/Picture4.png" alt="Living Room Image 1">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="container containers pt-5">
+                       
+                        <div class="image-section mt-5 pt-5 mb-5">
+                           
+                            <img src="img/service-imgs/Picture5.png" alt="Living Room Image 1">
+               
+                        </div>
+                        <div class="text-section pt-5 mt-5">
+                            
+                            <h6 class="renohead">Design and Architecture</h6>
+                            <div class="d-flex">
+                            <img src="img/service-imgs/Picture2.png" class="pr-2 img-li">
+                            <p class="paras2">At Ordell Interiors, our expert designers and architects collaborate to create spaces that are both stunning and functional. </p>
+                           </div>
+                            
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="container containers pt-5 pb-5">
+                        <div class="text-section pb-5 mb-5 pt-5 mt-5">
+                           
+                            <h6 class="renohead">Construction and Renovation</h6>
+                            <div class="d-flex">
+                            <img src="img/service-imgs/Picture3.png" class="pr-2 img-li">
+                            <p class="paras2">At Ordell Interiors, our construction and renovation services are designed to transform your space with quality craftsmanship and attention to detail.  </p>
+                           </div>
+                        </div>
+                        <div class="image-section pb-5 pt-5 mb-5">
+                            <img src="img/service-imgs/Picture6.png" alt="Living Room Image 1" >
+                          
+                        </div>
+                    </div>
+            
+            
+                    
+                    <script>
+                        function startImageSlider(section) {
+                            const images = section.querySelectorAll('.image-section img');
+                            let currentIndex = 0;
+                    
+                            function changeImage() {
+                                images[currentIndex].classList.remove('active');
+                                currentIndex = (currentIndex + 1) % images.length;
+                                images[currentIndex].classList.add('active');
+                            }
+                    
+                            setInterval(changeImage, 3000);
+                        }
+                    
+                        document.querySelectorAll('.container').forEach(startImageSlider);
+                    </script>
+                    </section>
+                <!-- <div class="row g-4 justify-content-center text-center">
                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item bg-light rounded">
                             <div class="service-img">
@@ -209,13 +297,110 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12"> 
                         <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">Services More</a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <!-- Services End -->
+
+        <style>
+            .containers {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+                    .text-section {
+            width: 45%;
+        }
+        .image-section {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .image-section img.active {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 100%;
+            }
+            .text-section,
+            .image-section {
+                width: 100%;
+            }
+            .image-section img {
+                max-width: 100%;
+            }
+        }
+                </style>
+            
+        
+        
+            
+        
+        
+        <style>
+
+            .img-li{
+                height:50px;
+                width:50px;
+                padding-right: 5px;
+            }
+            .service-step {
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid #e3e3e3;
+                border-radius: 1px;
+                background-color: #f9f9f9;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                flex: 1;
+            }
+            .service-step img {
+                max-width: 240px; /* Increased the image size */
+                margin-bottom: 15px;
+                background-color:#333 ;
+                border-radius: 1px;
+            }
+            .service-step:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            .service-step h4 {
+                color: #1f2b7b;
+                margin-bottom: 10px;
+            }
+            .service-step p {
+                color: #333;
+            }
+            .services-container {
+                display: flex;
+                
+                align-items: stretch;
+                flex-wrap: wrap;
+            }
+            @media (max-width: 576px) {
+                .service-step {
+                    margin: 5px;
+                    padding: 15px;
+                }
+            }
+        </style>
 
         <!-- Testimonial Start -->
         <div class="container-fluid testimonial bg-light py-5">
