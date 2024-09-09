@@ -79,11 +79,12 @@
     border: none;
     font-weight: 400;
     transition: 0.5s;
+    font-size: 12px;
 }
 
 .btn.btn-primary:hover {
-    background: var(--bs-dark) !important;
-    color: var(--bs-light) !important;
+    background: white !important;
+    color: black !important;
 }
 
 .btn.btn-dark {
@@ -135,6 +136,8 @@
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
     color: white !important;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .navbar .navbar-nav .nav-item {
