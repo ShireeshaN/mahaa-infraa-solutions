@@ -480,14 +480,14 @@
 </div>
 
 <style>
-   .icons-section {
+  .icons-section {
     background-color: black;
-    height: 110px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
-    width:100%;
+    width: 100%;
+    padding: 10px; /* Add some padding */
 }
 
 .icons-container {
@@ -498,7 +498,7 @@
 .icons {
     width: 60px; /* Set image width */
     height: 60px; /* Set image height */
-    object-fit: cover; /* Ensure image fits within 100px */
+    object-fit: cover; /* Ensure image fits within dimensions */
     margin-bottom: 5px;
     border-radius: 50%; /* Make the icon circular */
     transition: transform 0.5s ease-in-out; /* Smooth transition for animation */
@@ -516,7 +516,9 @@
 /* Mobile alignment */
 @media (max-width: 768px) {
     .icons-section {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 20px; /* Space between items */
         height: auto; /* Adjust height for mobile */
     }
 
@@ -525,7 +527,7 @@
     }
 
     .icons {
-        width: 80px;  /* Adjust image size for mobile */
+        width: 80px; /* Adjust image size for mobile */
         height: 80px;
     }
 
@@ -534,6 +536,7 @@
     }
 }
 
+
 </style>
 
 
@@ -541,7 +544,7 @@
 
 <div class="ellipse-section">
     <!-- Section Heading -->
-    <h2 class="section-heading">Steps to Design Your Home</h2>
+    <h2 class="section-heading pb-5"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam>  Your dream Interior in 5 steps!</h2>
   
     <div class="containers">
         <div class="ellipse-container">
@@ -549,31 +552,31 @@
                 <div class="ellipse">
                     <img src="img/interioricons/int1.png" alt="Icon 1" class="icon">
                 </div>
-                <h3 class="ellipse-heading">1 Meet Designer</h3>
+                <h3 class="ellipse-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">1</spam> Meet Designer</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int2.png" alt="Icon 2" class="icon">
                 </div>
-                <h3 class="ellipse-heading">2 Book Mahaa</h3>
+                <h3 class="ellipse-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">2</spam> Book Mahaa</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int3.png" alt="Icon 3" class="icon">
                 </div>
-                <h3 class="ellipse-heading">3 Place the order</h3>
+                <h3 class="ellipse-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">3</spam> Place the order</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int4.png" alt="Icon 4" class="icon">
                 </div>
-                <h3 class="ellipse-heading">4 Installation begins</h3>
+                <h3 class="ellipse-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">3</spam> Installation begins</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int5.png" alt="Icon 5" class="icon">
                 </div>
-                <h3 class="ellipse-heading">5 Move in</h3>
+                <h3 class="ellipse-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">5</spam> Move in</h3>
             </div>
         </div>
 
@@ -585,136 +588,131 @@
 </div>
 
 <style>
-    /* Section with background color */
-    .ellipse-section {
-        background-color: #CCCCCC;
-        padding: 50px 0; /* Adjust padding as needed */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    /* General styles for all screens */
+.ellipse-section {
+    background-color: #CCCCCC;
+    padding: 50px 0; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Section heading */
-    .section-heading {
-        font-size: 24px;
-        color: black;
-        text-align: center;
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
+.section-heading {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
-    .containers {
-        background-color: white;
-        padding: 50px;
-        border-radius: 10px;
-        /* width: 90%; */
-        max-width: 1300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        text-align: center;
-    }
+.containers {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 1300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
 
-    /* Ellipse container */
+.ellipse-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute items evenly */
+}
+
+.ellipse-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.ellipse {
+    width: 180px;
+    height: 100px;
+    background-color: #CCCCCC;
+    border-radius: 50%; /* This creates the ellipse shape */
+    position: relative;
+    margin: 0 auto; /* Center the ellipse item */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns the content towards the bottom */
+    padding-bottom: 10px; /* Adjust space from the bottom edge */
+}
+
+.ellipse .icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.ellipse-heading {
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+}
+
+.button-container {
+    margin-top: 20px; /* Space above button */
+}
+
+.get-started-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #DEBB3B; /* Gold color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+    background-color: #C6A626; /* Darker gold on hover */
+    color:black;
+}
+
+.ellipse:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
     .ellipse-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        grid-template-rows: auto auto auto; /* Three rows */
+        gap: 20px; /* Space between items */
     }
 
-    /* Ellipse item: wraps both ellipse and heading */
-    .ellipse-item {
+    .ellipse-item:nth-child(5) {
+        grid-column: 1 / -1; /* Make the fifth item span across both columns */
         text-align: center;
-        margin: 10px;
     }
 
-    /* Ellipse shape */
     .ellipse {
-        width: 180px;
+        width: 100px;
         height: 100px;
-        background-color: #CCCCCC;
-        border-radius: 50%; /* This creates the ellipse shape */
-        position: relative;
-        margin-left: 20px; /* X position */
-        margin-top: 20px; /* Y position */
-        display: flex;
-        justify-content: center;
-        align-items: flex-end; /* Aligns the content towards the bottom */
-        padding-bottom: 10px; /* Adjust space from the bottom edge */
     }
 
-    /* Icons inside ellipse */
     .ellipse .icon {
-        width: 120px;
-        height: 120px;
-        object-fit: contain;
+        width: 90px;
+        height: 90px;
     }
 
-    /* Headings outside ellipse */
     .ellipse-heading {
-        font-size: 14px;
-        color: black;
-        margin-top: 10px;
+        font-size: 12px;
     }
 
-    /* Button container */
-    .button-container {
-        margin-top: 20px; /* Space above button */
-    }
-
-    /* Get Started Button */
     .get-started-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #DEBB3B
-        ; /* Blue color */
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+        font-size: 14px;
+        padding: 8px 16px;
     }
+}
 
-    .get-started-button:hover {
-        background-color: #DEBB3B
-        ; /* Darker blue on hover */
-    }
-
-    /* Hover effect on ellipse */
-    .ellipse:hover {
-        transform: scale(1.1); /* Slight zoom on hover */
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .ellipse-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .ellipse {
-            width: 100px;
-            height: 100px;
-        }
-
-        .ellipse .icon {
-            width: 90px;
-            height: 90px;
-        }
-
-        .ellipse-heading {
-            font-size: 12px;
-        }
-
-        .get-started-button {
-            font-size: 14px;
-            padding: 8px 16px;
-        }
-    }
 </style>
-
 
 <!-- First Section -->
 <div class="first-section">
-    <h2 class="section-heading">Welcome to Our Design Process</h2>
+    <h2 class="section-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Your dream Architecture in 9 steps!</h2>
 </div>
 
 <!-- Second Section -->
@@ -724,63 +722,66 @@
             <div class="bubble active">
                 <span class="bubble-number">1</span>
             </div>
-            <h3 class="bubble-heading">Step 1</h3>
+            <h3 class="bubble-heading"><br/>Design</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">2</span>
             </div>
-            <h3 class="bubble-heading">Step 2</h3>
+            <h3 class="bubble-heading"><br/>Planning</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">3</span>
             </div>
-            <h3 class="bubble-heading">Step 3</h3>
+            <h3 class="bubble-heading text-center">Technical<br>
+                Documentation</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">4</span>
             </div>
-            <h3 class="bubble-heading">Step 4</h3>
+            <h3 class="bubble-heading text-center">Project<br/>
+                Management</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">5</span>
             </div>
-            <h3 class="bubble-heading">Step 5</h3>
+            <h3 class="bubble-heading text-center">Client<br/>
+                Consultation</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">6</span>
             </div>
-            <h3 class="bubble-heading">Step 6</h3>
+            <h3 class="bubble-heading text-center">Regulatory<br/> Compliance</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">7</span>
             </div>
-            <h3 class="bubble-heading">Step 7</h3>
+            <h3 class="bubble-heading"><br/>Sustainability</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">8</span>
             </div>
-            <h3 class="bubble-heading">Step 8</h3>
+            <h3 class="bubble-heading"><br/>Renovation</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
             <div class="bubble">
                 <span class="bubble-number">9</span>
             </div>
-            <h3 class="bubble-heading">Step 9</h3>
+            <h3 class="bubble-heading"><br/>Restoration</h3>
         </div>
     </div>
 </div>
@@ -788,12 +789,12 @@
 <!-- Third Section -->
 <div class="third-section container p-5">
     <div class="text-content">
-        <h2 class="text-heading">Get Started with Us</h2>
-        <p class="text-paragraph">Discover how our process works and get in touch to start your project. Our team is here to assist you every step of the way.</p>
-        <a href="#contact" class="contact-button">Contact Us</a>
+        <h2 class="text-heading">Online Consultation</h2>
+        <p class="text-paragraph">Ready to assist you regarding all things related to all architecture</p>
+        <a href="#contact" class="contact-button">Get Started</a>
     </div>
     <div class="image-content">
-        <img src="img/design-process.jpg" alt="Design Process">
+        <img src="img/consult.jpg" alt="Design Process">
     </div>
 </div>
 
@@ -806,7 +807,7 @@
 }
 
 .section-heading {
-    font-size: 24px;
+    font-size: 30px;
     color: black;
     margin: 0;
     font-weight: bold;
@@ -821,6 +822,7 @@
     align-items: center;
     overflow-x: auto; /* Allows horizontal scrolling if needed */
     white-space: nowrap; /* Prevents wrapping of bubbles */
+    border-radius: 10px;
 }
 
 .numbered-bubbles {
@@ -869,6 +871,7 @@
     background-color: black;
     border-radius: 1px;
     margin: 0 10px;
+    margin-top: -30px;
 }
 
 /* Third Section */
@@ -901,14 +904,17 @@
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #007BFF;
+    background-color: #DEBB3B
+    ;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
+    background-color: #DEBB3B
+    ;
+    color:black;
 }
 
 .image-content {
@@ -921,25 +927,39 @@
     height: auto;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile - M Shape for bubbles */
 @media (max-width: 768px) {
     .second-section {
-        flex-direction: column;
-        text-align: center;
-        overflow-x: hidden; /* Prevents horizontal scroll on mobile */
-        padding: 20px 0; /* Adjust padding for smaller screens */
+        padding: 20px 0;
     }
 
     .numbered-bubbles {
-        flex-direction: column; /* Stack bubbles vertically */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
         align-items: center;
+        justify-items: center;
+        position: relative;
     }
 
     .bubble-container {
-        margin-bottom: 20px; /* Space between bubbles */
-        min-width: auto; /* Remove fixed width constraint */
+        position: relative;
     }
 
+    /* Raise the middle bubble to form the "M" shape */
+    .bubble-container:nth-child(2), /* Bubble 2 */
+    .bubble-container:nth-child(5), /* Bubble 5 */
+    .bubble-container:nth-child(8) { /* Bubble 8 */
+        /* top: -20px;  */
+    }
+
+    /* Adjust other bubbles as needed */
+    .bubble-container:nth-child(4), /* Bubble 4 */
+    .bubble-container:nth-child(6) { /* Bubble 6 */
+        top: 20px;
+    }
+
+    /* Adjust the size of the bubbles for mobile */
     .bubble {
         width: 50px;
         height: 50px;
@@ -951,6 +971,16 @@
 
     .bubble-heading {
         font-size: 12px;
+    }
+
+    /* Hide the dotted line on mobile */
+    .dotted-line {
+        display: none;
+    }
+
+    /* Adjust bubble container margin */
+    .bubble-container {
+        margin-bottom: 20px; /* Space between bubbles */
     }
 
     .third-section {
@@ -972,7 +1002,6 @@
         padding: 8px 16px;
     }
 }
-
 </style>
 
 
