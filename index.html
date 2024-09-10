@@ -539,139 +539,446 @@
 
 
 
-
 <div class="ellipse-section">
+    <!-- Section Heading -->
+    <h2 class="section-heading">Steps to Design Your Home</h2>
+  
     <div class="containers">
-       
         <div class="ellipse-container">
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int1.png" alt="Icon 1" class="icon">
                 </div>
-                <h3 class="ellipse-heading">Heading 1</h3>
+                <h3 class="ellipse-heading">1 Meet Designer</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int2.png" alt="Icon 2" class="icon">
                 </div>
-                <h3 class="ellipse-heading">Heading 2</h3>
+                <h3 class="ellipse-heading">2 Book Mahaa</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int3.png" alt="Icon 3" class="icon">
                 </div>
-                <h3 class="ellipse-heading">Heading 3</h3>
+                <h3 class="ellipse-heading">3 Place the order</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int4.png" alt="Icon 4" class="icon">
                 </div>
-                <h3 class="ellipse-heading">Heading 4</h3>
+                <h3 class="ellipse-heading">4 Installation begins</h3>
             </div>
             <div class="ellipse-item">
                 <div class="ellipse">
                     <img src="img/interioricons/int5.png" alt="Icon 5" class="icon">
                 </div>
-                <h3 class="ellipse-heading">Heading 5</h3>
+                <h3 class="ellipse-heading">5 Move in</h3>
             </div>
+        </div>
+
+        <!-- Get Started Button -->
+        <div class="button-container">
+            <a  class="get-started-button">Get Started</a>
         </div>
     </div>
 </div>
 
 <style>
     /* Section with background color */
-.ellipse-section {
-    background-color: #CCCCCC;
-    padding: 50px 0; /* Adjust padding as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containers {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Ellipse container */
-.ellipse-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-/* Ellipse item: wraps both ellipse and heading */
-.ellipse-item {
-    text-align: center;
-    margin: 10px;
-}
-
-/* Ellipse shape */
-.ellipse {
-    width: 180px;
-    height: 100px;
-    background-color: #CCCCCC;
-    border-radius: 50%; /* This creates the ellipse shape */
-    position: relative;
-    margin-left: 20px; /* X position */
-    margin-top: 20px; /* Y position */
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Aligns the content towards the bottom */
-    padding-bottom: 10px; /* Adjust space from the bottom edge */
-}
-
-/* Icons inside ellipse */
-.ellipse .icon {
-   
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-}
-
-
-/* Other styles remain the same */
-
-
-/* Headings outside ellipse */
-.ellipse-heading {
-    font-size: 14px;
-    color: black;
-    margin-top: 10px;
-}
-
-/* Hover effect on ellipse */
-.ellipse:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .ellipse-container {
+    .ellipse-section {
+        background-color: #CCCCCC;
+        padding: 50px 0; /* Adjust padding as needed */
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    /* Section heading */
+    .section-heading {
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .containers {
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        /* width: 90%; */
+        max-width: 1300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        text-align: center;
+    }
+
+    /* Ellipse container */
+    .ellipse-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    /* Ellipse item: wraps both ellipse and heading */
+    .ellipse-item {
+        text-align: center;
+        margin: 10px;
+    }
+
+    /* Ellipse shape */
     .ellipse {
-        width: 100px;
+        width: 180px;
         height: 100px;
+        background-color: #CCCCCC;
+        border-radius: 50%; /* This creates the ellipse shape */
+        position: relative;
+        margin-left: 20px; /* X position */
+        margin-top: 20px; /* Y position */
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Aligns the content towards the bottom */
+        padding-bottom: 10px; /* Adjust space from the bottom edge */
     }
 
+    /* Icons inside ellipse */
     .ellipse .icon {
-        width: 30px;
-        height: 30px;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
     }
 
+    /* Headings outside ellipse */
     .ellipse-heading {
+        font-size: 14px;
+        color: black;
+        margin-top: 10px;
+    }
+
+    /* Button container */
+    .button-container {
+        margin-top: 20px; /* Space above button */
+    }
+
+    /* Get Started Button */
+    .get-started-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #DEBB3B
+        ; /* Blue color */
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .get-started-button:hover {
+        background-color: #DEBB3B
+        ; /* Darker blue on hover */
+    }
+
+    /* Hover effect on ellipse */
+    .ellipse:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .ellipse-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ellipse {
+            width: 100px;
+            height: 100px;
+        }
+
+        .ellipse .icon {
+            width: 90px;
+            height: 90px;
+        }
+
+        .ellipse-heading {
+            font-size: 12px;
+        }
+
+        .get-started-button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+</style>
+
+
+<!-- First Section -->
+<div class="first-section">
+    <h2 class="section-heading">Welcome to Our Design Process</h2>
+</div>
+
+<!-- Second Section -->
+<div class="second-section container p-5">
+    <div class="numbered-bubbles">
+        <div class="bubble-container">
+            <div class="bubble active">
+                <span class="bubble-number">1</span>
+            </div>
+            <h3 class="bubble-heading">Step 1</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">2</span>
+            </div>
+            <h3 class="bubble-heading">Step 2</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">3</span>
+            </div>
+            <h3 class="bubble-heading">Step 3</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">4</span>
+            </div>
+            <h3 class="bubble-heading">Step 4</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">5</span>
+            </div>
+            <h3 class="bubble-heading">Step 5</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">6</span>
+            </div>
+            <h3 class="bubble-heading">Step 6</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">7</span>
+            </div>
+            <h3 class="bubble-heading">Step 7</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">8</span>
+            </div>
+            <h3 class="bubble-heading">Step 8</h3>
+        </div>
+        <div class="dotted-line"></div>
+        <div class="bubble-container">
+            <div class="bubble">
+                <span class="bubble-number">9</span>
+            </div>
+            <h3 class="bubble-heading">Step 9</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Third Section -->
+<div class="third-section container p-5">
+    <div class="text-content">
+        <h2 class="text-heading">Get Started with Us</h2>
+        <p class="text-paragraph">Discover how our process works and get in touch to start your project. Our team is here to assist you every step of the way.</p>
+        <a href="#contact" class="contact-button">Contact Us</a>
+    </div>
+    <div class="image-content">
+        <img src="img/design-process.jpg" alt="Design Process">
+    </div>
+</div>
+
+<style>
+    /* First Section */
+.first-section {
+    background-color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-heading {
+    font-size: 24px;
+    color: black;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Second Section */
+.second-section {
+    background-color: #CCCCCC;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    white-space: nowrap; /* Prevents wrapping of bubbles */
+}
+
+.numbered-bubbles {
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.bubble-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    min-width: 60px; /* Ensures enough space for each bubble */
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+
+.bubble-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bubble-heading {
+    font-size: 14px;
+    color: black;
+}
+
+.bubble.active {
+    background-color: gold;
+}
+
+.dotted-line {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+    margin: 0 10px;
+}
+
+/* Third Section */
+.third-section {
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-heading {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.text-paragraph {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+.image-content {
+    flex: 1;
+    text-align: right;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .second-section {
+        flex-direction: column;
+        text-align: center;
+        overflow-x: hidden; /* Prevents horizontal scroll on mobile */
+        padding: 20px 0; /* Adjust padding for smaller screens */
+    }
+
+    .numbered-bubbles {
+        flex-direction: column; /* Stack bubbles vertically */
+        align-items: center;
+    }
+
+    .bubble-container {
+        margin-bottom: 20px; /* Space between bubbles */
+        min-width: auto; /* Remove fixed width constraint */
+    }
+
+    .bubble {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bubble-number {
+        font-size: 18px;
+    }
+
+    .bubble-heading {
         font-size: 12px;
+    }
+
+    .third-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-content {
+        text-align: center;
+    }
+
+    .contact-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
 </style>
+
+
+
+
+
         <!-- About Start -->
         <div class="container-fluid about bg-light py-5">
             <div class="container py-5">
