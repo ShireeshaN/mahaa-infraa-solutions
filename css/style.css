@@ -963,3 +963,151 @@
     height:70px;
     width:100%;
 }
+
+
+/***project-page ***/
+
+/* Main Heading */
+.main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+/* First row with static images */
+.static-images {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.static-images img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Second row carousel */
+.carousel-container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%; /* Only one image visible at a time */
+    height: auto;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+/* Carousel icons */
+.carousel-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: gold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+}
+
+.carousel-icon.left {
+    left: 10px;
+}
+
+.carousel-icon.right {
+    right: 10px;
+}
+
+ /* Static Images Styling */
+ .static-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.static-image-wrapper {
+    position: relative;
+    width: 30%;
+    margin: 0 10px;
+}
+
+.static-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.static-image-wrapper:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.static-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #DEBB3B;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.static-image-wrapper:hover .static-image-text {
+    opacity: 1;
+}
+
+/* Carousel Styling */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+   
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    
+    height: auto;
+    margin: 0 10px;
+}
+
+.carousel-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: gold;
+    user-select: none;
+}
+
+.carousel-icon.left {
+    left: 10px;
+}
+

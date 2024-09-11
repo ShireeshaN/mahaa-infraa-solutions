@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #DEBB3B;
+    --bs-primary: #44D2F6;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -84,7 +84,7 @@ h1,
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    color:#DEBB3B;
+    color: #102147
 }
 
 h1,
@@ -4138,7 +4138,7 @@ fieldset:disabled .btn {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #44d2f6
+    background-color: #DEBB3B
 }
 
 .dropdown-item.disabled,
@@ -4186,7 +4186,7 @@ fieldset:disabled .btn {
 .dropdown-menu-dark .dropdown-item.active,
 .dropdown-menu-dark .dropdown-item:active {
     color: #fff;
-    background-color: #44d2f6
+    background-color: #DEBB3B;
 }
 
 .dropdown-menu-dark .dropdown-item.disabled,
@@ -4328,7 +4328,7 @@ fieldset:disabled .btn {
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    color: #44d2f6;
+    color: #DEBB3B;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
@@ -4340,7 +4340,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #36a8c5
+    color: #DEBB3B;
 }
 
 .nav-link.disabled {
@@ -4395,7 +4395,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #44d2f6
+    background-color: #DEBB3B;
 }
 
 .nav-fill>.nav-link,
@@ -8341,7 +8341,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: black !important
+    background-color: #44d2f6 !important
 }
 
 .bg-secondary {
