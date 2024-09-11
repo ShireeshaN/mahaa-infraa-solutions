@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #44D2F6;
+    --bs-primary: #DEBB3B;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -84,7 +84,7 @@ h1,
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    color: #102147
+    color:#DEBB3B;
 }
 
 h1,
@@ -8341,7 +8341,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: #44d2f6 !important
+    background-color: black !important
 }
 
 .bg-secondary {
