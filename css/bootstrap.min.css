@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #DEBB3B;
+    --bs-primary: #44D2F6;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -84,7 +84,7 @@ h1,
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    color:#DEBB3B;
+    color: #102147
 }
 
 h1,
@@ -2510,14 +2510,14 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-    border-color: #DEBB3B;
+    border-color: #a2e9fb;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(68, 210, 246, .25)
 }
 
 .form-check-input:checked {
-    background-color: #DEBB3B;
-    border-color: #DEBB3B;
+    background-color: #44d2f6;
+    border-color: #44d2f6
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -2529,8 +2529,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input[type=checkbox]:indeterminate {
-    background-color: #DEBB3B;
-    border-color: #DEBB3B;
+    background-color: #44d2f6;
+    border-color: #44d2f6;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e")
 }
 
@@ -2619,7 +2619,7 @@ textarea.form-control-lg {
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background-color: #DEBB3B;
+    background-color: #44d2f6;
     border: 0;
     border-radius: 1rem;
     transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -2649,7 +2649,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #DEBB3B;
+    background-color: #44d2f6;
     border: 0;
     border-radius: 1rem;
     transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -4138,7 +4138,7 @@ fieldset:disabled .btn {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #DEBB3B;
+    background-color: #DEBB3B
 }
 
 .dropdown-item.disabled,
@@ -4186,7 +4186,7 @@ fieldset:disabled .btn {
 .dropdown-menu-dark .dropdown-item.active,
 .dropdown-menu-dark .dropdown-item:active {
     color: #fff;
-    background-color: #DEBB3B
+    background-color: #DEBB3B;
 }
 
 .dropdown-menu-dark .dropdown-item.disabled,
@@ -8341,7 +8341,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: black !important
+    background-color: #44d2f6 !important
 }
 
 .bg-secondary {
