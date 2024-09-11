@@ -1,179 +1,250 @@
-  <!-- Projects -->
-  <div class="container-fluid training py-5">
-    <div class="container py-5">
-        <div class="pb-5">
-            <div class="row g-4 align-items-end">
-                <div class="col-xl-8">
-                    <h4 class="text-primary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Projects -
-                        Overview</h4>
-                    <h1 class=" mb-0 wow fadeInUp" data-wow-delay="0.3s">Projects - Overview</h1>
-                </div>
-                <div class="col-xl-4 text-xl-end wow fadeInUp" data-wow-delay="0.3s">
-                    <a class="btn btn-primary rounded-pill text-white py-3 px-5"
-                        href="customizedwallpapers-project.html">View More</a>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery with Buttons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <div class="content-section">
+            <h2>Our Gallery</h2>
+            <p>This section contains a gallery that changes based on the button clicked on the left.</p>
         </div>
-        <div class="training-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
-                <div class="training-img rounded-top">
-                    <img src="img/serviceprojects/11.png" class="img-fluid rounded-top w-100" alt="Image">
-                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                        style="top: 0; left: 0;">01</h1>
-                </div>
-                <div class="rounded-bottom border border-top-0 p-4">
-                    <a href="#" class="h4 mb-3 d-block">Wallpaper</a>
-                    <p class="mb-3">Discover how our custom wallpapers have transformed ordinary spaces into
-                        extraordinary rooms.</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4"
-                        href="customizedwallpapers-project.html">Read More</a>
-                </div>
-            </div>
-            <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.3s">
-                <div class="training-img rounded-top">
-                    <img src="img/serviceprojects/4.png" class="img-fluid rounded-top w-100" alt="Image">
-                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                        style="top: 0; left: 0;">02</h1>
-                </div>
-                <div class="rounded-bottom border border-top-0 p-4">
-                    <a href="#" class="h4 mb-3 d-block">Curtains</a>
-                    <p class="mb-3">See how our tailored curtains have added elegance and privacy to homes
-                        and offices alike.</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4"
-                        href="customized-curtains-projects.html">Read More</a>
-                </div>
-            </div>
-            <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.5s">
-                <div class="training-img rounded-top">
-                    <img src="img/serviceprojects/9.png" class="img-fluid rounded-top w-100" alt="Image">
-                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                        style="top: 0; left: 0;">03</h1>
-                </div>
-                <div class="rounded-bottom border border-top-0 p-4">
-                    <a href="#" class="h4 mb-3 d-block">Blinds</a>
-                    <p class="mb-3">Check out our blinds projects, where style meets functionality in every
-                        window treatment.</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4"
-                        href="blinds-projects.html">Read More</a>
-                </div>
-            </div>
-            <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.7s">
-                <div class="training-img rounded-top">
-                    <img src="img/serviceprojects/7.png" class="img-fluid rounded-top w-100" alt="Image">
-                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                        style="top: 0; left: 0;">04</h1>
-                </div>
-                <div class="rounded-bottom border border-top-0 p-4">
-                    <a href="#" class="h4 mb-3 d-block">Sofa</a>
-                    <p class="mb-3">Explore our completed sofa projects that blend luxury, comfort, and
-                        timeless design.</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4"
-                        href="customizedsofa-project.html">Read More</a>
-                </div>
+
+        <div class="gallery-container">
+            <div class="buttons-container">
+                <button class="nav-btn active" onclick="changeImages(1)">Button 1</button>
+                <button class="nav-btn" onclick="changeImages(2)">Button 2</button>
+                <button class="nav-btn" onclick="changeImages(3)">Button 3</button>
+                <button class="nav-btn" onclick="changeImages(4)">Button 4</button>
+                <button class="nav-btn" onclick="changeImages(5)">Button 5</button>
+                <button class="nav-btn" onclick="changeImages(6)">Button 6</button>
+                <button class="nav-btn" onclick="changeImages(7)">Button 7</button>
+                <button class="nav-btn" onclick="changeImages(8)">Button 8</button>
             </div>
 
-            <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.7s">
-                <div class="training-img rounded-top">
-                    <img src="img/serviceprojects/1.png" class="img-fluid rounded-top w-100" alt="Image">
-                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                        style="top: 0; left: 0;">05</h1>
-                </div>
-                <div class="rounded-bottom border border-top-0 p-4">
-                    <a href="#" class="h4 mb-3 d-block">Artificial Grass</a>
-                    <p class="mb-3">View our artificial grass installations that offer lush, green
-                        landscapes year-round.</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4"
-                        href="artificial-grass-projects.html">Read More</a>
-                </div>
+            <div class="images-container" id="image-section">
+                <!-- This section will be updated by JavaScript based on button clicks -->
             </div>
-
         </div>
-    </div>
-</div>
-<!-- Projects -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
 
 <style>
-    /*** Training Start ***/
-.training-carousel .owl-stage-outer {
-    margin-top: 30px;
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.training-carousel .owl-nav .owl-prev,
-.training-carousel .owl-nav .owl-next {
-    position: absolute;
-    top: 0;
-    padding: 10px 35px;
-    border: 1px solid var(--bs-secondary);
-    color: var(--bs-white);
-    background: black;
-    border-radius: 50px;
-    transition: 0.5s;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.training-carousel .owl-nav .owl-prev {
-    left: 0 !important;
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 90%;
+    margin: auto;
 }
 
-.training-carousel .owl-nav .owl-next {
-    right: 0;
+.content-section {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.training-carousel .owl-nav .owl-prev:hover,
-.training-carousel .owl-nav .owl-next:hover {
-    box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.training .training-item .training-img {
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+}
+
+.nav-btn {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.image-item {
     position: relative;
-    overflow: hidden;
-    transition: 0.5s;
+    width: 400px;
+    height:400px;
 }
 
-.training .training-item .training-img img {
-    transition: 0.5s;
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.training .training-item:hover .training-img img {
-    transform: scale(1.2);
+.overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
-/*** Training End ***/
 
+.image-item:hover .overlay {
+    display: block;
+}
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .buttons-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .images-container {
+        width: 100%;
+    }
+
+    .image-row {
+        flex-direction: column;
+    }
+
+    .image-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
 
 </style>
 
 <script>
-      // Dance Training carousel
-      $(".training-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        dots: false,
-        loop: true,
-        margin: 25,
-        nav : true,
-        navText : [
-            '<i class="fas fa-chevron-left"></i>',
-            '<i class="fas fa-chevron-right"></i>'
-        ],
-        responsiveClass: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            },
-            1200:{
-                items:3
-            }
+    const images = {
+    1: [
+        { src: 'img/team-1.jpg', desc: 'Image 1 Description' },
+        { src: 'img/team-1.jpg', desc: 'Image 2 Description' },
+        { src: 'img/team-1.jpg', desc: 'Image 3 Description' },
+        { src: 'img/team-1.jpg', desc: 'Image 4 Description' }
+    ],
+    2: [
+        { src: 'image5.jpg', desc: 'Image 5 Description' },
+        { src: 'image6.jpg', desc: 'Image 6 Description' },
+        { src: 'image7.jpg', desc: 'Image 7 Description' },
+        { src: 'image8.jpg', desc: 'Image 8 Description' }
+    ],
+    3: [
+        { src: 'image9.jpg', desc: 'Image 9 Description' },
+        { src: 'image10.jpg', desc: 'Image 10 Description' },
+        { src: 'image11.jpg', desc: 'Image 11 Description' },
+        { src: 'image12.jpg', desc: 'Image 12 Description' }
+    ],
+    4: [
+        { src: 'image13.jpg', desc: 'Image 13 Description' },
+        { src: 'image14.jpg', desc: 'Image 14 Description' },
+        { src: 'image15.jpg', desc: 'Image 15 Description' },
+        { src: 'image16.jpg', desc: 'Image 16 Description' }
+    ],
+    5: [
+        { src: 'image17.jpg', desc: 'Image 17 Description' },
+        { src: 'image18.jpg', desc: 'Image 18 Description' },
+        { src: 'image19.jpg', desc: 'Image 19 Description' },
+        { src: 'image20.jpg', desc: 'Image 20 Description' }
+    ],
+    6: [
+        { src: 'image21.jpg', desc: 'Image 21 Description' },
+        { src: 'image22.jpg', desc: 'Image 22 Description' },
+        { src: 'image23.jpg', desc: 'Image 23 Description' },
+        { src: 'image24.jpg', desc: 'Image 24 Description' }
+    ],
+    7: [
+        { src: 'image25.jpg', desc: 'Image 25 Description' },
+        { src: 'image26.jpg', desc: 'Image 26 Description' },
+        { src: 'image27.jpg', desc: 'Image 27 Description' },
+        { src: 'image28.jpg', desc: 'Image 28 Description' }
+    ],
+    8: [
+        { src: 'image29.jpg', desc: 'Image 29 Description' },
+        { src: 'image30.jpg', desc: 'Image 30 Description' },
+        { src: 'image31.jpg', desc: 'Image 31 Description' },
+        { src: 'image32.jpg', desc: 'Image 32 Description' }
+    ]
+};
+
+function changeImages(buttonIndex) {
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add active class to the clicked button
+    buttons[buttonIndex - 1].classList.add('active');
+
+    // Get the images for the clicked button
+    const selectedImages = images[buttonIndex];
+    const imageSection = document.getElementById('image-section');
+
+    // Clear current images
+    imageSection.innerHTML = '';
+
+    // Add new images to the section
+    selectedImages.forEach((image, index) => {
+        const imageRow = index < 2 ? 'image-row' : '';
+        const html = `
+            <div class="image-item ${imageRow}">
+                <img src="${image.src}" alt="Image ${index + 1}">
+                <div class="overlay">
+                    <p>${image.desc}</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        `;
+        if (index % 2 === 0) {
+            const rowDiv = document.createElement('div');
+            rowDiv.classList.add('image-row');
+            imageSection.appendChild(rowDiv);
         }
+        imageSection.lastChild.innerHTML += html;
     });
+}
+
+// Initialize first button images
+changeImages(1);
+
 </script>
