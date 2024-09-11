@@ -161,14 +161,14 @@
                     <img src="image3.jpg" class="carousel-bg" alt="#">
                 </div>
             </div>
-            <div class="content-container">
-                <div class="left-content">
+            <div class="content-container ">
+                <div class="left-content wow fadeInRight">
                     <h2>Your Heading Here</h2>
                     <p>Your descriptive text goes here. Explain the purpose of the form and any relevant details.</p>
                 </div>
-                <div class="right-form">
+                <div class="right-form wow fadeInLeft">
                     <form>
-                        <fieldset class="mb-4">
+                        <!-- <fieldset class="mb-4">
                             <legend class="text-white">Select Category</legend>
                             <div class="dropdown-container">
                                 <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" aria-expanded="false">
@@ -190,7 +190,7 @@
                                 </div>
                             </div>
                         </fieldset>
-        
+         -->
                         <div class="mb-3">
                             <label for="name" class="form-label text-white">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -446,7 +446,7 @@
 
 
 
-<div class="icons-section">
+<div class="icons-section wow fadeInRight">
     <div class="icons-container">
         <img src="img/heroico/ico1.jpg" alt="Icon 1" class="icons">
         <div class="icons-text text-primary">Modern
@@ -542,11 +542,11 @@
 
 
 
-<div class="ellipse-section">
+<div class="ellipse-section  ">
     <!-- Section Heading -->
-    <h2 class="section-heading pb-5"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam>  Your dream Interior in 5 steps!</h2>
+    <h2 class="section-heading pb-5 wow fadeInRight"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam>  Your dream Interior in 5 steps!</h2>
   
-    <div class="containers">
+    <div class="containers wow fadeInLeft">
         <div class="ellipse-container">
             <div class="ellipse-item">
                 <div class="ellipse">
@@ -711,12 +711,12 @@
 </style>
 
 <!-- First Section -->
-<div class="first-section">
-    <h2 class="section-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Your dream Architecture in 9 steps!</h2>
+<div class="first-section wow fadeInLeft">
+    <h2 class="section-heading "><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Your dream Architecture in 9 steps!</h2>
 </div>
 
 <!-- Second Section -->
-<div class="second-section container p-5">
+<div class="second-section container p-5  wow fadeInRight">
     <div class="numbered-bubbles">
         <div class="bubble-container">
             <div class="bubble active">
@@ -787,7 +787,7 @@
 </div>
 
 <!-- Third Section -->
-<div class="third-section container p-5">
+<div class="third-section container p-5  wow fadeInLeft">
     <div class="text-content">
         <h2 class="text-heading">Online Consultation</h2>
         <p class="text-paragraph">Ready to assist you regarding all things related to all architecture</p>
@@ -1012,20 +1012,17 @@
 
 
 <!-- Projects -->
-<div class="container-fluid training py-5">
-    <div class="container py-5">
-        <div class="pb-5">
+<div class="container-fluid training ">
+    <div class="container ">
+        <div class="">
             <div class="row g-4 align-items-end">
-                <div class="col-xl-8">
-                    <h4 class="text-primary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Projects - Overview</h4>
-                    <h1 class="mb-0 wow fadeInUp" data-wow-delay="0.3s">Projects - Overview</h1>
+                <div class="first-section">
+                    <h2 class="section-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Project Overview</h2>
                 </div>
-                <div class="col-xl-4 text-xl-end wow fadeInUp" data-wow-delay="0.3s">
-                    <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="customizedwallpapers-project.html">View More</a>
-                </div>
+              
             </div>
         </div>
-        <div class="training-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="training-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">
             <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
                 <div class="training-img rounded-top">
                     <img src="img/projectsimg/1.png" class="img-fluid rounded-top w-100" alt="Image">
@@ -1191,11 +1188,266 @@ $(document).ready(function(){
 
 
 
+<!--services-->
+
+
+
+<section class="container pt-5">
+    <div class="row g-4 align-items-end">
+        <div class="first-section  wow fadeInLeft">
+            <h2 class="section-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Our Services</h2>
+        </div>
+      
+    </div>
+
+    <div class="gallery-container owl-carousel  wow fadeInRight">
+        <div class="buttons-container">
+            <button class="nav-btn active" onclick="changeImages(1)"> Architecture</button>
+            <button class="nav-btn" onclick="changeImages(2)">Commercial </button>
+            <button class="nav-btn" onclick="changeImages(3)">  landscaping</button>
+            <button class="nav-btn" onclick="changeImages(4)">Project Management</button>
+            <button class="nav-btn" onclick="changeImages(5)">Residential</button>
+            <button class="nav-btn" onclick="changeImages(6)">Renovation</button>
+            <button class="nav-btn" onclick="changeImages(7)">3D designing</button>
+            <button class="nav-btn" onclick="changeImages(8)">Turn key interiors</button>
+        </div>
+
+        <div class="images-container "  id="image-section">
+            <!-- This section will be updated by JavaScript based on button clicks -->
+        </div>
+    </div>
+</section>
+
+<style>
 
 
 
 
+.content-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+}
+
+.nav-btn {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width:auto;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.nav-btn.active {
+    background-color: #B69062;
+    color: white;
+    width:auto;
+    border-radius: 10px;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.image-item {
+    position: relative;
+    width: 48%; /* Adjust the size to make images smaller */
+    height: 400px; /* Set a fixed height to limit image size */
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%; /* Ensure the image fits within the fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-item:hover .overlay {
+    display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .buttons-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Start with one column */
+        grid-gap: 10px; /* Space between buttons */
+        width: 100%;
+    }
+
+    .nav-btn {
+        border-radius: 10px;
+        text-align: center; /* Center text */
+    }
+
+    /* Use the nth-child pseudo-class to adjust grid layout */
+    .nav-btn:nth-child(1) {
+        grid-column: 1 / 2; /* Place the first button in the first column */
+    }
+
+    .nav-btn:nth-child(2),
+    .nav-btn:nth-child(3) {
+        grid-column: span 1; /* Place the second and third buttons in the second row */
+    }
+
+    .nav-btn:nth-child(4),
+    .nav-btn:nth-child(5),
+    .nav-btn:nth-child(6) {
+        grid-column: span 1; /* Place the fourth, fifth, and sixth buttons in the third row */
+    }
+
+    /* Add more styles as needed for additional rows */
+    /* For example, you can continue this pattern for more rows */
+
+    .images-container {
+        width: 100%;
+    }
+
+    .image-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image-item {
+        width: 48%;
+        margin-bottom: 10px;
+        height: 200px; /* Increase height for mobile view */
+    }
+}
+
+
+</style>
+
+<script>
+    const images = {
+    1: [
+        { src: 'img/projectsimg/1.png', desc: 'Image 1 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 2 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 3 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 4 Description' }
+    ],
+    2: [
+        { src: 'img/projectsimg/5.png', desc: 'Image 5 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 6 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 7 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 8 Description' }
+    ],
+    3: [
+        { src: 'img/projectsimg/1.png', desc: 'Image 9 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 10 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 11 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 12 Description' }
+    ],
+    4: [
+        { src: 'img/projectsimg/5.png', desc: 'Image 13 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 14 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 15 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 16 Description' }
+    ],
+    5: [
+        { src: 'img/projectsimg/1.png', desc: 'Image 17 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 18 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 19 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 20 Description' }
+    ],
+    6: [
+        { src: 'img/projectsimg/5.png', desc: 'Image 21 Description' },
+        { src: 'img/projectsimg/1.png', desc: 'Image 22 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 23 Description' },
+        { src: 'img/projectsimg/3.png', desc: 'Image 24 Description' }
+    ],
+    7: [
+        { src: 'img/projectsimg/4.png', desc: 'Image 25 Description' },
+        { src: 'img/projectsimg/5.png', desc: 'Image 26 Description' },
+        { src: 'img/projectsimg/1.png', desc: 'Image 27 Description' },
+        { src: 'img/projectsimg/2.png', desc: 'Image 28 Description' }
+    ],
+    8: [
+        { src: 'img/projectsimg/3.png', desc: 'Image 29 Description' },
+        { src: 'img/projectsimg/4.png', desc: 'Image 30 Description' },
+        { src: 'img/projectsimg/5.png', desc: 'Image 31 Description' },
+        { src: 'img/projectsimg/1.png', desc: 'Image 32 Description' }
+    ]
+};
+
+function changeImages(buttonIndex) {
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add active class to the clicked button
+    buttons[buttonIndex - 1].classList.add('active');
+
+    // Get the images for the clicked button
+    const selectedImages = images[buttonIndex];
+    const imageSection = document.getElementById('image-section');
+
+    // Clear current images
+    imageSection.innerHTML = '';
+
+    // Add new images to the section
+    selectedImages.forEach((image, index) => {
+        const imageRow = index < 2 ? 'image-row' : '';
+        const html = `
+            <div class="image-item ${imageRow}">
+                <img src="${image.src}" alt="Image ${index + 1}">
+                <div class="overlay">
+                    <p>${image.desc}</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        `;
+        if (index % 2 === 0) {
+            const rowDiv = document.createElement('div');
+            rowDiv.classList.add('image-row');
+            imageSection.appendChild(rowDiv);
+        }
+        imageSection.lastChild.innerHTML += html;
+    });
+}
+
+// Initialize first button images
+changeImages(1);
+
+</script>
 
 
 
