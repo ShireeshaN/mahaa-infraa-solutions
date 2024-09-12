@@ -163,8 +163,8 @@
             </div>
             <div class="content-container ">
                 <div class="left-content wow fadeInRight">
-                    <h2 style="text-align: start;">Your Heading Here</h2>
-                    <p style="text-align: start;">Your descriptive text goes here. Explain the purpose of the form and any relevant details.</p>
+                    <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in Architecture and Interiors</h1>
+                    <!-- <p style="text-align: start;">Your descriptive text goes here. Explain the purpose of the form and any relevant details.</p> -->
                 </div>
                 <div class="right-form wow fadeInLeft">
                     <form>
@@ -884,6 +884,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px 0;
+    border-radius: 10px;
+ 
 }
 
 .text-content {
@@ -1460,15 +1462,15 @@ changeImages(1);
     <div class="gallerygon-image-container">
         <div class="gallerygon-image-row" id="row1">
             <!-- Initial set of images -->
-            <img src="img/service-1.jpg" alt="Image 1">
-            <img src="img/service-2.jpg" alt="Image 2">
-            <img src="img/service-3.jpg" alt="Image 3">
+            <img src="img/projectsimg/1.png" alt="Image 1">
+            <img src="img/projectsimg/2.png" alt="Image 2">
+            <img src="img/projectsimg/3.png" alt="Image 3">
         </div>
         <div class="gallerygon-image-row" id="row2">
             <!-- Initial set of images -->
-            <img src="img/service-1.jpg" alt="Image 4">
-            <img src="img/service-2.jpg" alt="Image 5">
-            <img src="img/service-3.jpg" alt="Image 6">
+            <img src="img/projectsimg/4.png" alt="Image 4">
+            <img src="img/projectsimg/5.png" alt="Image 5">
+            <img src="img/projectsimg/1.png" alt="Image 6">
         </div>
     </div>
 
@@ -1496,11 +1498,11 @@ changeImages(1);
 
 <script>
     const imageSets = {
-        1: ['img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg', 'img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg'],
-        2: ['img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg', 'img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg'],
-        3: ['img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg', 'img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg'],
-        4: ['img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg', 'img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg'],
-        5: ['img/service-3.jpg', 'img/service-2.jpg', 'img/service-3.jpg', 'img/service-1.jpg', 'img/service-2.jpg', 'img/service-3.jpg']
+        1: ['img/projectsimg/1.png', 'img/projectsimg/2.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png'],
+        2: ['img/projectsimg/1.png', 'img/projectsimg/4.png', 'img/projectsimg/3.png', 'img/projectsimg/2.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png'],
+        3: ['img/projectsimg/5.png', 'img/projectsimg/2.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/1.png', 'img/projectsimg/5.png'],
+        4: ['img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/2.png', 'img/projectsimg/1.png'],
+        5: ['img/projectsimg/1.png', 'img/projectsimg/1.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png']
     };
 
     let currentSet = 1;
@@ -1668,20 +1670,22 @@ changeImages(1);
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 30px;
-        color: white;
+        font-size: 50px;
+        color: black;
         cursor: pointer;
         z-index: 1100;
+        font-weight: 600;
     }
 
     .gallerygon-modal .gallerygon-arrow {
         position: absolute;
         top: 50%;
-        font-size: 30px;
-        color: white;
+        font-size: 50px;
+        color:black;
         cursor: pointer;
         user-select: none;
         z-index: 1100;
+        font-weight: 600;
     }
 
     .gallerygon-modal .gallerygon-arrow.left {
@@ -1716,10 +1720,89 @@ changeImages(1);
     }
 </style>
 
-
+  <!-- Blog Start -->
+  <div class="container-fluid blog pb-5 pt-5">
+    <div class="container pb-5">
+        <div class="gallerygon-first-section">
+            <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Blogs</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
+                    <div class="mb-4">
+                        <h4 class="text-primary mb-2">Interiors</h4>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
+                            <p class="mb-0"><span class="text-dark fw-bold">By</span> Maha</p>
+                        </div>
+                    </div>
+                    <div class="project-img">
+                        <img src="img/blog-1.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <div class="blog-plus-icon">
+                            <a href="img/blog-1.jpg" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <a href="#" class="h6">Simple Elements of Interior design to Transform
+                            your Home</a>
+                    </div>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
+                    <div class="mb-4">
+                        <h4 class="text-primary mb-2">Architecture</h4>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
+                            <p class="mb-0"><span class="text-dark fw-bold">By</span> Maha</p>
+                        </div>
+                    </div>
+                    <div class="project-img">
+                        <img src="img/blog-2.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <div class="blog-plus-icon">
+                            <a href="img/blog-2.jpg" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <a href="#" class="h6">Architectural Eccentricity: 9 Concepts for
+                            Unprecedented Office Design</a>
+                    </div>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
+                    <div class="mb-4">
+                        <h4 class="text-primary mb-2">Interior</h4>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
+                            <p class="mb-0"><span class="text-dark fw-bold">By</span> Maha</p>
+                        </div>
+                    </div>
+                    <div class="project-img">
+                        <img src="img/blog-3.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <div class="blog-plus-icon">
+                            <a href="img/blog-3.jpg" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <a href="#" class="h6">Artistry at Home: 8 Creative Concepts to Elevate
+                            Living Spaces</a>
+                    </div>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
 <!--Gallery-->
+
+
+
         <!-- About Start -->
-        <div class="container-fluid about bg-light py-5">
+        <!-- <div class="container-fluid about bg-light py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
@@ -1796,12 +1879,12 @@ changeImages(1);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- About End -->
 
 
         <!-- Services Start -->
-        <div class="container-fluid service py-5">
+        <!-- <div class="container-fluid service py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Services</h4>
@@ -1873,12 +1956,12 @@ changeImages(1);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Services End -->
 
 
         <!-- Project Start -->
-        <div class="container-fluid project">
+        <!-- <div class="container-fluid project">
             <div class="container">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Projects</h4>
@@ -1932,93 +2015,18 @@ changeImages(1);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Project End -->
 
 
-        <!-- Blog Start -->
-        <div class="container-fluid blog pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Blogs</h4>
-                    <h1 class="display-4">Latest Articles & News from the Blogs</h1>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">Investment</h4>
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
-                                    <p class="mb-0"><span class="text-dark fw-bold">By</span> Mark D. Brock</p>
-                                </div>
-                            </div>
-                            <div class="project-img">
-                                <img src="img/blog-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="img/blog-1.jpg" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">Business</h4>
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
-                                    <p class="mb-0"><span class="text-dark fw-bold">By</span> Mark D. Brock</p>
-                                </div>
-                            </div>
-                            <div class="project-img">
-                                <img src="img/blog-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="img/blog-2.jpg" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">Consulting</h4>
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-0"><span class="text-dark fw-bold">On</span> Mar 14, 2024</p>
-                                    <p class="mb-0"><span class="text-dark fw-bold">By</span> Mark D. Brock</p>
-                                </div>
-                            </div>
-                            <div class="project-img">
-                                <img src="img/blog-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="img/blog-3.jpg" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Interested in Giving Back this year? Here are some tips</a>
-                            </div>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
+      
 
 
         <!-- Team Start -->
         <div class="container-fluid team pb-5">
             <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Team</h4>
-                    <h1 class="display-4">Our Investa Company Dedicated Team Member</h1>
+                <div class="gallerygon-first-section">
+                    <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Team</h2>
                 </div>
                 <div class="row g-4 justify-content-center">
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
@@ -2036,7 +2044,7 @@ changeImages(1);
                             </div>
                             <div class="team-content bg-dark text-center rounded-bottom p-4">
                                 <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
+                                    <h4 class="text-white">MAHA</h4>
                                     <p class="text-muted mb-0">CEO & Founder</p>
                                 </div>
                             </div>
@@ -2057,7 +2065,7 @@ changeImages(1);
                             </div>
                             <div class="team-content bg-dark text-center rounded-bottom p-4">
                                 <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
+                                    <h4 class="text-white">MAHA</h4>
                                     <p class="text-muted mb-0">CEO & Founder</p>
                                 </div>
                             </div>
@@ -2078,8 +2086,8 @@ changeImages(1);
                             </div>
                             <div class="team-content bg-dark text-center rounded-bottom p-4">
                                 <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
+                                    <h4 class="text-white">MAHA</h4>
+                                    <p class="text-muted mb-0">CO-Founder</p>
                                 </div>
                             </div>
                         </div>
@@ -2099,8 +2107,8 @@ changeImages(1);
                             </div>
                             <div class="team-content bg-dark text-center rounded-bottom p-4">
                                 <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
+                                    <h4 class="text-white">MAHA</h4>
+                                    <p class="text-muted mb-0">CO-Founder</p>
                                 </div>
                             </div>
                         </div>
@@ -2116,19 +2124,22 @@ changeImages(1);
             <div class="container py-5">
                 <div class="row g-4 align-items-center">
                     <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="h-100 rounded">
+                        <div class="gallerygon-first-section">
+                            <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Clients are Talking</h2>
+                        </div>
+                        <!-- <div class="h-100 rounded">
                             <h4 class="text-primary">Our Feedbacks </h4>
                             <h1 class="display-4 mb-4">Clients are Talking</h1>
                             <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque soluta unde itaque. Consequatur quam odit blanditiis harum veritatis porro.</p>
                             <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read All Reviews <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-xl-8">
                         <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
                             <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="d-flex">
                                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                                    <p class="mt-4">Maha Infra Solutions transformed our home beautifully! Their design expertise and attention to detail made the renovation process seamless. Highly recommended!
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -2144,7 +2155,7 @@ changeImages(1);
                             <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="d-flex">
                                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                                    <p class="mt-4">Fantastic job on our office redesign! Maha Infra Solutions delivered a stylish, functional space that fits our brand perfectly. Professional and efficient!
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -2160,7 +2171,10 @@ changeImages(1);
                             <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                                 <div class="d-flex">
                                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                                    <p class="mt-4"> 
+                                        Maha Infra Solutions handled our turnkey project effortlessly, 
+                                        from concept to completion. The result was stunning and hassle-free.
+                                         Highly recommend their all-in-one service!
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -2186,60 +2200,61 @@ changeImages(1);
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="pb-5">
-                            <h4 class="text-primary">FAQs</h4>
-                            <h1 class="display-4">Get the Answers to Common Questions</h1>
+                        <div class="gallerygon-first-section">
+                            <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> FAQs</h2>
                         </div>
+                      
                        <div class="accordion bg-light rounded p-4" id="accordionExample">
                             <div class="accordion-item border-0 mb-4">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
-                                        What Does a Financial Advisor Do?
+                                        1. What types of infrastructure projects does Maha Infra Solutions handle?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                      
+                                        <p>We specialize in a wide range of infrastructure projects, including residential, commercial, industrial, and turnkey solutions. Our expertise covers everything from design and planning to execution and maintenance.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item border-0 mb-4">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        What industries do you specialize in? 
+                                        2. How can I get a quote for my project?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                     
+                                        <p>To receive a quote, please contact us through our website's contact form or call us directly. Provide details about your project, and we will schedule a consultation to discuss your needs and provide a tailored quote.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item border-0 mb-4">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can you guarantee for growth?
+                                        3. What is the typical timeline for project completion?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                       
+                                        <p>Project timelines vary based on the scope and complexity of the project. During our initial consultation, we will provide an estimated timeline and keep you updated throughout the project's progress.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item border-0 mb-0">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        What makes your business plans so special?
+                                        5. Can Maha Infra Solutions assist with design and planning?
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                       
+                                        
+                                        <p>Absolutely! Our team includes experienced designers and planners who will work closely with you to develop a customized plan that meets your needs and vision.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2247,7 +2262,7 @@ changeImages(1);
                     </div>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
                         <div class="faq-img RotateMoveRight rounded">
-                            <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
+                            <img src="img/projectsimg/5.png" class="img-fluid rounded w-100" alt="Image">
                             <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -2257,64 +2272,59 @@ changeImages(1);
         <!-- FAQ End -->
 
         <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
+        <div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
+            <div class="container ">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <h4 class="text-white mb-4">Newsletter</h4>
-                                <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                             
+                                <p class="mb-3">Transforming Vision into Reality. Leading the Way in Modern Infrastructure Solutions</p>
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-lg-6 col-xl-2">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Explore</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> testimonial</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                          
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i>Projetcs</a>
+                           
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Careers</a>
+                      
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Cost Estimater</a>
+                          
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                            
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> Beeramguda, Hyderabad</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> maha@info.com</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> maha@info.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 000 00000</a>
                             <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class="text-body">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-body">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2 co-sm-12">
+                        <img class="footerlogo" src="img/mahalogo.png"/>
+                       
                     </div>
                 </div>
             </div>
@@ -2327,13 +2337,11 @@ changeImages(1);
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Maha Infra Solutions</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                       
+                        Designed By <a class="border-bottom text-primary" href="https://www.thepatternscompany.com">The Patterns Company</a>
                     </div>
                 </div>
             </div>
