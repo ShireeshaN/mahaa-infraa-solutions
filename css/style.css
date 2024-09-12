@@ -1112,3 +1112,23 @@
     left: 10px;
 }
 
+.footerlogo {
+    height: 120px;
+    width: 100%;
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+    .footerlogo {
+        height: 100%;
+        width:100%; /* Adjust the height as needed for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .footerlogo {
+       height: 100%; /* Further adjust the height for smaller screens if necessary */
+      
+    }
+}
+
