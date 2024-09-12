@@ -1020,7 +1020,7 @@
     color: gold;
     cursor: pointer;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
     border-radius: 50%;
     user-select: none;
     z-index: 10;
