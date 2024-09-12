@@ -1,128 +1,124 @@
-<!-- Team Start -->
-<div class="container-fluid team py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h4 class="text-primary">Our Team</h4>
-            <h1 class="display-4">Our Investa Company Dedicated Team Member</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 24px;
+            margin: 40px 0;
+        }
+
+        .boxes-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .box-heading {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .box-content {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .toggle-button {
+            background-color: #C6A626;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: #a18520;
+        }
+
+        .box-details {
+            display: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .box.expanded .box-details {
+            display: block;
+        }
+
+        .box.expanded .toggle-button::before {
+            content: "-";
+        }
+
+        .box .toggle-button::before {
+            content: "+";
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-heading">Our Packages</div>
+
+    <div class="boxes-container">
+        <div class="box" id="box1">
+            <div class="box-heading">Interior Design</div>
+            <div class="box-content">Innovative designs for your home.</div>
+            <button class="toggle-button"></button>
+            <div class="box-details">
+                <p>Details about the interior design services offered, including options, pricing, and design process information.</p>
+            </div>
         </div>
 
-        <!-- First Row: 3 Static Images with Hover Text -->
-        <div class="static-images">
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 1">
-                <div class="hover-text">Text for Image 1</div>
-            </div>
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 2">
-                <div class="hover-text">Text for Image 2</div>
-            </div>
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 3">
-                <div class="hover-text">Text for Image 3</div>
+        <div class="box" id="box2">
+            <div class="box-heading">Renovation</div>
+            <div class="box-content">Transform your space with our renovation services.</div>
+            <button class="toggle-button"></button>
+            <div class="box-details">
+                <p>Details about renovation services, including types of renovations, costs, and timeframes.</p>
             </div>
         </div>
 
-        <!-- Second Row: Carousel with one visible image at a time -->
-        <div class="carousel-container">
-            <span class="carousel-icon left" onclick="moveLeft()">&#10094;</span>
-            <div class="carousel">
-                <img src="img/projects-2.jpg" alt="Image 4" class="carousel-image">
-                <img src="img/service-1.jpg" alt="Image 5" class="carousel-image">
-                <img src="img/projects-2.jpg" alt="Image 6" class="carousel-image">
-                <img src="img/projects-2.jpg" alt="Image 7" class="carousel-image">
-            </div>
-            <span class="carousel-icon right" onclick="moveRight()">&#10095;</span>
-        </div>
-
-        <div class="static-images">
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 1">
-                <div class="hover-text">Text for Image 1</div>
-            </div>
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 2">
-                <div class="hover-text">Text for Image 2</div>
-            </div>
-            <div class="image-container">
-                <img src="img/projects-2.jpg" alt="Image 3">
-                <div class="hover-text">Text for Image 3</div>
+        <div class="box" id="box3">
+            <div class="box-heading">Consultation</div>
+            <div class="box-content">Professional advice for your projects.</div>
+            <button class="toggle-button"></button>
+            <div class="box-details">
+                <p>Information on the consultation process, including how to book a consultation and what to expect.</p>
             </div>
         </div>
     </div>
-</div>
-<!-- Team End -->
 
-<style>
-    /* Static Images Styling */
-    .static-images {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 30px;
-    }
-
-    .image-container {
-        position: relative;
-    }
-
-    .static-images img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .hover-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        text-align: center;
-        padding: 10px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .image-container:hover .hover-text {
-        opacity: 1;
-    }
-
-    /* Carousel Styling (Remains Unchanged) */
-    .carousel-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-    }
-
-    .carousel {
-        display: flex;
-        overflow: hidden;
-        width: 60%;
-    }
-
-    .carousel img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.5s ease;
-    }
-
-    .carousel-icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: gold;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    .left {
-        left: 10px;
-    }
-
-    .right {
-        right: 10px;
-    }
-</style>
+    <script>
+        document.querySelectorAll('.box').forEach(box => {
+            const button = box.querySelector('.toggle-button');
+            button.addEventListener('click', () => {
+                box.classList.toggle('expanded');
+            });
+        });
+    </script>
+    
+</body>
+</html>
