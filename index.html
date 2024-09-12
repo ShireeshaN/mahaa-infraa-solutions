@@ -2194,6 +2194,85 @@ changeImages(1);
             </div>
         </div>
         <!-- Testimonial End -->
+  <!--partners-->
+  <div class="gallerygon-first-section">
+    <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Partners</h2>
+</div>
+<section class="partners-section container mt-5 p-5 mb-5 ">
+    <div class="partners-container p-5">
+        <div class="partners-logos">
+            <!-- Add your partner brand logos here (duplicated for smooth scrolling) -->
+            <img src="img/partners/prts.png" alt="Partner 1">
+            <img src="img/partners/prts.png" alt="Partner 2">
+            <img src="img/partners/prts.png" alt="Partner 3">
+            <img src="img/partners/prts.png" alt="Partner 4">
+            <img src="img/partners/prts.png" alt="Partner 5">
+            <img src="img/partners/prts.png" alt="Partner 6">
+            <img src="img/partners/prts.png" alt="Partner 7">
+            <img src="img/partners/prts.png" alt="Partner 8">
+            <!-- Duplicate logos for infinite looping -->
+            <img src="img/partners/prts.png" alt="Partner 1">
+            <img src="img/partners/prts.png" alt="Partner 2">
+            <img src="img/partners/prts.png" alt="Partner 3">
+            <img src="img/partners/prts.png" alt="Partner 4">
+            <img src="img/partners/prts.png" alt="Partner 5">
+            <img src="img/partners/prts.png" alt="Partner 6">
+            <img src="img/partners/prts.png" alt="Partner 7">
+            <img src="img/partners/prts.png" alt="Partner 8">
+        </div>
+    </div>
+</section>
+
+<style>
+/* Style for the entire section */
+.partners-section {
+    background-color: #CCCCCC; /* Light gray background for the section */
+    padding: 20px 0; /* Adjust padding as needed */
+    border-radius: 10px;
+}
+
+/* Style for the container inside the section */
+.partners-container {
+    background-color: #FFFFFF; /* White background for the container */
+    padding: 10px 0; /* Adjust padding as needed */
+    overflow: hidden; /* Hide anything that overflows the container */
+    border-radius: 10px;
+}
+
+/* Style for the logos and scrolling effect */
+.partners-logos {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure logos are in one line */
+    overflow: hidden; /* Hide the scrollbar */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll 20s linear infinite; /* Continuous scroll animation */
+}
+
+.partners-logos img {
+    height: 210px; /* Adjust the height of logos as needed */
+    margin-right: 20px; /* Adjust spacing between logos */
+}
+
+/* Keyframes for continuous scrolling effect */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scroll by half the width to loop smoothly */
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+    .partners-logos {
+        animation: scroll 15s linear infinite; /* Faster scrolling on smaller screens */
+    }
+
+    .partners-logos img {
+        height: 200px; /* Smaller logo height for mobile view */
+        margin-right: 15px; /* Adjust spacing between logos */
+    }
+}
+</style>
+
+<!--partners-->
 
 
         <!-- FAQ Start -->
@@ -2272,86 +2351,7 @@ changeImages(1);
         </div>
         <!-- FAQ End -->
 
-        <!--partners-->
-        <div class="gallerygon-first-section">
-            <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Partners</h2>
-        </div>
-        <section class="partners-section container mt-5 p-5 mb-5 ">
-            <div class="partners-container p-5">
-                <div class="partners-logos">
-                    <!-- Add your partner brand logos here (duplicated for smooth scrolling) -->
-                    <img src="img/partners/prts.png" alt="Partner 1">
-                    <img src="img/partners/prts.png" alt="Partner 2">
-                    <img src="img/partners/prts.png" alt="Partner 3">
-                    <img src="img/partners/prts.png" alt="Partner 4">
-                    <img src="img/partners/prts.png" alt="Partner 5">
-                    <img src="img/partners/prts.png" alt="Partner 6">
-                    <img src="img/partners/prts.png" alt="Partner 7">
-                    <img src="img/partners/prts.png" alt="Partner 8">
-                    <!-- Duplicate logos for infinite looping -->
-                    <img src="img/partners/prts.png" alt="Partner 1">
-                    <img src="img/partners/prts.png" alt="Partner 2">
-                    <img src="img/partners/prts.png" alt="Partner 3">
-                    <img src="img/partners/prts.png" alt="Partner 4">
-                    <img src="img/partners/prts.png" alt="Partner 5">
-                    <img src="img/partners/prts.png" alt="Partner 6">
-                    <img src="img/partners/prts.png" alt="Partner 7">
-                    <img src="img/partners/prts.png" alt="Partner 8">
-                </div>
-            </div>
-        </section>
-        
-        <style>
-        /* Style for the entire section */
-        .partners-section {
-            background-color: #CCCCCC; /* Light gray background for the section */
-            padding: 20px 0; /* Adjust padding as needed */
-            border-radius: 10px;
-        }
-        
-        /* Style for the container inside the section */
-        .partners-container {
-            background-color: #FFFFFF; /* White background for the container */
-            padding: 10px 0; /* Adjust padding as needed */
-            overflow: hidden; /* Hide anything that overflows the container */
-            border-radius: 10px;
-        }
-        
-        /* Style for the logos and scrolling effect */
-        .partners-logos {
-            display: flex;
-            flex-wrap: nowrap; /* Ensure logos are in one line */
-            overflow: hidden; /* Hide the scrollbar */
-            white-space: nowrap; /* Prevent line breaks */
-            animation: scroll 20s linear infinite; /* Continuous scroll animation */
-        }
-        
-        .partners-logos img {
-            height: 210px; /* Adjust the height of logos as needed */
-            margin-right: 20px; /* Adjust spacing between logos */
-        }
-        
-        /* Keyframes for continuous scrolling effect */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Scroll by half the width to loop smoothly */
-        }
-        
-        /* Responsive design for mobile view */
-        @media (max-width: 768px) {
-            .partners-logos {
-                animation: scroll 15s linear infinite; /* Faster scrolling on smaller screens */
-            }
-        
-            .partners-logos img {
-                height: 200px; /* Smaller logo height for mobile view */
-                margin-right: 15px; /* Adjust spacing between logos */
-            }
-        }
-        </style>
-        
-<!--partners-->
-
+      
         <!-- Footer Start -->
         <div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
             <div class="container ">
