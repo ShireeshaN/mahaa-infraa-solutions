@@ -2273,7 +2273,82 @@ changeImages(1);
 </style>
 
 <!--partners-->
+<section class="dani-section-nan container">
+    <div class="content-container-nan">
+      <div class="text-section-nan">
+        <h1 class="heading-nan">This is a Heading</h1>
+        <p class="paragraph-nan">This is a paragraph that gives more details. The text is aligned on the left side.</p>
+      </div>
+      <div class="button-section-nan">
+        <button class="dani-button-nan">Click Me</button>
+      </div>
+    </div>
+  </section>
+  
+  
+<style>
+    .dani-section-nan {
+  background-color: lightpink;
+  padding: 100px;
+  border-radius: 10px;
+}
 
+.content-container-nan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-section-nan {
+  flex: 1;
+  max-width: 60%;
+}
+
+.heading-nan {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.paragraph-nan {
+  font-size: 16px;
+}
+
+.button-section-nan {
+  flex: 1;
+  max-width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.dani-button-nan {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .content-container-nan {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section-nan, .button-section-nan {
+    max-width: 100%;
+  }
+
+  .heading-nan {
+    font-size: 20px;
+  }
+
+  .paragraph-nan {
+    font-size: 14px;
+  }
+}
+
+</style>
 
         <!-- FAQ Start -->
         <div class="container-fluid faq py-5">
@@ -2351,7 +2426,7 @@ changeImages(1);
         </div>
         <!-- FAQ End -->
 
-      
+     
         <!-- Footer Start -->
         <div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
             <div class="container ">
