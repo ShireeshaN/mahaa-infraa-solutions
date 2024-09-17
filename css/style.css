@@ -1127,6 +1127,7 @@
        height: 100%; /* Further adjust the height for smaller screens if necessary */
       
     }
+    
   
 }
 
@@ -1139,8 +1140,8 @@
 /* iPhone 14 (390px width) specific adjustments */
 @media only screen and (max-width: 390px) {
     .mahalogo {
-        height: 50px; /* Adjusted height for smaller screens */
-        width: 100%;  /* Keeping the width 100% to cover the screen width */
+        height: 40px; /* Adjusted height for smaller screens */
+       /* Keeping the width 100% to cover the screen width */
     }
 }
 
