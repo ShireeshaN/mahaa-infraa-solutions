@@ -1130,5 +1130,9 @@
        height: 100%; /* Further adjust the height for smaller screens if necessary */
       
     }
+    .mahalogo{
+        height: 60px;
+        width:100%;
+    }
 }
 
