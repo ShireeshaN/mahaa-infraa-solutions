@@ -960,10 +960,6 @@
 }
 /*** copyright end ***/
 
-.mahalogo{
-    height:90px;
-    width:100%;
-}
 
 
 /***project-page ***/
@@ -1123,10 +1119,7 @@
         height: 100%;
         width:100%; /* Adjust the height as needed for mobile */
     }
-    .mahalogo{
-        height: 60px;
-        width:100%;
-    }
+   
 }
 
 @media (max-width: 480px) {
@@ -1134,9 +1127,20 @@
        height: 100%; /* Further adjust the height for smaller screens if necessary */
       
     }
-    .mahalogo{
-        height: 60px;
-        width:100%;
+  
+}
+
+.mahalogo{
+    height:90px;
+    width:100%;
+}
+
+
+/* iPhone 14 (390px width) specific adjustments */
+@media only screen and (max-width: 390px) {
+    .mahalogo {
+        height: 50px; /* Adjusted height for smaller screens */
+        width: 100%;  /* Keeping the width 100% to cover the screen width */
     }
 }
 
