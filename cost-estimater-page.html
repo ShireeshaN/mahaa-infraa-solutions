@@ -132,176 +132,560 @@
         <div class="container-fluid bg-breadcrumb">
             <div class="bg-breadcrumb-single"></div>
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Cost Estimator</h4>
                 <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Contact</li>
+                    <li class="breadcrumb-item active text-primary">Cost Estimator</li>
                 </ol>    
             </div>
         </div>
         <!-- Header End -->
 
 
-        <style>
-            /* General mobile view adjustments */
-@media (max-width: 768px) {
-    .contact-item div {
-        flex-direction: column;
-    }
-    .contact-item div i {
-        margin-bottom: 10px;
-    }
-    .navbar-brand img {
-        max-width: 150px;
-    }
-    /* Form elements */
-    form .form-floating {
-        margin-bottom: 20px;
-    }
 
-    /* Adjust text and layout for smaller screens */
-    .display-4 {
-        font-size: 2rem;
-    }
-    .contact .container {
-        padding: 20px 15px;
-    }
-    .contact-item h4, .contact-item p {
-        text-align: center;
-    }
 
-    /* Adjust map height */
-    iframe {
-        height: 300px;
-        width: 100%;
-    }
 
-    /* Footer */
-    .footer .row {
-        text-align: center;
-    }
-    .footer .col-lg-3, .footer .col-md-6 {
-        flex: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
 
-    /* Adjust navbar */
-    .navbar-expand-lg .navbar-collapse {
-        justify-content: space-between;
-    }
-    .navbar-nav {
-        flex-direction: column;
-    }
-    .btn-primary {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-        </style>
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="contact-item">
-                            <div class="pb-5">
-                                <h4 class="text-primary">Contact Us</h4>
-                                <h1 class="display-4 mb-4">Get In Touch With Us</h1>
-                       
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <a href="https://maps.app.goo.gl/KvHPmr39vAoQ66577" target="_blank">
-                                <div class="bg-dark btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
-                                <div class="ms-4">
-                                    
-                                    <h4>Addresses</h4>
-                                    <p class="mb-0 " style="color:#818181">
-                                        Beeramguda, Hyderabad</p></a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <a href="tel:9441917441" target="_blank">
-                                <div class="bg-dark btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Mobile</h4>
-                                    <p class="mb-0" style="color:#818181">+91 9441917441</p></a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <a href="mailto:mahaainfraasolutions@gmail.com" target="_blank">
-                                <div class="bg-dark btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Email</h4>
-                                    <p class="mb-0" style="color:#818181">mahaainfraasolutions@gmail.com</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                        <label for="phone">Your Phone</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded h-100">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15219.452092513957!2d78.388871!3d17.514051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf2952de271e3%3A0xe87cfa0f00ebc2d!2sMahaa%20Infraa%20Solutions!5e0!3m2!1sen!2sin!4v1725962746839!5m2!1sen!2sin" width="1300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom p-4">
-                                <div class="d-flex">
-                                    <a class="btn btn-dark btn-lg-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="containersss">
+            <h1>Select Your Interior Package</h1>
+            <div class="packages ">
+              <button class="package-btn" onclick="showPackage('basic')">Basic</button>
+              <button class="package-btn" onclick="showPackage('standard')">Standard</button>
+              <button class="package-btn" onclick="showPackage('standard-plus')">Standard+</button>
+              <button class="package-btn" onclick="showPackage('premium')">Premium</button>
+              <button class="package-btn" onclick="showPackage('luxury')">Luxury</button>
+              <button class="package-btn" onclick="showPackage('imperia')">Imperia</button>
+              <button class="package-btn" onclick="showPackage('custom')">Custom</button>
+            </div>
+        
+            <!-- Basic Package -->
+        <div id="basic" class="package-section" style="background-color:#F1EFF0;">
+          <h2>Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
+          
+          <!-- Designs & Drawings Section -->
+          <button class="expand-btn" onclick="toggleRoom('basic-living-room')">+ Designs & Drawings</button>
+          <div id="basic-living-room" class="room">
+            <h3>Designs & Drawings</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
+                <p>Architectural Layout 2D</p>
+              </div>
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+                <p>Basic Elevation</p>
+              </div>
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+                <p>Structural Design</p>
+              </div>
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+                <p>3D Elevation</p>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Additional Sections -->
+          <button class="expand-btn" onclick="toggleRoom('basic-living-room-details')">+ Structure</button>
+          <div id="basic-living-room-details" class="room">
+            <h3>Structure</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                <p>Steel - Shree or equivalent</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                  <p>Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                  <p>Aggregates - 20mm & 40mm</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                  <p>Blocks - Standard Red Bricks. 9 inch & 4 inch</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                  <p>RCC Design Mix - M20 / M25 or As per the structural designer recommendation</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+                  <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-bedroom')">+ Kitchen</button>
+          <div id="basic-bedroom" class="room">
+            <h3>Kitchen</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+                <p>
+                  Ceramic Wall Dado - Upto Rs.40 per Sqft</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+                  <p>
+                      Main Sink Faucet - Upto Rs.1300</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+                  <p>
+                      Any other Faucet or Accessories - ISI Marked
+                  </p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+                  <p>
+                      Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 3,000</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-bathroom')">+ Bathroom</button>
+          <div id="basic-bathroom" class="room">
+            <h3>Bathroom</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+                <p>Ceramic Wall Dado upto 7' height - Upto Rs.40 per Sqft</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+                  <p>Sanitarywares & CP fittings upto Rs. 30,000 per 1000 Sqft of Hindware make</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+                  <p>CPVC Pipe - Astral or Equivalent</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+                  <p>Bathroom doors - Waterproof flush doors or WPC</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-office')">+ Doors & Windows</button>
+          <div id="basic-office" class="room">
+            <h3>Doors & Windows</h3>
+           
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+                <p>Windows - Aluminium Windows with glass shutters and mesh shutters (3 track with 1 mesh) of Jindal Profiles</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+                  <p>Main Door - Flush Door with Veneer. Sal wood frame of 5 inch by 3 inch, worth Rs.20,000 including fixtures.</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+                  <p>Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-dining')">+ Painting</button>
+          <div id="basic-dining" class="room">
+            <h3>Painting</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+                <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+                  <p>Exterior Painting - Asian Primer + Ace Exterior emulsion Paint or equivalent</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+         
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-storage')">+ Flooring</button>
+          <div id="basic-storage" class="room">
+            <h3>Flooring</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+                <p>Living & Dining Flooring - Tiles of value upto Rs.50 per sqft</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+                  <p>Rooms & Kitchen Flooring - Tiles of value upto Rs.50 per sqft</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+                  <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.40 per sqft</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+                  <p>Staircase Flooring - Sadarahalli Granite of value upto ₹ 70 per sqft</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+                  <p>Parking Tiles - Anti-skid tiles of value upto ₹ 40 per sqft</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-garden')">+ Electrical</button>
+          <div id="basic-garden" class="room">
+            <h3>Electrical</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+                <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+                  <p>
+                      Switches & Sockets - Polycab modular or equivalent</p>
                 </div>
             </div>
+          </div>
+        
+        
+          <button class="expand-btn" onclick="toggleRoom('basic-entrance')">+ Miscellaneous</button>
+          <div id="basic-entrance" class="room">
+            <h3>Miscellaneous</h3>
+            <div class="designs-drawings">
+              <div class="design-item">
+                <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                <p>Overhead Tank - Double Layered tank of 1000 Ltrs of Duratank make</p>
+              </div>
+              <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                  <p>Underground Sump - 4000 Ltrs</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                  <p>Staircase Railing - MS Railing</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                  <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                  <p>Get in touch with us!</p>
+                </div>
+                <div class="design-item">
+                  <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+                  <p>Classic Package - ₹2,050/sq.ft (Incl. GST)</p>
+                </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
         </div>
-        <!-- Contact End -->
+        
+            <!-- Standard Package -->
+            <div id="standard" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Standard Package ₹2,190/sq.ft (Incl. GST)</h2>
+              <button class="expand-btn" onclick="toggleRoom('standard-design')">+ Designs & Drawings</button>
+              <div id="standard-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+                    <p>Electrical Drawings</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+                    <p>Plumbing Drawings</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+        
+            <!-- Standard+ Package -->
+            <div id="standard-plus" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Standard+ Package ₹2,390/sq.ft (Incl. GST)</h2>
+              <button class="expand-btn" onclick="toggleRoom('standard-plus-design')">+ Designs & Drawings</button>
+              <div id="standard-plus-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/standard-plus/standard-plus1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/standard-plus/standard-plus1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/standard-plus/standard-plus1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/standard-plus/standard-plus1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Premium Package -->
+            <div id="premium" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Premium Package ₹2,890/sq.ft (Incl. GST)</h2>
+              <button class="expand-btn" onclick="toggleRoom('premium-design')">+ Designs & Drawings</button>
+              <div id="premium-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/premium/premium1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/premium/premium1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/premium/premium1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/premium/premium1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Luxury Package -->
+            <div id="luxury" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Luxury Package ₹3,490/sq.ft (Incl. GST)</h2>
+              <button class="expand-btn" onclick="toggleRoom('luxury-design')">+ Designs & Drawings</button>
+              <div id="luxury-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/luxury/luxury1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/luxury/luxury1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/luxury/luxury1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/luxury/luxury1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Imperia Package -->
+            <div id="imperia" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Imperia Package ₹4,090/sq.ft (Incl. GST)</h2>
+              <button class="expand-btn" onclick="toggleRoom('imperia-design')">+ Designs & Drawings</button>
+              <div id="imperia-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/imperia/imperia1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/imperia/imperia1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/imperia/imperia1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/imperia/imperia1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Custom Package -->
+            <div id="custom" class="package-section" style="background-color:#F1EFF0;">
+              <h2>Custom Package - Price on Request</h2>
+              <button class="expand-btn" onclick="toggleRoom('custom-design')">+ Designs & Drawings</button>
+              <div id="custom-design" class="room">
+                <h3>Designs & Drawings</h3>
+                <div class="designs-drawings">
+                  <div class="design-item">
+                    <img src="img/custom/custom1.png" alt="Design 1" class="design-icon">
+                    <p>Architectural Layout 2D</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/custom/custom1.png" alt="Design 2" class="design-icon">
+                    <p>Basic Elevation</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/custom/custom1.png" alt="Design 3" class="design-icon">
+                    <p>Structural Design</p>
+                  </div>
+                  <div class="design-item">
+                    <img src="img/custom/custom1.png" alt="Design 4" class="design-icon">
+                    <p>3D Elevation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <script>
+            function showPackage(packageId) {
+              var sections = document.querySelectorAll('.package-section');
+              sections.forEach(function(section) {
+                section.classList.remove('active');
+              });
+              document.getElementById(packageId).classList.add('active');
+            }
+        
+            function toggleRoom(roomId) {
+              var room = document.getElementById(roomId);
+              room.classList.toggle('active');
+            }
+          </script>
+
+
+
+
+
+
+
+<style>
+      .containersss {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+     h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .packages {
+      margin-bottom: 40px;
+    }
+    .package-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn:hover {
+      background-color: #0056b3;
+    }
+    .package-section {
+      display: none;
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .package-section.active {
+      display: block;
+    }
+    .room {
+      display: none;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .room.active {
+      display: block;
+    }
+    .room h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .room p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .expand-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .designs-drawings {
+      display: block;
+      margin-top: 20px;
+    }
+    .design-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .design-item p {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #666;
+    }
+    .design-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Footer Start -->
         <div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
