@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Packages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .packages {
+      margin-bottom: 40px;
+    }
+    .package-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn:hover {
+      background-color: #0056b3;
+    }
+    .package-section {
+      display: none;
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .package-section.active {
+      display: block;
+    }
+    .room {
+      display: none;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .room.active {
+      display: block;
+    }
+    .room h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .room p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .expand-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .designs-drawings {
+      display: block;
+      margin-top: 20px;
+    }
+    .design-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .design-item p {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #666;
+    }
+    .design-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h1>Select Your Interior Package</h1>
+    <div class="packages">
+      <button class="package-btn" onclick="showPackage('basic')">Basic</button>
+      <button class="package-btn" onclick="showPackage('standard')">Standard</button>
+      <button class="package-btn" onclick="showPackage('standard-plus')">Standard+</button>
+      <button class="package-btn" onclick="showPackage('premium')">Premium</button>
+      <button class="package-btn" onclick="showPackage('luxury')">Luxury</button>
+      <button class="package-btn" onclick="showPackage('imperia')">Imperia</button>
+      <button class="package-btn" onclick="showPackage('custom')">Custom</button>
+    </div>
+
+
+    <!-- Basic Package -->
+<div id="basic" class="package-section" style="background-color:#F1EFF0;">
+  <h2>Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
+  
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('basic-living-room')">+ Designs & Drawings</button>
+  <div id="basic-living-room" class="room">
+    <h3>Designs & Drawings</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
+        <p>Architectural Layout 2D</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+        <p>Basic Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+        <p>Structural Design</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+        <p>3D Elevation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Sections -->
+  <button class="expand-btn" onclick="toggleRoom('basic-living-room-details')">+ Structure</button>
+  <div id="basic-living-room-details" class="room">
+    <h3>Structure</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+        <p>Steel - Shree or equivalent</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>Aggregates - 20mm & 40mm</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>Blocks - Standard Red Bricks. 9 inch & 4 inch</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>RCC Design Mix - M20 / M25 or As per the structural designer recommendation</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
+        </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleRoom('basic-bedroom')">+ Kitchen</button>
+  <div id="basic-bedroom" class="room">
+    <h3>Kitchen</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+        <p>
+          
+Ceramic Wall Dado - Upto Rs.40 per Sqft</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+          <p>
+            Main Sink Faucet - Upto Rs.1300</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+          <p>
+            Any other Faucet or Accessories - ISI Marked
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+          <p>
+            Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 3,000
+          </p>
+        </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleRoom('basic-bathroom')">+ Bathroom</button>
+  <div id="basic-bathroom" class="room">
+    <h3>Bathroom</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+        <p>Ceramic Wall Dado upto 7' height - Upto Rs.40 per Sqft</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+          <p>Sanitarywares & CP fittings upto Rs. 30,000 per 1000 Sqft of Hindware make</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+          <p>CPVC Pipe - Astral or Equivalent</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+          <p>Bathroom doors - Waterproof flush doors or WPC</p>
+        </div>
+       
+       
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleRoom('basic-office')">+ Doors & Windows</button>
+  <div id="basic-office" class="room">
+    <h3>Doors & Windows</h3>
+   
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+        <p>Windows - Aluminium Windows with glass shutters and mesh shutters (3 track with 1 mesh) of Jindal Profiles</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+          <p>Main Door - Flush Door with Veneer. Sal wood frame of 5 inch by 3 inch, worth Rs.20,000 including fixtures.</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+          <p>Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.</p>
+        </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleRoom('basic-dining')">+ Painting</button>
+  <div id="basic-dining" class="room">
+    <h3>Painting</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+        <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+          <p>Exterior Painting - Asian Primer + Ace Exterior emulsion Paint or equivalent</p>
+        </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleRoom('basic-storage')">+ Flooring</button>
+  <div id="basic-storage" class="room">
+    <h3>Flooring</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+        <p>Living & Dining Flooring - Tiles of value upto Rs.50 per sqft</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+          <p>Rooms & Kitchen Flooring - Tiles of value upto Rs.50 per sqft</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+          <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.40 per sqft</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+          <p>Staircase Flooring - Sadarahalli Granite of value upto ₹ 70 per sqft
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+          <p>Parking Tiles - Anti-skid tiles of value upto ₹ 40 per sqft
+          </p>
+        </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+
+  <button class="expand-btn" onclick="toggleRoom('basic-garden')">+ Electrical</button>
+  <div id="basic-garden" class="room">
+    <h3>Electrical</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+        <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+          <p>
+            Switches & Sockets - Polycab modular or equivalent</p>
+        </div>
+    </div>
+  </div>
+
+
+  <button class="expand-btn" onclick="toggleRoom('basic-entrance')">+ Miscellaneous</button>
+  <div id="basic-entrance" class="room">
+    <h3>Miscellaneous</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+        <p>Overhead Tank - Double Layered tank of 1000 Ltrs of Duratank make</p>
+      </div>
+      <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+          <p>Underground Sump - 4000 Ltrs</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+          <p>Staircase Railing - MS Railing</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+          <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft</p>
+        </div>
+        
+        
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+</div>
+
+
+
+   <!-- Standard Package -->
+<div id="standard" class="package-section" style="background-color:#F1EFF0;">
+  <h2>Standard Package ₹2,050/sq.ft (Incl. GST)</h2>
+
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-design')">+ Designs & Drawings</button>
+  <div id="standard-design" class="room">
+    <h3>Designs & Drawings</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
+        <p>Architectural Layout 2D</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+        <p>Basic Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+        <p>Structural Design</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+        <p>3D Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+        <p>Electrical Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+        <p>Plumbing Drawings</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specifications Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-specifications')">+ Structure</button>
+  <div id="standard-specifications" class="room">
+    <h3>Structure</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 1" class="design-icon">
+        <p>Steel - Vizag or equivalent</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 2" class="design-icon">
+        <p>Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 3" class="design-icon">
+        <p>ggregates - 20mm & 40mm</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 4" class="design-icon">
+        <p>Blocks - Standard Red Bricks. 9 inch & 4 inch</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 5" class="design-icon">
+        <p>RCC Design Mix - M20 / M25 or As per the structural designer recommendation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Specification 5" class="design-icon">
+        <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finishes Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-finishes')">+ Kitchen</button>
+  <div id="standard-finishes" class="room">
+    <h3>Kitchen</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Finish 1" class="design-icon">
+        <p>
+          Ceramic Wall Dado - Upto Rs.60 per Sqft</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Finish 2" class="design-icon">
+        <p>Main Sink Faucet - Upto Rs.2000</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Finish 3" class="design-icon">
+        <p>Any other Faucet or Accessories - ISI Marked
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Finish 3" class="design-icon">
+        <p>Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 6,000
+        </p>
+      </div>
+    </div>
+   
+  </div>
+
+  <!-- Additional Section 1 -->
+  <button class="expand-btn" onclick="toggleRoom('standard-section1')">+ Bathroom</button>
+  <div id="standard-section1" class="room">
+    <h3>Bathroom</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+        <p>Ceramic Wall Dado upto 7' height - Upto Rs.60 per Sqft</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+        <p>Sanitarywares & CP fittings upto Rs. 50,000 per 1000 Sqft of Parryware make</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+    <p>
+      CPVC Pipe - Ashirwad or Supreme or Equivalent
+    </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+        <p>Bathroom doors - Waterproof flush doors or WPC</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Section 2 -->
+  <button class="expand-btn" onclick="toggleRoom('standard-section2')">+ Doors & Windows</button>
+  <div id="standard-section2" class="room">
+    <h3>Doors & Windows</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 2 Item 1" class="design-icon">
+        <p>Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of Atlas or equivalent make</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 2 Item 2" class="design-icon">
+        <p>Main Door - Teak Door With Teak frame of 5 inch by 3 inch, worth Rs.30,000 including fixtures.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 2 Item 2" class="design-icon">
+        <p>Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.
+
+        </p>
+      </div>
+      </div>
+    </div>
+
+
+  <!-- Additional Section 3 -->
+  <button class="expand-btn" onclick="toggleRoom('standard-section3')">+ Painting</button>
+  <div id="standard-section3" class="room">
+    <h3>Painting</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 3 Item 1" class="design-icon">
+        <p>Interior Painting - JK Putty + Tractor Shyne Emulsion or equivalent</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 3 Item 2" class="design-icon">
+        <p>Exterior Painting - Asian Primer + Apex Exterior Emulsion Paint or equivalent</p>
+      </div>
+    </div>
+  </div>
+
+ 
+
+ <!-- Flooring Section -->
+ <button class="expand-btn" onclick="toggleRoom('standard-flooring')">+ Flooring</button>
+ <div id="standard-flooring" class="room">
+   <h3>Flooring</h3>
+   <div class="designs-drawings">
+     <div class="design-item">
+       <img src="img/basic/basic1.png" alt="Flooring" class="design-icon">
+       <p>Living & Dining Flooring - Tiles or Granite of value upto Rs.100 per sqft</p>
+     </div>
+     <div class="design-item">
+      <img src="img/basic/basic1.png" alt="Flooring" class="design-icon">
+      <p>Rooms & Kitchen Flooring - Tiles of value upto Rs.80 per sqft</p>
+    </div>
+    <div class="design-item">
+      <img src="img/basic/basic1.png" alt="Flooring" class="design-icon">
+      <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.60 per sqft</p>
+    </div>
+    <div class="design-item">
+      <img src="img/basic/basic1.png" alt="Flooring" class="design-icon">
+      <p>Rooms & Kitchen FloStaircase Flooring - Sadarahalli Granite of value upto ₹ 80 per sqft</p>
+    </div>
+    <div class="design-item">
+      <img src="img/basic/basic1.png" alt="Flooring" class="design-icon">
+      <p>Parking Tiles - Anti-skid tiles of value upto ₹ 50 per sqft</p>
+    </div>
+     <!-- Add more flooring options -->
+   </div>
+ </div>
+
+  <!-- Additional Section 5 -->
+  <button class="expand-btn" onclick="toggleRoom('standard-section5')">+ Electrical</button>
+  <div id="standard-section5" class="room">
+    <h3>Electrical</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 5 Item 1" class="design-icon">
+        <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 5 Item 2" class="design-icon">
+        <p> Switches & Sockets - Polycab Levana or equivalent</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 5 Item 3" class="design-icon">
+        <p> UPS Wiring Provision</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Section 6 -->
+  <button class="expand-btn" onclick="toggleRoom('standard-section6')">+ Miscellaneous</button>
+  <div id="standard-section6" class="room">
+    <h3>Miscellaneous</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 6 Item 1" class="design-icon">
+        <p>Overhead Tank - Double Layered tank of 1500 Ltrs of Duratank make</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 6 Item 2" class="design-icon">
+        <p>Underground Sump - 6000 Ltrs
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 6 Item 3" class="design-icon">
+        <p>Staircase Railing - MS Railing</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Section 6 Item 4" class="design-icon">
+        <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--standard+-->
+<div id="standard-plus" class="package-section" style="background-color:#E0E0E0;">
+  <h2>Standard+ Package ₹2,440/sq.ft (Incl. GST)</h2>
+
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-designs-drawings')">+ Designs & Drawings</button>
+  <div id="standard-plus-designs-drawings" class="room">
+      <h3>Designs & Drawings</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Architectural Layout 2D</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p> Basic Elevation</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Structural Design</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>3D Elevation</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Electrical Drawings</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Plumbing Drawings</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Structure Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-structure')">+ Structure</button>
+  <div id="standard-plus-structure" class="room">
+      <h3>Structure</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Steel - Vizag or equivalent</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Cement - Ultratech or equivalent of 43 or 53 grade</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>ggregates - 20mm & 40mm</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Blocks - Standard Red Bricks. 9 inch & 4 inch</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>RCC Design Mix - ACC or Ultratech M20 / M25 or As per the structural designer recommendation</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Kitchen Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-kitchen')">+ Kitchen</button>
+  <div id="standard-plus-kitchen" class="room">
+      <h3>Kitchen</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Finish 1" class="design-icon">
+          <p>
+            Ceramic Wall Dado - Upto Rs.80 per Sqft</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Finish 2" class="design-icon">
+          <p>Main Sink Faucet - Upto Rs.3500</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Finish 3" class="design-icon">
+          <p>Any other Faucet or Accessories - ISI Marked
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Finish 3" class="design-icon">
+          <p>Kitchen Sink of Stainless Steel or granite Finish worth Rs. 8,000 (Futura, Carysil)
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Bathroom Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-bathroom')">+ Bathroom</button>
+  <div id="standard-plus-bathroom" class="room">
+      <h3>Bathroom</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 1" class="design-icon">
+          <p>Ceramic Wall Dado upto 7' height - Upto Rs.80 per Sqft</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+          <p>Sanitarywares & CP fittings upto Rs. 70,000 per 1000 Sqft of Jaquar make</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+      <p>
+        CPVC Pipe - Ashirwad or Supreme or Equivalent
+      </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 1 Item 2" class="design-icon">
+          <p>Bathroom doors - Waterproof flush doors or WPC</p>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Doors & Windows Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-doors-windows')">+ Doors & Windows</button>
+  <div id="standard-plus-doors-windows" class="room">
+      <h3>Doors & Windows</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 2 Item 1" class="design-icon">
+          <p>Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of Lesso Eiti or equivalent make</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 2 Item 2" class="design-icon">
+          <p>Main Door - Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.40,000 including fixtures.
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 2 Item 2" class="design-icon">
+          <p>1 Pooja Room Door - Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 31,000 for every 2,000 sft package area
+
+          </p>
+        </div>
+      </div>
+
+        </div>
+ 
+
+  <!-- Painting Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-painting')">+ Painting</button>
+  <div id="standard-plus-painting" class="room">
+      <h3>Painting</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 3 Item 1" class="design-icon">
+          <p>Interior Painting - JK Putty + Apcolite Premium Emulsion or equivalent</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 3 Item 2" class="design-icon">
+          <p>Exterior Painting - Asian Primer + Apex Exterior Emulsion Paint or equivalent</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Flooring Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-flooring')">+ Flooring</button>
+  <div id="standard-plus-flooring" class="room">
+      <h3>Flooring</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 4 Item 1" class="design-icon">
+          <p>Living & Dining Flooring - Tiles or Granite or Marble of value upto Rs.140 per sqft
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 4 Item 2" class="design-icon">
+          <p>Rooms & Kitchen Flooring -Tiles or Granite or Marble of value upto Rs.120 per sqft
+
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 4 Item 3" class="design-icon">
+          <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.80 per sqft
+
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 4 Item 4" class="design-icon">
+          <p>Staircase Flooring - Sadarahalli Granite of value upto ₹ 110 per sqft
+
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 4 Item 5" class="design-icon">
+          <p>Parking Tiles - Anti-skid tiles of value upto ₹ 70 per sqft
+  
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Electrical Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-electrical')">+ Electrical</button>
+  <div id="standard-plus-electrical" class="room">
+      <h3>Electrical</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 5 Item 1" class="design-icon">
+          <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 5 Item 2" class="design-icon">
+          <p> Switches & Sockets - Legrand Myrius or equivalent</p>
+        </div>
+       
+      </div>
+  </div>
+
+  <!-- Plumbing Section -->
+  <button class="expand-btn" onclick="toggleRoom('standard-plus-plumbing')">+ Miscellaneous</button>
+  <div id="standard-plus-plumbing" class="room">
+      <h3>Miscellaneous</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 6 Item 1" class="design-icon">
+          <p>A Sintex /Apollo Double layered overhead tank of - 2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 6 Item 2" class="design-icon">
+          <p>Underground Sump - 7000 Ltrs
+
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 6 Item 3" class="design-icon">
+          <p>Staircase Railing - SS (Stainless) Railing of SS 304 grade profiles
+          </p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Section 6 Item 4" class="design-icon">
+          <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft
+          </p>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+<!-- Premium Package -->
+<div id="premium" class="package-section" style="background-color:#F9F9F9;">
+  <h2>Premium Package ₹2,660/sq.ft (Incl. GST)</h2>
+
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-designs-drawings')">+ Designs & Drawings</button>
+  <div id="premium-designs-drawings" class="room">
+    <h3>Designs & Drawings</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Architectural Layout 2D" class="design-icon">
+        <p>Architectural Layout | 2D</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Basic Elevation" class="design-icon">
+        <p>Basic Elevation
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Structural Design" class="design-icon">
+        <p>Structural Design
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="3D Elevation" class="design-icon">
+        <p>3D Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical Drawings" class="design-icon">
+        <p>Electrical Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Plumbing Drawings</p>
+      </div>
+      <div class="design-item"></div>
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Furniture Plan
+        </p>
+      </div>
+    </div>
+ 
+
+  <!-- Structure Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-structure')">+ Structure</button>
+  <div id="premium-structure" class="room">
+    <h3>Structure</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Steel" class="design-icon">
+        <p>Steel - Vizag or equivalent</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Cement" class="design-icon">
+        <p>Cement - Ultratech or equivalent of 43 or 53 grade</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Aggregates" class="design-icon">
+        <p>Aggregates - 20mm & 40mm
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Blocks" class="design-icon">
+        <p>Blocks - Standard Red Bricks. 9 inch & 4 inch
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="RCC Design Mix" class="design-icon">
+        <p>RCC Design Mix - ACC or Ultratech M20 / M25 or As per the structural designer recommendation
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kitchen Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-kitchen')">+ Kitchen</button>
+  <div id="premium-kitchen" class="room">
+    <h3>Kitchen</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Ceramic Wall Dado - Upto Rs.90 per Sqft</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Sink Faucet" class="design-icon">
+        <p>Main Sink Faucet - Upto Rs.3500</p>
+      </div>
+      <div class="design-item">
+        <img src="img/premium/kitchen3.png" alt="Faucet Accessories" class="design-icon">
+        <p>Any other Faucet or Accessories - ISI Marked
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Kitchen Sink" class="design-icon">
+        <p>Kitchen Sink of Stainless Steel or granite Finish worth Rs. 8,000 (Futura, Carysil)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bathroom Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-bathroom')">+ Bathroom</button>
+  <div id="premium-bathroom" class="room">
+    <h3>Bathroom</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Ceramic Wall Dado upto 7' height - Upto Rs.90 per Sqft</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Sanitarywares & CP fittings" class="design-icon">
+        <p>Sanitarywares & CP fittings upto Rs. 80,000 per 1000 Sqft of Kohler make
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="CPVC Pipe" class="design-icon">
+        <p>CPVC Pipe - Ashirwad or Supreme or Equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Bathroom doors - Waterproof flush doors or WPC
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Mirror, Soap Dish, Towel Rail - Worth Rs. 9,000 till 1000 ft of Construction
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Solar water heater provision
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Doors & Windows Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-doors-windows')">+ Doors & Windows</button>
+  <div id="premium-doors-windows" class="room">
+    <h3>Doors & Windows</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Windows" class="design-icon">
+        <p>Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of Fenesta or equivalent make
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Door" class="design-icon">
+        <p>Main Door - Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.50,000 including fixtures.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.13,000 including fixtures. Door Frames of Sal Wood 4 inch by 3 inch.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>1 Pooja Room Door - Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 35,000 for every 2,000 sft package area
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Painting Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-painting')">+ Painting</button>
+  <div id="premium-painting" class="room">
+    <h3>Painting</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Interior Painting" class="design-icon">
+        <p>Interior Painting - JK Putty + Royale Luxury Emulsion or equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Exterior Painting" class="design-icon">
+        <p>Exterior Painting - Asian Primer + Apex Ultima Exterior Emulsion Paint or equivalent
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flooring Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-flooring')">+ Flooring</button>
+  <div id="premium-flooring" class="room">
+    <h3>Flooring</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Living & Dining" class="design-icon">
+        <p>Living & Dining Flooring - Tiles or Granite or Marble of value upto Rs.160 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bed Rooms" class="design-icon">
+        <p>Rooms & Kitchen Flooring -Tiles or Granite or Marble of value upto Rs.140 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Kitchen" class="design-icon">
+        <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.90 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+        <p>Staircase Flooring - Sadarahalli Granite of value upto ₹ 140 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Balcony" class="design-icon">
+        <p>Parking Tiles - Anti-skid tiles of value upto ₹ 70 per sqft
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Electrical & Plumbing Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-electrical-plumbing')">+ Electrical </button>
+  <div id="premium-electrical-plumbing" class="room">
+    <h3>Electrical </h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical" class="design-icon">
+        <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>Switches & Sockets - Legrand Myrius or equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>UPS Wiring Provision
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>1 EV Charging Point at Ground floor
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ceiling Section -->
+  <button class="expand-btn" onclick="toggleRoom('premium-ceiling')">+ Miscellaneous</button>
+  <div id="premium-ceiling" class="room">
+    <h3>Miscellaneous</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Design" class="design-icon">
+        <p>A Sintex /Apollo Double layered overhead tank of - 2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Underground Sump - 8000 Ltrs
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Staircase Railing - SS (Stainless) Glass Railing of SS 304 grade profiles
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>1 Copper gas connection for every dwelling unit of 1,500 sft package area
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- Luxury Package -->
+<div id="luxury" class="package-section" style="background-color:#F1EFF0;">
+  <h2>Luxury Package ₹3,920/sq.ft (Incl. GST)</h2>
+
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-designs-drawings')">+ Designs & Drawings</button>
+  <div id="luxury-designs-drawings" class="room">
+    <h3>Designs & Drawings</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Architectural Layout 2D" class="design-icon">
+        <p>Architectural Layout 2D</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Basic Elevation" class="design-icon">
+        <p>Basic Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Structural Design" class="design-icon">
+        <p>Structural Design</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="3D Elevation" class="design-icon">
+        <p>3D Elevation</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical Drawings" class="design-icon">
+        <p>Electrical Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Plumbing Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Furniture Plan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Structure Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-structure')">+ Structure</button>
+  <div id="luxury-structure" class="room">
+    <h3>Structure</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Steel" class="design-icon">
+        <p>Earthquake resistant design & Weather proof structure, promising safety & quality for generations
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Cement" class="design-icon">
+        <p>Steel - Vizag or equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Aggregates" class="design-icon">
+        <p>Cement - Ultratech or equivalent of 43 or 53 grade
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Blocks" class="design-icon">
+        <p>Aggregates - 20mm & 40mm
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="RCC Design Mix" class="design-icon">
+        <p>Blocks - Standard Red Bricks. 9 inch & 4 inch
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>RCC Design Mix - ACC or Ultratech M25 or As per the structural designer recommendation
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>Ceiling Height - 12 feet (Finished Floor level to Finished Floor level)
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>Antitermite treatment is included as part of the package
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Kitchen Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-kitchen')">+ Kitchen</button>
+  <div id="luxury-kitchen" class="room">
+    <h3>Kitchen</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Indian / Italian Marble for Wall Dado of value upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Sink Faucet" class="design-icon">
+        <p>Kitchen Sink of Kaff / Franke make of value upto ₹ 10,000.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Faucet Accessories" class="design-icon">
+        <p>Main sink faucet of value upto ₹ 5000 (Grohe / Kohler make)</p>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Bathroom Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-bathroom')">+ Bathroom</button>
+  <div id="luxury-bathroom" class="room">
+    <h3>Bathroom</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Bathroom Italian Marble wall Dado of upto 7' height - Value of upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Sanitarywares & CP fittings" class="design-icon">
+        <p>CP fittings of Grohe / Kohler make of value upto ₹ 5 lakhs will be provided for upto 3 bathrooms including accessories upto package area of 3000 sft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="CPVC Pipe" class="design-icon">
+        <p>Sanitarywares of Grohe / Kohler make of value upto ₹ 2.5 lakhs will be provided for upto 3 bathrooms
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Centralized Energy saving heat pump of value upto ₹ 3 lakhs will be provided
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Moisture resistant / Grid false ceiling in bathrooms
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Glass partition for shower area to divide the wet area & dry area in the Master Bathroom
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Motion sensor lighting
+
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Bathroom Doors - Louvered teak wood door of 2'6"x7' of value upto ₹ 20000
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Doors & Windows Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-doors-windows')">+ Doors & Windows</button>
+  <div id="luxury-doors-windows" class="room">
+    <h3>Doors & Windows</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Windows" class="design-icon">
+        <p>Windows - High Precision double glazed sound & weather proof UPVC / wooden windows with mesh shutters of Eiti or equivalent make
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Door" class="design-icon">
+        <p>Main Door - High performance Engineered wood imported Burma teak wood door of value upto ₹ 80,000 including fixtures.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>Internal Doors - Membrane doors / Flush Door with Veneer of value upto ₹ 25,000 including fixtures. Door Frames of imported Ghana Teak Jamb lining.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>Bathroom Doors - Louvered teak wood door of 2'6"x7' of value upto ₹ 20000
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>1 Pooja Room Door - Burma Teak along with Teak frame of value upto ₹ 40,000 including fixtures for every 4,000 sft package.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Painting Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-painting')">+ Painting</button>
+  <div id="luxury-painting" class="room">
+    <h3>Painting</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Interior Painting" class="design-icon">
+        <p>Interior Painting - JK Putty + Asian Royale Emulsion or equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Exterior Painting" class="design-icon">
+        <p>Exterior Painting - Asian Primer + Apex Ultima Protek Paint or equivalent</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flooring Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-flooring')">+ Flooring</button>
+  <div id="luxury-flooring" class="room">
+    <h3>Flooring</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Living & Dining" class="design-icon">
+        <p>Living, Dining, Other bedrooms including Kitchen Flooring - Marble of value upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bed Rooms" class="design-icon">
+        <p>Master Bedroom & Kids Bedroom - American Oak wooden flooring of value upto ₹ 900 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Kitchen" class="design-icon">
+        <p>Bathroom flooring - Antiskid tiles / marble of value upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+        <p>Balcony & Open areas flooring - Antiskid tiles of value upto ₹ 120 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Balcony" class="design-icon">
+        <p>Staircase flooring - Marble of value upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Balcony" class="design-icon">
+        <p>Parking Tiles - Stamp concrete finish / natural stones of value upto ₹ 100 per sqft
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Electrical & Plumbing Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-electrical-plumbing')">+ Electrical </button>
+  <div id="luxury-electrical-plumbing" class="room">
+    <h3>Electrical</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical" class="design-icon">
+        <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>Switches & Sockets - Legrand Myrius, Schneider Unica Pure or GM equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+          <p>UPS Wiring
+
+          </p>
+        </div>
+      </div>
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>1 EV Charging Point
+        </p>
+      </div>
+    </div>
+
+
+  <!-- Ceiling Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-ceiling')">+ Miscellaneous</button>
+  <div id="luxury-ceiling" class="room">
+    <h3>Miscellaneous</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Design" class="design-icon">
+        <p>A Sintex Triple layered overhead tank of - 2500L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Staircase Railing - SS (Stainless) Glass Railing of SS 304 grade profiles / MS railing with wooden hand rail
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Window Grills - Basic MS Grill with enamel Paint at ₹ 200 per Sqft
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>1 Copper gas connection for every dwelling unit of 1,500 sft package area
+        </p>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Landscaping Section -->
+  <button class="expand-btn" onclick="toggleRoom('luxury-landscaping')">+ Luxury Indulgences for the Globetrotter</button>
+  <div id="luxury-landscaping" class="room">
+    <h3>Luxury Indulgences for the Globetrotter</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Garden Design" class="design-icon">
+        <p>Home Automation with Motion Sensor, Appliance control including AC, Kitchen Appliances, Curtain control, Mood lighting**</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Imperia Package -->
+<div id="imperia" class="package-section" style="background-color:#F1EFF0;">
+  <h2>Imperia Package ₹4,990/sq.ft (Incl. GST)</h2>
+  
+  <!-- Designs & Drawings Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-designs')">+ Designs & Drawings</button>
+  <div id="imperia-designs" class="room">
+    <h3>Designs & Drawings</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Architectural Layout 2D" class="design-icon">
+        <p>2D Floor Plan</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Basic Elevation" class="design-icon">
+        <p>Architectural Layout | 2D</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Structural Design" class="design-icon">
+        <p>Structural Design
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="3D Elevation" class="design-icon">
+        <p>3D Elevation
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical Drawings" class="design-icon">
+        <p>Electrical Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Plumbing Drawings</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing Drawings" class="design-icon">
+        <p>Furniture Plan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Structure Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-structure')">+ Structure</button>
+  <div id="imperia-structure" class="room">
+    <h3>Structure</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Steel" class="design-icon">
+        <p>Earthquake resistant design & Weather proof structure, promising safety & quality for generations
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Cement" class="design-icon">
+        <p>Steel - Vizag or equivalent</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Aggregates" class="design-icon">
+        <p>Cement - Ultratech or equivalent of 43 or 53 grade
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Blocks" class="design-icon">
+        <p>Aggregates - 20mm & 40mm
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="RCC Design Mix" class="design-icon">
+        <p>Blocks - Standard Red Bricks. 9 inch & 4 inch
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>RCC Design Mix - ACC or Ultratech M25 or As per the structural designer recommendation
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>Ceiling Height - 12 feet (Finished Floor level to Finished Floor level)
+
+        </p>
+      </div>
+      <div class="design-item"></div>
+        <img src="img/basic/basic1.png" alt="Ceiling Height" class="design-icon">
+        <p>Antitermite treatment is included as part of the package
+
+        </p>
+      </div>
+    </div>
+
+
+  <!-- Kitchen Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-kitchen')">+ Kitchen</button>
+  <div id="imperia-kitchen" class="room">
+    <h3>Kitchen</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Indian / Italian Marble for Wall Dado of value upto ₹ 380 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Sink Faucet" class="design-icon">
+        <p>Kitchen Sink of Kaff / Franke make of value upto ₹ 12,000.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Faucet Accessories" class="design-icon">
+        <p>Main sink faucet of value upto ₹ 6000 (Roca / Grohe / Kohler make)</p>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Bathroom Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-bathroom')">+ Bathroom</button>
+  <div id="imperia-bathroom" class="room">
+    <h3>Bathroom</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceramic Wall Dado" class="design-icon">
+        <p>Bathroom Italian Marble wall Dado of upto 7' height - Value of upto ₹ 450 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="Sanitarywares & CP fittings" class="design-icon">
+        <p>CP fittings of Grohe / Kohler make of value upto ₹ 7 lakhs will be provided for upto 3 bathrooms including accessories upto package area of 3000 sft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="CPVC Pipe" class="design-icon">
+        <p>Sanitarywares of Grohe / Kohler / American Standard make of value upto ₹ 3.5 lakhs will be provided for upto 3 bathrooms
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Centralized Energy saving heat pump of value upto ₹ 3 lakhs will be provided
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Moisture resistant / Grid false ceiling in bathrooms
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Glass partition for shower area to divide the wet area & dry area in the Master & Kids Bathroom
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="sic1.png" alt="Bathroom Doors" class="design-icon">
+        <p>Motion sensor lighting
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doors & Windows Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-doors-windows')">+ Doors & Windows</button>
+  <div id="imperia-doors-windows" class="room">
+    <h3>Doors & Windows</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Windows" class="design-icon">
+        <p>Windows - High Precision double glazed sound & weather proof UPVC / wooden windows with mesh shutters of Eiti or equivalent make
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Main Door" class="design-icon">
+        <p>Main Door - High performance Engineered wood imported Burma teak wood door of value upto ₹ 1,20,000 including fixtures.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>Internal Doors - Membrane doors / Flush Door with Veneer of value upto ₹ 30,000 including fixtures. Door Frames of imported Border Teak Jamb lining.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>Bathroom Doors - Louvered teak wood door of 2'6"x7' of value upto ₹ 25000
+
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Pooja Room Door" class="design-icon">
+        <p>1 Pooja Room Door - Burma Teak along with Teak frame of value upto ₹ 50,000 including fixtures for every 4,000 sft package.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Painting Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-painting')">+ Painting</button>
+  <div id="imperia-painting" class="room">
+    <h3>Painting</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Interior Painting" class="design-icon">
+        <p>Interior Painting - JK Putty + Asian Royale Luxury Emulsion or equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Exterior Painting" class="design-icon">
+        <p>Exterior Painting - Asian Primer + Apex Ultima Protek Duralife Paint or equivalent</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flooring Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-flooring')">+ Flooring</button>
+  <div id="imperia-flooring" class="room">
+    <h3>Flooring</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Living & Dining" class="design-icon">
+        <p>Living, Dining, Other bedrooms including Kitchen Flooring - Marble of value upto ₹ 450 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bedrooms" class="design-icon">
+        <p>Master Bedroom & Kids Bedroom - American Oak wooden flooring of value upto ₹ 900 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Kitchen" class="design-icon">
+        <p>Bathroom flooring - Antiskid tiles / marble of value upto ₹ 450 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+        <p>Balcony & Open areas flooring - Antiskid tiles of value upto ₹ 150 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Balcony" class="design-icon">
+        <p>Staircase flooring - Marble of value upto ₹ 450 per sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Balcony" class="design-icon">
+        <p>Parking Tiles - Stamp concrete finish / natural stones of value upto ₹ 120 per sqft
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Electrical & Plumbing Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-electrical-plumbing')">+ Electrical</button>
+  <div id="imperia-electrical-plumbing" class="room">
+    <h3>Electrical</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Electrical" class="design-icon">
+        <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>Switches & Sockets - Legrand Myrius, Schneider Unica Pure or GM equivalent
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>UPS Wiring
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Plumbing" class="design-icon">
+        <p>1 EV Charging Point</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ceiling Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-ceiling')">+ Miscellaneous</button>
+  <div id="imperia-ceiling" class="room">
+    <h3>Miscellaneous</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Ceiling Design" class="design-icon">
+        <p>A Sintex Triple layered overhead tank of - 2500L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications</p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Underground Sump - 11,000 Ltrs
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Staircase Railing - SS (Stainless) Glass Railing of SS 304 grade profiles / MS railing with wooden hand rail
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>Window Grills - Basic MS Grill with enamel Paint at ₹ 250 per Sqft
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Lighting Fixtures" class="design-icon">
+        <p>1 Copper gas connection for every dwelling unit of 1,500 sft package area
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Landscaping Section -->
+  <button class="expand-btn" onclick="toggleRoom('imperia-landscaping')">+ Luxury Indulgences for the Globetrotter</button>
+  <div id="imperia-landscaping" class="room">
+    <h3>Luxury Indulgences for the Globetrotter</h3>
+    <div class="designs-drawings">
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Garden Design" class="design-icon">
+        <p>Home Automation with Motion Sensor, Appliance control including AC, Kitchen Appliances, Curtain control, Mood lighting**
+        </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Centralized all weather air conditioning units by Mitsubishi / Carrier / Daikin make</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- Landscaping Section -->
+   <button class="expand-btn" onclick="toggleRoom('imperia-landscaping')">+ Home Automation including safety & security worth INR 7 Lakhs</button>
+   <div id="imperia-landscaping" class="room">
+     <h3>Home Automation including safety & security worth INR 7 Lakhs</h3>
+     <div class="designs-drawings">
+       <div class="design-item">
+         <img src="img/basic/basic1.png" alt="Garden Design" class="design-icon">
+         <p>CCTV cameras at all vantage points
+
+         </p>
+       </div>
+       <div class="design-item">
+         <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+         <p>False ceiling with recessed coves and cornices
+        </p>
+       </div>
+
+       <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Fire leak and Panic buttons in strategic areas
+
+       </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Gate for car parking area
+
+       </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Intrusion alert automated system
+
+       </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Private Glass see through Elevator of Mitsubishi/Schindler make - worth 8 lakhs
+
+       </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Safety and Security with Biometric and App based Keyless Entry and Exit
+
+
+       </p>
+      </div>
+      <div class="design-item">
+        <img src="img/basic/basic1.png" alt="Hardscape Elements" class="design-icon">
+        <p>Video Door phone with extension to Kitchen, Living/Dining and Master Bedroom
+
+       </p>
+      </div>
+     </div>
+   </div>
+</div>
+
+
+<!-- Custom Package -->
+<div id="custom" class="package-section" style="background-color:#F1EFF0;">
+  <h2>Custom Package - Price on Request</h2>
+  
+  <!-- Contact Us Button -->
+  <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+</div>
+
+</div>
+
+
+  <script>
+    function showPackage(packageId) {
+      var sections = document.querySelectorAll('.package-section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      document.getElementById(packageId).classList.add('active');
+    }
+
+    function toggleRoom(roomId) {
+      var room = document.getElementById(roomId);
+      room.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

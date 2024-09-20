@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Packages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .packages {
+      margin-bottom: 40px;
+    }
+    .package-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn:hover {
+      background-color: #0056b3;
+    }
+    .package-section {
+      display: none;
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .package-section.active {
+      display: block;
+    }
+    .room {
+      display: none;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .room.active {
+      display: block;
+    }
+    .room h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .room p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .expand-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+
+
+    .designs-drawings {
+    display: block; /* Ensure items are stacked one by one */
+    margin-top: 20px;
+  }
+  .design-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+ 
+  .design-item p {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #666;
+  }
+
+
+  .design-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .room p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Select Your Interior Package</h1>
+    <div class="packages">
+      <button class="package-btn" onclick="showPackage('basic')">Basic</button>
+      <button class="package-btn" onclick="showPackage('standard')">Standard</button>
+      <button class="package-btn" onclick="showPackage('standard-plus')">Standard+</button>
+      <button class="package-btn" onclick="showPackage('premium')">Premium</button>
+      <button class="package-btn" onclick="showPackage('luxury')">Luxury</button>
+      <button class="package-btn" onclick="showPackage('imperia')">Imperia</button>
+      <button class="package-btn" onclick="showPackage('custom')">Custom</button>
+    </div>
+
+<!-- Basic Package -->
+<div id="basic" class="package-section" style="background-color:#F1EFF0;">
+    <h2>Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
+    
+    <!-- Designs & Drawings Section -->
+    <button class="expand-btn" onclick="toggleRoom('basic-living-room')">+ Designs & Drawings</button>
+    <div id="basic-living-room" class="room">
+      <h3>Designs & Drawings</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
+          <p>Architectural Layout 2D</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+          <p>Basic Elevation</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+          <p>Structural Design</p>
+        </div>
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+          <p>3D Elevation</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Additional Sections -->
+    <button class="expand-btn" onclick="toggleRoom('basic-living-room-details')">+ Structure</button>
+    <div id="basic-living-room-details" class="room">
+      <h3>Structure</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+          <p>Steel - Shree or equivalent</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+            <p>Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+            <p>Aggregates - 20mm & 40mm</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+            <p>Blocks - Standard Red Bricks. 9 inch & 4 inch</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+            <p>RCC Design Mix - M20 / M25 or As per the structural designer recommendation</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+            <p>Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  
+    <button class="expand-btn" onclick="toggleRoom('basic-bedroom')">+ Kitchen</button>
+    <div id="basic-bedroom" class="room">
+      <h3>Kitchen</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+          <p>
+            Ceramic Wall Dado - Upto Rs.40 per Sqft</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+            <p>
+                Main Sink Faucet - Upto Rs.1300</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+            <p>
+                Any other Faucet or Accessories - ISI Marked
+            </p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bedroom" class="design-icon">
+            <p>
+                Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 3,000</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  
+    <button class="expand-btn" onclick="toggleRoom('basic-bathroom')">+ Bathroom</button>
+    <div id="basic-bathroom" class="room">
+      <h3>Bathroom</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+          <p>Ceramic Wall Dado upto 7' height - Upto Rs.40 per Sqft</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+            <p>Sanitarywares & CP fittings upto Rs. 30,000 per 1000 Sqft of Hindware make</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+            <p>CPVC Pipe - Astral or Equivalent</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Bathroom" class="design-icon">
+            <p>Bathroom doors - Waterproof flush doors or WPC</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  
+    <button class="expand-btn" onclick="toggleRoom('basic-office')">+ Doors & Windows</button>
+    <div id="basic-office" class="room">
+      <h3>Doors & Windows</h3>
+     
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+          <p>Windows - Aluminium Windows with glass shutters and mesh shutters (3 track with 1 mesh) of Jindal Profiles</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+            <p>Main Door - Flush Door with Veneer. Sal wood frame of 5 inch by 3 inch, worth Rs.20,000 including fixtures.</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Office" class="design-icon">
+            <p>Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  
+    <button class="expand-btn" onclick="toggleRoom('basic-dining')">+ Painting</button>
+    <div id="basic-dining" class="room">
+      <h3>Painting</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+          <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Dining Area" class="design-icon">
+            <p>Exterior Painting - Asian Primer + Ace Exterior emulsion Paint or equivalent</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  
+   
+  
+    <button class="expand-btn" onclick="toggleRoom('basic-storage')">+ Flooring</button>
+    <div id="basic-storage" class="room">
+      <h3>Flooring</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+          <p>Living & Dining Flooring - Tiles of value upto Rs.50 per sqft</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+            <p>Rooms & Kitchen Flooring - Tiles of value upto Rs.50 per sqft</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+            <p>Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.40 per sqft</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+            <p>Staircase Flooring - Sadarahalli Granite of value upto ₹ 70 per sqft</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Storage" class="design-icon">
+            <p>Parking Tiles - Anti-skid tiles of value upto ₹ 40 per sqft</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+
+
+    <button class="expand-btn" onclick="toggleRoom('basic-garden')">+ Electrical</button>
+    <div id="basic-garden" class="room">
+      <h3>Electrical</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+          <p>All wiring shall be done with fire proof wires of Finolex silver FR or equivalent.</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Garden" class="design-icon">
+            <p>
+                Switches & Sockets - Polycab modular or equivalent</p>
+          </div>
+      </div>
+    </div>
+
+
+    <button class="expand-btn" onclick="toggleRoom('basic-entrance')">+ Miscellaneous</button>
+    <div id="basic-entrance" class="room">
+      <h3>Miscellaneous</h3>
+      <div class="designs-drawings">
+        <div class="design-item">
+          <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+          <p>Overhead Tank - Double Layered tank of 1000 Ltrs of Duratank make</p>
+        </div>
+        <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+            <p>Underground Sump - 4000 Ltrs</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+            <p>Staircase Railing - MS Railing</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+            <p>Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+            <p>Get in touch with us!</p>
+          </div>
+          <div class="design-item">
+            <img src="img/basic/basic1.png" alt="Entrance" class="design-icon">
+            <p>Classic Package - ₹2,050/sq.ft (Incl. GST)</p>
+          </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Standard Package -->
+<div id="standard" class="package-section">
+  <h2>Standard Package ₹2,050/sq.ft (Incl. GST)</h2>
+  
+    <!-- Living Room -->
+    <button class="expand-btn" onclick="toggleRoom('standard-living-room')">+ Designs & Drawings</button>
+    <div id="standard-living-room" class="room">
+      <h3>Designs & Drawings</h3>
+      <img src="img/basic/basic1.png" alt="Living Room" class="design-icon">
+      <p>Standard living room setup with upgraded finishes and design elements.</p>
+      
+    </div>
+  
+    <!-- Kitchen -->
+    <button class="expand-btn" onclick="toggleRoom('standard-kitchen')">+ Kitchen</button>
+    <div id="standard-kitchen" class="room">
+    
+      <img src="img/basic/basic2.png" alt="Kitchen" class="design-icon">
+      <p>Functional kitchen design with high-quality materials and appliances.</p>
+    </div>
+  
+    <!-- Bedroom -->
+    <button class="expand-btn" onclick="toggleRoom('standard-bedroom')">+ Bedroom</button>
+    <div id="standard-bedroom" class="room">
+      <h3>Bedroom</h3>
+      <img src="img/basic/basic3.png" alt="Bedroom" class="design-icon">
+      <p>Elegant bedroom design with premium furnishings and decor.</p>
+    </div>
+  
+    <!-- Bathroom -->
+    <button class="expand-btn" onclick="toggleRoom('standard-bathroom')">+ Bathroom</button>
+    <div id="standard-bathroom" class="room">
+      <h3>Bathroom</h3>
+      <img src="img/basic/basic4.png" alt="Bathroom" class="design-icon">
+      <p>Modern bathroom design with high-end fixtures and finishes.</p>
+    </div>
+  
+    <!-- Office -->
+    <button class="expand-btn" onclick="toggleRoom('standard-office')">+ Office</button>
+    <div id="standard-office" class="room">
+      <h3>Office</h3>
+      <img src="img/basic/basic5.png" alt="Office" class="design-icon">
+      <p>Stylish office space designed for functionality and productivity.</p>
+    </div>
+  
+    <!-- Dining Area -->
+    <button class="expand-btn" onclick="toggleRoom('standard-dining')">+ Dining Area</button>
+    <div id="standard-dining" class="room">
+      <h3>Dining Area</h3>
+      <img src="img/basic/basic6.png" alt="Dining Area" class="design-icon">
+      <p>Elegant dining area with premium table settings and decor.</p>
+    </div>
+  
+    <!-- Garden -->
+    <button class="expand-btn" onclick="toggleRoom('standard-garden')">+ Garden</button>
+    <div id="standard-garden" class="room">
+      <h3>Garden</h3>
+      <img src="img/basic/basic7.png" alt="Garden" class="design-icon">
+      <p>Beautifully landscaped garden with premium plants and features.</p>
+    </div>
+  
+    <!-- Storage -->
+    <button class="expand-btn" onclick="toggleRoom('standard-storage')">+ Storage</button>
+    <div id="standard-storage" class="room">
+      <h3>Storage</h3>
+      <img src="img/basic/basic8.png" alt="Storage" class="design-icon">
+      <p>Well-designed storage solutions with ample space and organization.</p>
+    </div>
+  
+    <!-- Entrance -->
+    <button class="expand-btn" onclick="toggleRoom('standard-entrance')">+ Entrance</button>
+    <div id="standard-entrance" class="room">
+      <h3>Entrance</h3>
+      <img src="img/basic/basic9.png" alt="Entrance" class="design-icon">
+      <p>Welcoming entrance with stylish design elements and furnishings.</p>
+    </div>
+  
+    <!-- Utility Room -->
+    <button class="expand-btn" onclick="toggleRoom('standard-utility')">+ Utility Room</button>
+    <div id="standard-utility" class="room">
+      <h3>Utility Room</h3>
+      <img src="img/basic/basic10.png" alt="Utility Room" class="design-icon">
+      <p>Efficient utility room with functional equipment and storage.</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function showPackage(packageName) {
+      // Hide all packages
+      const packages = document.querySelectorAll('.package-section');
+      packages.forEach(pkg => pkg.classList.remove('active'));
+
+      // Show the selected package
+      const selectedPackage = document.getElementById(packageName);
+      if (selectedPackage) {
+        selectedPackage.classList.add('active');
+      }
+    }
+
+    function toggleRoom(roomId) {
+      // Toggle visibility of the selected room
+      const room = document.getElementById(roomId);
+      if (room) {
+        room.classList.toggle('active');
+      }
+    }
+  </script>
+
+</body>
+</html>

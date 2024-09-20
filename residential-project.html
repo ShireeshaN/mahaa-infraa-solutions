@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Investa - Investment Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link rel="icon" href="img/mahaaaa.jpg" type="image/x-icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+     <!-- Topbar Start -->
+     <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Beeramguda, Hyderabad</a>
+                        <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 9441917441</a>
+                        <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-dark btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white  px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <!-- <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1> -->
+              <img class="mahalogo" src="img/mahalogo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link">Why Choose Us</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <!-- <a href="project.html" class="nav-item nav-link">Projects</a> -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="architecture-and-construction-project.html" class="dropdown-item">Architecture and Construction</a>
+                                <a href="commercial.html" class="dropdown-item">Commercial</a>
+                                <a href="industrial.html" class="dropdown-item">Industrial</a>
+                                <a href="residential-project.html" class="dropdown-item">Residential</a>
+                               
+                            </div>
+                        </div>
+                        <a href="career.html" class="nav-item nav-link">Career</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <!-- <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
+                        <a href="contact.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
+                        <a href="cost-estimater-page.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Cost Estimater</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb-r">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Residential</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    
+                    <li class="breadcrumb-item active text-primary">Residential</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+       
+
+       
+       <!-- Team Start -->
+<div class="container-fluid team py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">Residential</h4>
+            <h1 class="display-4">Innovative Residential Spaces</h1>
+        </div>
+
+        <!-- First Row: 3 Static Images -->
+        <div class="static-images">
+            <div class="static-image-wrapper">
+                <img src="img/project-images/1.png" alt="Image 1">
+                <div class="static-image-text">Residential</div>
+            </div>
+            <div class="static-image-wrapper">
+                <img src="img/project-images/2.png" alt="Image 2">
+                <div class="static-image-text">Residential</div>
+            </div>
+            <div class="static-image-wrapper">
+                <img src="img/project-images/9.png" alt="Image 3">
+                <div class="static-image-text">Residential</div>
+            </div>
+        </div>
+
+        <!-- Second Row: Carousel with one visible image at a time -->
+        <div class="carousel-container pt-3 pb-3">
+            <span class="carousel-icon left" onclick="moveLeft()">&#10094;</span>
+            <div class="carousel">
+                <img src="img/project-images/5.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/6.png" alt="Image 5" class="carousel-image">
+                <img src="img/project-images/7.png" alt="Image 6" class="carousel-image">
+                <img src="img/project-images/3.png" alt="Image 7" class="carousel-image">
+                <img src="img/project-images/1.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/2.png" alt="Image 5" class="carousel-image">
+                <img src="img/project-images/4.png" alt="Image 6" class="carousel-image">
+                <img src="img/project-images/8.png" alt="Image 7" class="carousel-image">
+                <img src="img/project-images/9.png" alt="Image 7" class="carousel-image">
+            </div>
+            <span class="carousel-icon right" onclick="moveRight()">&#10095;</span>
+        </div>
+
+        <div class="static-images">
+            <div class="static-image-wrapper">
+                <img src="img/project-images/3.png" alt="Image 1">
+                <div class="static-image-text">Residential</div>
+            </div>
+            <div class="static-image-wrapper">
+                <img src="img/project-images/4.png" alt="Image 2">
+                <div class="static-image-text">Residential</div>
+            </div>
+            <div class="static-image-wrapper">
+                <img src="img/project-images/8.png" alt="Image 3">
+                <div class="static-image-text">Residential</div>
+            </div>
+        
+
+
+
+
+       
+                
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <style>
+            /* Media Query for Mobile View */
+    @media (max-width: 768px) {
+      .static-images {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .static-image-wrapper {
+        width: 90%;
+        margin: 10px 0;
+      }
+
+      .carousel-container {
+        width: 100%;
+      }
+
+      .carousel img {
+        width: 100%;
+      }
+
+      .carousel-icon {
+        padding: 8px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+        </style>
+
+
+<section class="container mt-3 " style="background-color: #f9f9f9; padding: 50px;">
+    <!-- Main Heading -->
+    <div class="gallerygon-first-section">
+        <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> 
+            
+            
+            Crafting Your Ideal Living Space</h2>
+    </div>
+
+    <!-- Content Row 1-->
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Heading, Paragraph, and Icon -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0"> Personalized Design</h4>
+                </div>
+                <p style="text-align: justify;">We transform your vision into reality by designing spaces that are a true reflection of your style and preferences. From modern minimalism to classic elegance, our designs cater to your unique taste.</p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-6 text-center  wow fadeInRight">
+                <img src="img/project-images/house-architecture-plan-with-furniture-interior-design-real-estate-floor-plan-floor-plan-services-real-estate-marketing-concept-bright-vibrant-violet-isolated-illustration_335657-1135-removebg-preview.png" alt="Right Image" style="width: 100%; max-width: 400px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row 2 -->
+    <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Right Side (now on the left): Image -->
+            <div class="col-md-6 order-md-1 text-center mb-4 mb-md-0 wow fadeInLeft">
+                <img src="img/project-images/isometric-yoga-studio-background_1284-20740-removebg-preview.png" alt="Left Image" style="width: 100%; max-width: 400px;">
+            </div>
+
+            <!-- Left Side (now on the right): Heading, Paragraph, and Icon -->
+            <div class="col-md-6 order-md-2">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Functionality and Flow</h4>
+                </div>
+                <p style="text-align: justify;">Our designs focus on optimizing the layout of your home to ensure a seamless flow between spaces. We prioritize functionality by incorporating smart storage solutions and designing each room to serve its intended purpose effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row 3 -->
+    <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Left Side: Heading, Paragraph, and Icon -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Comfort and Quality</h4>
+                </div>
+                <p style="text-align: justify;">Comfort is key in residential interiors. We select high-quality materials and furnishings that not only look great but also provide enduring comfort and durability.</p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-6 text-center wow fadeInRight">
+                <img src="img/project-images/living-room-with-couch-coffee-table_1138544-155440.jpg" alt="Right Image" style="width: 100%; max-width: 400px;">
+            </div>
+        </div>
+    </div>
+
+      <!-- Content Row 2 -->
+      <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Right Side (now on the left): Image -->
+            <div class="col-md-6 order-md-1 text-center mb-4 mb-md-0 wow fadeInLeft">
+                <img src="img/project-images/modern-living-room-interior-with-warm-lighting-minimalist-design-theres-white-couch-coffee-table-tv-plant_1057087-28267.jpg" alt="Left Image" style="width: 100%; max-width: 400px;">
+            </div>
+
+            <!-- Left Side (now on the right): Heading, Paragraph, and Icon -->
+            <div class="col-md-6 order-md-2">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Innovative Lighting Solutions</h4>
+                </div>
+                <p style="text-align: justify;">We employ a mix of natural and artificial lighting to create inviting and functional spaces. Our lighting designs enhance the ambiance and highlight the architectural features of your home.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row 3 -->
+    <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Left Side: Heading, Paragraph, and Icon -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Safety and Accessibility</h4>
+                </div>
+                <p style="text-align: justify;">Our designs incorporate safety features and accessibility considerations to ensure a secure and inclusive living environment for all family members.</p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-6 text-center wow fadeInRight">
+                <img src="img/project-images/elderly-couple-family-visit-children-grand-daughter-home-interior-isometric-vector-illustration_1284-30039-removebg-preview.png" alt="Right Image" style="width: 100%; max-width: 400px;">
+            </div>
+        </div>
+    </div>
+
+      <!-- Content Row 2 -->
+      <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Right Side (now on the left): Image -->
+            <div class="col-md-6 order-md-1 text-center mb-4 mb-md-0 wow fadeInLeft">
+                <img src="img/project-images/flat-hand-drawn-hygge-lifestyle-scenes_23-2148868809-removebg-preview.png" alt="Left Image" style="width: 100%; max-width: 400px;">
+            </div>
+
+            <!-- Left Side (now on the right): Heading, Paragraph, and Icon -->
+            <div class="col-md-6 order-md-2">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Sustainable Practices</h4>
+                </div>
+                <p style="text-align: justify;">We are committed to eco-friendly practices by integrating sustainable materials and energy-efficient solutions that contribute to a greener home and reduce long-term costs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row 3 -->
+    <div class="container pt-5"> <!-- Added top padding -->
+        <div class="row align-items-center">
+            <!-- Left Side: Heading, Paragraph, and Icon -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="img/services-imges/icoss.jpg" alt="Icon" style="width: 30px; margin-right: 10px;">
+                    <h4 class="mb-0">Attention to Detail</h4>
+                </div>
+                <p style="text-align: justify;">Every detail matters in our design process. From choosing the right color palette to selecting the perfect textures, we ensure that every element works harmoniously to create a cohesive and aesthetically pleasing space.</p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-6 text-center wow fadeInRight">
+                <img src="img/project-images/interior-design-with-photo-frames-grey-couch-vector-illustration-vector-illustration_969863-193991.avif" alt="Right Image" style="width: 100%; max-width: 400px;">
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+
+    
+
+      <!-- Footer Start -->
+      <div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
+        <div class="container ">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="footer-item">
+                         
+                            <p class="mb-3">Transforming Vision into Reality. Leading the Way in Modern Infrastructure Solutions</p>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Explore</h4>
+                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                      
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="architecture-and-construction-project.html"><i class="fas fa-angle-right me-2"></i>Projetcs</a>
+                       
+                        <a href="careers.html"><i class="fas fa-angle-right me-2"></i> Careers</a>
+                  
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a href="cost-estimater-page.html"><i class="fas fa-angle-right me-2"></i> Cost Estimater</a>
+                      
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a href="https://maps.app.goo.gl/qmfe532MUZ7bLRKc8" target="_blank"><i class="fa fa-map-marker-alt me-2"></i> Beeramguda, Hyderabad</a>
+                        <a href="mailto:mahaainfraasolutions@gmail.com" target="_blank"><i class="fas fa-envelope me-2"></i> mahaainfraasolutions@gmail.com</a>
+                        <a href="mailto:mahaainfraasolutions@gmail.com" target="_blank"><i class="fas fa-envelope me-2"></i> maha@info.com</a>
+                        <a href="tel:9441917441" target="_blank"><i class="fas fa-phone me-2"></i> +91 9441917441</a>
+                        <a href="tel:9441917441" class="mb-3" target="_blank"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2 co-sm-12">
+                    <img class="footerlogo" src="img/mahalogo.png"/>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+        
+         <!-- Copyright Start -->
+         <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Maha Infra Solutions</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                       
+                        Designed By <a class="border-bottom text-primary" href="https://www.thepatternscompany.com">The Patterns Company</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a> 
+        
+        
+        <script>
+    let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const totalImages = images.length;
+
+// Function to show the current image
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.classList.remove('active');
+        if (i === index) {
+            img.classList.add('active');
+        }
+    });
+}
+
+// Move to the next image
+function moveRight() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+}
+
+// Move to the previous image
+function moveLeft() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    showImage(currentIndex);
+}
+
+// Automatically change images every 3 seconds
+setInterval(moveRight, 3000);
+
+// Initially display the first image
+showImage(currentIndex);
+
+</script>
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
