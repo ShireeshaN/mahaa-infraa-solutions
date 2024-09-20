@@ -48,9 +48,9 @@
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Beeramguda, Hyderabad</a>
-                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 9441917441</a>
-                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                            <a href="https://maps.app.goo.gl/e4A5TJaKsigrsiG69" target="_blank" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Beeramguda, Hyderabad</a>
+                            <a href="tel:+9441917441" target="_blank" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 9441917441</a>
+                            <a href="mailto:mahaainfraasolutions@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>mahaainfraasolutions@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-lg-4 text-center text-lg-end">
@@ -2201,31 +2201,41 @@ changeImages(1);
             </div>
         </div>
         <!-- Testimonial End -->
-  <!--partners-->
-  <div class="gallerygon-first-section">
-    <h2 class="gallerygon-heading pb-3 pt-5 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Partners</h2>
+<!--partners-->
+<div class="gallerygon-first-section">
+    <h2 class="gallerygon-heading pb-3 pt-5 text-center">
+        <span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Trusted Brand Partners
+    </h2>
 </div>
-<section class="partners-section container mt-5 p-5 mb-5 ">
+
+<section class="partners-section container mt-5 p-5 mb-5">
     <div class="partners-container p-5">
         <div class="partners-logos">
-            <!-- Add your partner brand logos here (duplicated for smooth scrolling) -->
-            <img src="img/partners/prts.png" alt="Partner 1">
-            <img src="img/partners/prts.png" alt="Partner 2">
-            <img src="img/partners/prts.png" alt="Partner 3">
-            <img src="img/partners/prts.png" alt="Partner 4">
-            <img src="img/partners/prts.png" alt="Partner 5">
-            <img src="img/partners/prts.png" alt="Partner 6">
-            <img src="img/partners/prts.png" alt="Partner 7">
-            <img src="img/partners/prts.png" alt="Partner 8">
-            <!-- Duplicate logos for infinite looping -->
-            <img src="img/partners/prts.png" alt="Partner 1">
-            <img src="img/partners/prts.png" alt="Partner 2">
-            <img src="img/partners/prts.png" alt="Partner 3">
-            <img src="img/partners/prts.png" alt="Partner 4">
-            <img src="img/partners/prts.png" alt="Partner 5">
-            <img src="img/partners/prts.png" alt="Partner 6">
-            <img src="img/partners/prts.png" alt="Partner 7">
-            <img src="img/partners/prts.png" alt="Partner 8">
+            <!-- Original logos -->
+            <img src="img/partners-imgs/1.png" alt="Partner 1">
+            <img src="img/partners-imgs/2.png" alt="Partner 2">
+            <img src="img/partners-imgs/3.png" alt="Partner 3">
+            <img src="img/partners-imgs/4.png" alt="Partner 4">
+            <img src="img/partners-imgs/5.png" alt="Partner 5">
+            <img src="img/partners-imgs/6.png" alt="Partner 6">
+            <img src="img/partners-imgs/7.png" alt="Partner 7">
+            <img src="img/partners-imgs/8.png" alt="Partner 8">
+            <img src="img/partners-imgs/9.png" alt="Partner 9">
+            <img src="img/partners-imgs/10.png" alt="Partner 10">
+            <img src="img/partners-imgs/11.png" alt="Partner 11">
+            
+            <!-- Duplicate logos for smooth looping -->
+            <img src="img/partners-imgs/1.png" alt="Partner 1">
+            <img src="img/partners-imgs/2.png" alt="Partner 2">
+            <img src="img/partners-imgs/3.png" alt="Partner 3">
+            <img src="img/partners-imgs/4.png" alt="Partner 4">
+            <img src="img/partners-imgs/5.png" alt="Partner 5">
+            <img src="img/partners-imgs/6.png" alt="Partner 6">
+            <img src="img/partners-imgs/7.png" alt="Partner 7">
+            <img src="img/partners-imgs/8.png" alt="Partner 8">
+            <img src="img/partners-imgs/9.png" alt="Partner 9">
+            <img src="img/partners-imgs/10.png" alt="Partner 10">
+            <img src="img/partners-imgs/11.png" alt="Partner 11">
         </div>
     </div>
 </section>
@@ -2252,7 +2262,7 @@ changeImages(1);
     flex-wrap: nowrap; /* Ensure logos are in one line */
     overflow: hidden; /* Hide the scrollbar */
     white-space: nowrap; /* Prevent line breaks */
-    animation: scroll 20s linear infinite; /* Continuous scroll animation */
+    animation: scroll 40s linear infinite; /* Continuous scroll animation */
 }
 
 .partners-logos img {
@@ -2263,13 +2273,13 @@ changeImages(1);
 /* Keyframes for continuous scrolling effect */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Scroll by half the width to loop smoothly */
+    100% { transform: translateX(-100%); } /* Scroll by the full width */
 }
 
 /* Responsive design for mobile view */
 @media (max-width: 768px) {
     .partners-logos {
-        animation: scroll 15s linear infinite; /* Faster scrolling on smaller screens */
+        animation: scroll 20s linear infinite; /* Faster scrolling on smaller screens */
     }
 
     .partners-logos img {
@@ -2278,6 +2288,7 @@ changeImages(1);
     }
 }
 </style>
+
 
 <!--partners-->
 <section class="dani-section-nan container">
