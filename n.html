@@ -1,261 +1,63 @@
-<!-- Services Section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <title>3D Yellow Car Animation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .first-section {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .section-heading {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        .gallery-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 20%;
-            margin-right: 20px;
-        }
-
-        .nav-btn {
-            background-color: #f0f0f0;
-            padding: 10px;
-            margin: 5px 0;
-            border: none;
-            cursor: pointer;
-            width: auto;
-            text-align: left;
-            border-radius: 10px;
-        }
-
-        .nav-btn.active {
-            background-color: #DEBB3B;
-            color: white;
-        }
-
-        .images-container {
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-        }
-
-        .image-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .image-item {
-            position: relative;
-            width: 48%; /* Adjust the size to make images smaller */
-            height: 400px; /* Set a fixed height for images */
-            text-align: center; /* Center text for headings */
-        }
-
-        .image-item img {
-            width: 100%;
-            height: 100%; /* Ensure the image fits within the fixed height */
-            object-fit: cover; /* Maintain aspect ratio and cover the area */
-            display: block;
-        }
-
-        .overlay {
-            display: none;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .image-item:hover .overlay {
-            display: block;
-        }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .gallery-container {
-                flex-direction: column;
-            }
-
-            .buttons-container {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .images-container {
-                width: 100%;
-            }
-
-            .image-item {
-                width: 100%;
-                height: auto; /* Allow height to adjust based on content */
-                margin-bottom: 10px;
-            }
-        }
+        body { margin: 0; }
+        canvas { display: block; }
     </style>
-
-    
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+    <script>
+        let scene, camera, renderer, car;
 
-<section class="container pt-5">
-    <div class="row g-4 align-items-end">
-        <div class="first-section wow fadeInLeft">
-            <h2 class="section-heading">
-                <span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Services
-            </h2>
-        </div>
-    </div>
-    <div class="gallery-container owl-carousel wow fadeInRight">
-        <div class="buttons-container">
-            <button class="nav-btn active" onclick="changeImages(1)">Architecture</button>
-            <button class="nav-btn" onclick="changeImages(2)">Commercial</button>
-            <button class="nav-btn" onclick="changeImages(3)">Landscaping</button>
-            <button class="nav-btn" onclick="changeImages(4)">Project Management</button>
-            <button class="nav-btn" onclick="changeImages(5)">Residential</button>
-            <button class="nav-btn" onclick="changeImages(6)">Renovation</button>
-            <button class="nav-btn" onclick="changeImages(7)">3D Designing</button>
-            <button class="nav-btn" onclick="changeImages(8)">Turn Key Interiors</button>
-        </div>
+        // Initialize the scene
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
 
-        <div class="images-container" id="image-section">
-            <!-- This section will be updated by JavaScript based on button clicks -->
-        </div>
-    </div>
-</section>
+            // Add a light
+            const light = new THREE.HemisphereLight(0xffffff, 0x444444);
+            light.position.set(0, 20, 0);
+            scene.add(light);
 
-<script>
-const images = {
-    1: [
-        { src: 'img/projectsimg/1.png', desc: 'Architecture' },
-        { type: 'text', heading: 'Heading for Image 2', text: 'Description for Image 2' },
-        { type: 'text', heading: 'Heading for Image 3', text: 'Description for Image 3' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 4 Description' }
-    ],
-    2: [
-        { src: 'img/projectsimg/5.png', desc: 'Image 5 Description' },
-        { type: 'text', heading: 'Heading for Image 2', text: 'Description for Image 2' },
-        { type: 'text', heading: 'Heading for Image 3', text: 'Description for Image 3' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 6 Description' }
-    ],
-    3: [
-        { src: 'img/projectsimg/1.png', desc: 'Image 9 Description' },
-        { type: 'text', heading: 'Heading for Image 2', text: 'Description for Image 2' },
-        { type: 'text', heading: 'Heading for Image 3', text: 'Description for Image 3' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 12 Description' }
-    ],
-    4: [
-        { src: 'img/projectsimg/5.png', desc: 'Image 13 Description' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 14 Description' },
-        { src: 'img/projectsimg/3.png', desc: 'Image 15 Description' },
-        { src: 'img/projectsimg/2.png', desc: 'Image 16 Description' }
-    ],
-    5: [
-        { src: 'img/projectsimg/1.png', desc: 'Image 17 Description' },
-        { src: 'img/projectsimg/2.png', desc: 'Image 18 Description' },
-        { src: 'img/projectsimg/3.png', desc: 'Image 19 Description' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 20 Description' }
-    ],
-    6: [
-        { src: 'img/projectsimg/5.png', desc: 'Image 21 Description' },
-        { src: 'img/projectsimg/1.png', desc: 'Image 22 Description' },
-        { src: 'img/projectsimg/2.png', desc: 'Image 23 Description' },
-        { src: 'img/projectsimg/3.png', desc: 'Image 24 Description' }
-    ],
-    7: [
-        { src: 'img/projectsimg/4.png', desc: 'Image 25 Description' },
-        { src: 'img/projectsimg/5.png', desc: 'Image 26 Description' },
-        { src: 'img/projectsimg/1.png', desc: 'Image 27 Description' },
-        { src: 'img/projectsimg/2.png', desc: 'Image 28 Description' }
-    ],
-    8: [
-        { src: 'img/projectsimg/3.png', desc: 'Image 29 Description' },
-        { src: 'img/projectsimg/4.png', desc: 'Image 30 Description' },
-        { src: 'img/projectsimg/5.png', desc: 'Image 31 Description' },
-        { src: 'img/projectsimg/1.png', desc: 'Image 32 Description' }
-    ]
-};
+            // Load the car model (use a real car GLTF model URL)
+            const loader = new THREE.GLTFLoader();
+            loader.load('path/to/your/yellow_car_model.glb', function(gltf) {
+                car = gltf.scene;
+                scene.add(car);
+                car.position.y = 0; // Adjust height if necessary
+            });
 
-function changeImages(buttonIndex) {
-    // Remove active class from all buttons
-    const buttons = document.querySelectorAll('.nav-btn');
-    buttons.forEach(button => button.classList.remove('active'));
-
-    // Add active class to the clicked button
-    buttons[buttonIndex - 1].classList.add('active');
-
-    // Get the images for the clicked button
-    const selectedImages = images[buttonIndex];
-    const imageSection = document.getElementById('image-section');
-
-    // Clear current images
-    imageSection.innerHTML = '';
-
-    // Add new images or text to the section
-    selectedImages.forEach((item, index) => {
-        const imageRow = index < 2 ? 'image-row' : '';
-        
-        let html = '';
-        if (item.type === 'text') {
-            html = `
-                <div class="image-item ${imageRow}">
-                    <h3>${item.heading}</h3>
-                    <p>${item.text}</p>
-                </div>
-            `;
-        } else {
-            html = `
-                <div class="image-item ${imageRow}">
-                    <img src="${item.src}" alt="Image ${index + 1}">
-                    <div class="overlay">
-                        <p>${item.desc}</p>
-                        <button class="bt btn-dark">Learn More</button>
-                    </div>
-                </div>
-            `;
+            camera.position.z = 5;
+            animate();
         }
 
-        if (index % 2 === 0) {
-            const rowDiv = document.createElement('div');
-            rowDiv.classList.add('image-row');
-            imageSection.appendChild(rowDiv);
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            if (car) {
+                car.position.x += 0.01; // Move the car to the right
+                if (car.position.x > 5) car.position.x = -5; // Loop the car
+            }
+            renderer.render(scene, camera);
         }
-        imageSection.lastChild.innerHTML += html;
-    });
-}
 
-// Initialize first button images
-changeImages(1);
-</script>
+        // Resize the renderer on window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
 
+        init();
+    </script>
 </body>
 </html>
