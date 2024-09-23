@@ -88,11 +88,11 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="blog.html" class="dropdown-item">Architecture & Construction </a>
+                                    <a href="architecture-and-construction-project.html" class="dropdown-item">Architecture & Construction </a>
                                     <a href="team.html" class="dropdown-item">Commercial</a>
-                                    <a href="testimonial.html" class="dropdown-item">Industrial</a>
-                                    <a href="faqs.html" class="dropdown-item">Residential</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <a href="industrial.html" class="dropdown-item">Industrial</a>
+                                    <a href="residential-project.html" class="dropdown-item">Residential</a>
+                                    <a href="#" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
                             <a href="career.html" class="nav-item nav-link">Career</a>
@@ -1172,7 +1172,7 @@ $(document).ready(function(){
 
 
 <!-- Services -->
-<section class="containerr pt-5">
+<section class="containerr container pt-5">
     <div class="row g-4 align-items-end">
         <div class="first-section wow fadeInLeft">
             <h2 class="section-heading">
@@ -1189,7 +1189,7 @@ $(document).ready(function(){
             <button class="nav-btn" onclick="changeImages(5)">Residential</button>
             <button class="nav-btn" onclick="changeImages(6)">Renovation</button>
             <button class="nav-btn" onclick="changeImages(7)">3D Designing</button>
-            <button class="nav-btn" onclick="changeImages(8)">Turn Key Interiors</button>
+            <button class="nav-btn" onclick="changeImages(8)">TurnKey Interiors</button>
         </div>
 
         <div class="images-container" id="image-section">
@@ -1275,11 +1275,12 @@ $(document).ready(function(){
     /* Long text styles */
     .long-text {
         max-height: 300px; /* Limit height to maintain layout */
-        overflow-y: auto; /* Scroll if text overflows */
+       /* Scroll if text overflows */
         padding: 10px;
-        background-color: #f9f9f9; /* Background for visibility */
-        border: 1px solid #ddd; /* Optional border */
+        /* Background for visibility */
+    /* Optional border */
         border-radius: 5px; /* Rounded corners */
+      
     }
 
     /* Mobile styles */
@@ -1313,7 +1314,7 @@ $(document).ready(function(){
     const images = {
         1: [
             { src: 'img/about/why7.png', desc: 'Stunning modern architecture design' },
-            { type: 'text', heading: 'Architectural Vision', text: 'This is a long description for the architecture service. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { type: 'text', heading: 'Architectural Vision', text: 'Architecture is the art and science of designing and constructing buildings. It is a dynamic field that blends creativity with practicality. At its core, architecture is about creating spaces that enhance human experiences. The design process harmonizes aesthetics and functionality, ensuring buildings are visually appealing and practical. Space plays a vital role in how we interact with our environments. Thoughtfully designed spaces foster connection and well-being, shaping our daily lives. Material selection is crucial, influencing durability and aesthetics. Eco-friendly materials are increasingly favored, promoting sustainability alongside beauty. Context matters; architecture must harmonize with its environment. Integrating structures with their natural surroundings enhances the relationship between building and landscape.' }
         ],
         2: [
             { src: 'img/about/why7.png', desc: 'Commercial space interior design' },
@@ -1341,7 +1342,7 @@ $(document).ready(function(){
         ],
         8: [
             { src: 'img/projectsimg/turn_key1.png', desc: 'Turnkey interiors project' },
-            { type: 'text', heading: 'Turn Key Interiors', text: 'Complete solutions for hassle-free interiors. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { type: 'text', heading: 'TurnKey Interiors', text: 'Complete solutions for hassle-free interiors. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
         ]
     };
     
