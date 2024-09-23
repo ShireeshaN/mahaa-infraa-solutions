@@ -89,7 +89,7 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
                                 <div class="dropdown-menu m-0">
                                     <a href="architecture-and-construction-project.html" class="dropdown-item">Architecture & Construction </a>
-                                    <a href="team.html" class="dropdown-item">Commercial</a>
+                                    <a href="commercial.html" class="dropdown-item">Commercial</a>
                                     <a href="industrial.html" class="dropdown-item">Industrial</a>
                                     <a href="residential-project.html" class="dropdown-item">Residential</a>
                                     <a href="#" class="dropdown-item">404 Page</a>
@@ -1249,6 +1249,9 @@ $(document).ready(function(){
         flex-direction: row; /* Side by side on larger screens */
         flex-wrap: wrap; /* Allow wrapping */
         width: 75%;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        padding: 15px;
     }
 
     .image-item {
@@ -1270,6 +1273,8 @@ $(document).ready(function(){
 
     .image-item p {
         margin: 0;
+        text-align: center;
+        
     }
 
     /* Long text styles */
@@ -1283,66 +1288,74 @@ $(document).ready(function(){
       
     }
 
-    /* Mobile styles */
-    @media (max-width: 768px) {
-        .gallery-container {
-            flex-direction: column;
-        }
-
-        .buttons-container {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .images-container {
-            flex-direction: column; /* One by one on mobile */
-            width: 100%;
-        }
-
-        .image-item {
-            width: 100%; /* Full width on mobile */
-            margin-bottom: 20px; /* Space between items */
-        }
-
-        .long-text {
-            max-height: none; /* Full height on mobile */
-        }
+   /* Mobile styles */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
     }
+
+    .buttons-container {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Arrange buttons horizontally */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+
+    .nav-btn {
+        flex: 1; /* Allow buttons to grow equally */
+        margin: 5px; /* Space between buttons */
+    }
+
+    .images-container {
+        flex-direction: column; /* One by one on mobile */
+        width: 100%;
+    }
+
+    .image-item {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between items */
+    }
+
+    .long-text {
+        max-height: none; /* Full height on mobile */
+    }
+}
 </style>
 
 <script>
     const images = {
         1: [
-            { src: 'img/about/why7.png', desc: 'Stunning modern architecture design' },
+            { src: 'img/heroserv/serss8.png', desc: 'Stunning modern architecture design' },
             { type: 'text', heading: 'Architectural Vision', text: 'Architecture is the art and science of designing and constructing buildings. It is a dynamic field that blends creativity with practicality. At its core, architecture is about creating spaces that enhance human experiences. The design process harmonizes aesthetics and functionality, ensuring buildings are visually appealing and practical. Space plays a vital role in how we interact with our environments. Thoughtfully designed spaces foster connection and well-being, shaping our daily lives. Material selection is crucial, influencing durability and aesthetics. Eco-friendly materials are increasingly favored, promoting sustainability alongside beauty. Context matters; architecture must harmonize with its environment. Integrating structures with their natural surroundings enhances the relationship between building and landscape.' }
         ],
         2: [
-            { src: 'img/about/why7.png', desc: 'Commercial space interior design' },
-            { type: 'text', heading: 'Commercial Excellence', text: 'Creating functional and appealing business environments. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss1.png', desc: 'Commercial space interior design' },
+            { type: 'text', heading: 'Commercial Excellence', text: 'Architecture is the art and science of designing and constructing buildings, encompassing a diverse range of structures, including commercial spaces. It combines creativity with practicality to create environments that enhance human experiences. At its core, architecture aims to craft spaces that facilitate interaction and productivity. In commercial design, this means balancing aesthetics with functionality to create inviting workplaces and engaging customer experiences. The design process is crucial; architects must consider the specific needs of businesses and their clientele. From retail stores to office buildings, every design must reflect the brand’s identity while promoting usability.' }
         ],
         3: [
-            { src: 'img/about/why7.png', desc: 'Beautiful landscaping project' },
-            { type: 'text', heading: 'Landscaping Magic', text: 'Enhancing outdoor spaces with creativity and nature. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss2.png', desc: 'Beautiful landscaping project' },
+            { type: 'text', heading: 'Landscaping Magic', text: 'Transform your outdoor spaces into beautiful and functional retreats with our expert landscaping services. We specialize in designing stunning gardens, patios, and outdoor living areas that enhance your property aesthetic appeal. Our team works closely with you to select the right plants and incorporate hardscaping features like pathways and walls. We prioritize sustainability by using native plants that require less maintenance and water, ensuring your landscape is both eco-friendly and vibrant. Let us create a serene environment where you can relax, entertain, and enjoy nature. Contact us today to start your landscaping project!' }
         ],
         4: [
-            { src: 'img/projectsimg/project_management1.png', desc: 'Effective project management strategies' },
-            { type: 'text', heading: 'Project Management', text: 'Ensuring timely delivery and quality assurance. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss3.png', desc: 'Effective project management strategies' },
+            { type: 'text', heading: 'Project Management', text: 'Our project management services ensure that your construction and design projects are executed seamlessly from start to finish. We take pride in our meticulous planning and coordination, working closely with clients to define goals, timelines, and budgets. Our experienced team oversees every aspect of the project, from resource allocation to quality control, ensuring that all deliverables meet the highest standards. By fostering clear communication and collaboration among all stakeholders, we minimize risks and address challenges proactively. Trust us to bring your vision to life while maintaining efficiency and excellence throughout the entire process.' }
         ],
         5: [
-            { src: 'img/projectsimg/residential1.png', desc: 'Cozy residential interior design' },
-            { type: 'text', heading: 'Residential Design', text: 'Making your home a comfortable and beautiful space. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss4.png', desc: 'Cozy residential interior design' },
+            { type: 'text', heading: 'Residential Design', text: 'Create the home of your dreams with our comprehensive residential design services. We specialize in crafting personalized spaces that reflect your unique style and needs, whether it’s a cozy living room, a functional kitchen, or a serene bedroom retreat. Our team collaborates closely with you to understand your vision, offering innovative design solutions that balance aesthetics and functionality. We focus on using high-quality materials and sustainable practices to ensure your home is not only beautiful but also environmentally friendly. Let us transform your living space into a haven of comfort and style that you and your family will cherish for years to come.' }
         ],
         6: [
-            { src: 'img/projectsimg/renovation1.png', desc: 'Successful renovation project' },
-            { type: 'text', heading: 'Renovation Projects', text: 'Breathing new life into existing structures. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss5.png', desc: 'Successful renovation project' },
+            { type: 'text', heading: 'Renovation Projects', text: 'Breathe new life into your spaces with our expert renovation services. Whether you are looking to update a single room or undertake a complete home makeover, we specialize in transforming outdated areas into modern, functional environments. Our team works closely with you to understand your vision and goals, ensuring every detail aligns with your style and needs. From kitchen and bathroom remodels to full home renovations, we handle every aspect of the project with precision and care. We prioritize quality craftsmanship and sustainable practices, using materials that enhance both the beauty and functionality of your space. Trust us to create a fresh, inviting atmosphere that revitalizes your home.'}
         ],
         7: [
-            { src: 'img/projectsimg/3d_design1.png', desc: '3D design visualization' },
-            { type: 'text', heading: '3D Designing', text: 'Bringing your ideas to life with realistic models. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss6.png', desc: '3D design visualization' },
+            { type: 'text', heading: '3D Designing', text: "Bring your ideas to life with our advanced 3D designing services. We utilize cutting-edge technology to create realistic visualizations of your projects, allowing you to see your concepts in detail before they become a reality. Our team collaborates closely with you to ensure that every aspect of your design aligns with your vision, whether it’s for residential, commercial, or landscaping projects. By providing a comprehensive view of materials, colors, and layouts, we help you make informed decisions and adjustments early in the design process. With our 3D designs, you can explore your space virtually, ensuring a smoother and more satisfying execution of your project." }
         ],
         8: [
-            { src: 'img/projectsimg/turn_key1.png', desc: 'Turnkey interiors project' },
-            { type: 'text', heading: 'TurnKey Interiors', text: 'Complete solutions for hassle-free interiors. ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '.repeat(10) }
+            { src: 'img/heroserv/serss7.png', desc: 'Turnkey interiors project' },
+            { type: 'text', heading: 'TurnKey Interiors', text: "Experience hassle-free interior solutions with our turnkey interiors services. We manage every aspect of your project from concept to completion, ensuring a seamless transition into your newly designed space. Our team takes care of everything, including design, procurement, and installation, allowing you to focus on what matters most. We collaborate with you to understand your vision, delivering customized interiors that reflect your style and enhance functionality. With our commitment to quality and attention to detail, we transform your space into a cohesive and inviting environment, ready for you to enjoy from day one. Let us handle the complexities of your project while you relax and anticipate your stunning new interior."}
         ]
     };
     
