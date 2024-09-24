@@ -701,21 +701,21 @@
 <div class="second-section container p-5  wow fadeInRight">
     <div class="numbered-bubbles">
         <div class="bubble-container">
-            <div class="bubble active  back1">
+            <div class="bubble1  ">
                 <span class="bubble-number">1</span>
             </div>
             <h3 class="bubble-heading"><br/>Design</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back2">
+            <div class="bubble2 ">
                 <span class="bubble-number">2</span>
             </div>
             <h3 class="bubble-heading"><br/>Planning</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back3">
+            <div class="bubble3 ">
                 <span class="bubble-number">3</span>
             </div>
             <h3 class="bubble-heading text-center">Technical<br>
@@ -723,7 +723,7 @@
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back4">
+            <div class="bubble4 ">
                 <span class="bubble-number">4</span>
             </div>
             <h3 class="bubble-heading text-center">Project<br/>
@@ -731,7 +731,7 @@
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back5">
+            <div class="bubble5 ">
                 <span class="bubble-number">5</span>
             </div>
             <h3 class="bubble-heading text-center">Client<br/>
@@ -739,14 +739,14 @@
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back6">
+            <div class="bubble6 ">
                 <span class="bubble-number">6</span>
             </div>
             <h3 class="bubble-heading text-center">Regulatory<br/> Compliance</h3>
         </div>
         <div class="dotted-line"></div>
         <div class="bubble-container">
-            <div class="bubble back7">
+            <div class="bubble7 ">
                 <span class="bubble-number">7</span>
             </div>
             <h3 class="bubble-heading"><br/>Sustainability</h3>
@@ -770,27 +770,7 @@
 <style>
     /* First Section */
 
-.back1.active{
-    background-color: #B0BEC5;
-}   
-.back2.active{
-    background-color: #90A4AE;
-}  
-.back3.active{
-    background-color: #607D8B ;
-} 
-.back4.active{
-    background-color: #FBC02D;
-}   
-.back5.active{
-    background-color: #7E57C2;
-}  
-.back6.active{
-    background-color: #FFD600 ;
-} 
-.back7.active{
-    background-color: #26C6DA ;
-} 
+
 .first-section {
     background-color: white;
     text-align: center;
@@ -830,8 +810,75 @@
     min-width: 60px; /* Ensures enough space for each bubble */
 }
 
-.bubble {
-    background-color: white;
+.bubble1 {
+    background-color: #F9ECC7;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble2 {
+    background-color: #F5E4B3
+    ;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble3 {
+    background-color: #F1DC9F;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble4 {
+    background-color: #ECD78D;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble5 {
+    background-color: #E8D175;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble6 {
+    background-color: #E3C658;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid black; /* Border around bubbles */
+}
+.bubble7 {
+    background-color: #DEBB3B;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -845,6 +892,7 @@
 .bubble-number {
     font-size: 24px;
     font-weight: bold;
+    color: black;
 }
 
 .bubble-heading {
@@ -852,9 +900,6 @@
     color: black;
 }
 
-.bubble {
-    background-color: gold;
-}
 
 .dotted-line {
     width: 20px;
