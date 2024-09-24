@@ -97,12 +97,12 @@
                             </div>
                         </div>
                         <a href="career.html" class="nav-item nav-link">Careers</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
                         <!-- <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
                         <a href="contact.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
-                        <a href="cost-estimater-page.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Cost Estimater</a>
+                        <a href="cost-estimater-page.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0 active">Cost Estimater</a>
                         <a href="paynow.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Pay Now</a>
                     </div>
                 </div>
@@ -144,7 +144,11 @@
         <!-- Header End -->
 
 
-
+<style>
+  .paraa{
+    color: white;
+  }
+</style>
 
 
 
@@ -152,18 +156,18 @@
           <h1>Select Your Interior Package</h1>
           <div class="packages">
             <button class="package-btn" onclick="showPackage('basic')">Basic</button>
-            <button class="package-btn" onclick="showPackage('standard')">Standard</button>
-            <button class="package-btn" onclick="showPackage('standard-plus')">Standard+</button>
-            <button class="package-btn" onclick="showPackage('premium')">Premium</button>
-            <button class="package-btn" onclick="showPackage('luxury')">Luxury</button>
-            <button class="package-btn" onclick="showPackage('imperia')">Imperia</button>
-            <button class="package-btn" onclick="showPackage('custom')">Custom</button>
+            <button class="package-btn1" onclick="showPackage('standard')">Standard</button>
+            <button class="package-btn2" onclick="showPackage('standard-plus')">Standard+</button>
+            <button class="package-btn3" onclick="showPackage('premium')">Premium</button>
+            <button class="package-btn4" onclick="showPackage('luxury')">Luxury</button>
+            <button class="package-btn5" onclick="showPackage('imperia')">Imperia</button>
+            <button class="package-btn6" onclick="showPackage('custom')">Custom</button>
           </div>
       
       
           <!-- Basic Package -->
-      <div id="basic" class="package-section" style="background-color:#c7c2c5;">
-        <h2>Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
+      <div id="basic" class="package-section" style="background-color:#85857f;">
+        <h2 class="text-white">Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
         
         <!-- Designs & Drawings Section -->
         <button class="expand-btn" onclick="toggleRoom('basic-living-room')">+ Designs & Drawings</button>
@@ -172,18 +176,18 @@
           <div class="designs-drawings">
             <div class="design-item">
               <img src="img/basic/basic1.png" alt="Design 1" class="design-icon">
-              <p>Architectural Layout 2D</p>
+              <p class="paraa">Architectural Layout 2D</p>
             </div>
             <div class="design-item">
-              <img src="img/basic/basic1.png" alt="Design 2" class="design-icon">
+              <img src="img/basic/elivation.png" alt="Design 2" class="design-icon">
               <p>Basic Elevation</p>
             </div>
             <div class="design-item">
-              <img src="img/basic/basic1.png" alt="Design 3" class="design-icon">
+              <img src="img/basic/structuredesign.png" alt="Design 3" class="design-icon">
               <p>Structural Design</p>
             </div>
             <div class="design-item">
-              <img src="img/basic/basic1.png" alt="Design 4" class="design-icon">
+              <img src="img/basic/3danimi.png" alt="Design 4" class="design-icon">
               <p>3D Elevation</p>
             </div>
           </div>
@@ -394,7 +398,7 @@
       
       
          <!-- Standard Package -->
-      <div id="standard" class="package-section" style="background-color:#F1EFF0;">
+      <div id="standard" class="package-section" style="background-color:#eded3e;">
         <h2>Standard Package ₹2,050/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -636,7 +640,7 @@
       
       
       <!--standard+-->
-      <div id="standard-plus" class="package-section" style="background-color:#E0E0E0;">
+      <div id="standard-plus" class="package-section" style="background-color:#d9a84c;">
         <h2>Standard+ Package ₹2,440/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -885,7 +889,7 @@
       
       
       <!-- Premium Package -->
-      <div id="premium" class="package-section" style="background-color:#F9F9F9;">
+      <div id="premium" class="package-section" style="background-color:#1ec35b;">
         <h2>Premium Package ₹2,660/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -1176,7 +1180,7 @@
       
       
       <!-- Luxury Package -->
-      <div id="luxury" class="package-section" style="background-color:#F1EFF0;">
+      <div id="luxury" class="package-section" style="background-color:#cf39b4;">
         <h2>Luxury Package ₹3,920/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -1508,7 +1512,7 @@
       
       
       <!-- Imperia Package -->
-      <div id="imperia" class="package-section" style="background-color:#F1EFF0;">
+      <div id="imperia" class="package-section" style="background-color:#e77123;">
         <h2>Imperia Package ₹4,990/sq.ft (Incl. GST)</h2>
         
         <!-- Designs & Drawings Section -->
@@ -1894,11 +1898,14 @@
       
       
       <!-- Custom Package -->
-      <div id="custom" class="package-section" style="background-color:#F1EFF0;">
-        <h2>Custom Package - Price on Request</h2>
+      <div id="custom" class="package-section" style="background-color:#3919c9;">
+        <h2 style="color: white;">Custom Package - Price on Request</h2>
         
         <!-- Contact Us Button -->
-        <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+         <div class="p-5">
+          <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+         </div>
+       
       </div>
       
       </div>
@@ -1926,6 +1933,16 @@
 
 
 <style>
+  .contact-btn{
+    background-color: white;
+    color: #3919c9;
+    height: 50px;
+    width:120px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 1px black;
+    
+  }
       .containersss {
       max-width: 1200px;
       margin: 0 auto;
@@ -1941,8 +1958,8 @@
       margin-bottom: 40px;
     }
     .package-btn {
-      background-color: #DEBB3B;
-      color: black;
+      background-color: #85857f;
+      color: white;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -1952,8 +1969,81 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
+    .package-btn1 {
+      background-color: #eded3e;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn2 {
+      background-color: #d9a84c;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn3 {
+      background-color:#1ec35b;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn4 {
+      background-color: #cf39b4 ;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn5 {
+      background-color:#e77123 ;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .package-btn6 {
+      background-color: #3919c9;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
     .package-btn:hover {
-      background-color: rgb(46, 198, 237);
+      background-color: rgb(110, 115, 116);
       color:white;
     }
     .package-section {
@@ -1979,20 +2069,23 @@
       font-size: 1.5rem;
       margin-bottom: 10px;
       color: #555;
+      font-weight: bold;
     }
     .room p {
       font-size: 1rem;
       color: #666;
     }
     .expand-btn {
-      background-color: #28a745;
-      color: white;
+      background-color: #f4f7f8;
+      color: black;
       padding: 5px 10px;
       border: none;
       cursor: pointer;
       font-size: 1rem;
       border-radius: 5px;
       margin-top: 10px;
+      font-weight: bold;
+      font-size: 20px;
     }
     .designs-drawings {
       display: block;
@@ -2006,7 +2099,8 @@
     .design-item p {
       flex-grow: 1;
       font-size: 1rem;
-      color: #666;
+      color: black;
+      font-weight: bold;
     }
     .design-icon {
       width: 25px;
