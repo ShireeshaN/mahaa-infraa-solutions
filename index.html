@@ -1046,7 +1046,22 @@
 <!--projects-->
 
 
-
+<style>
+    /* Blinking text animation */
+    .blinking-text {
+        color: #C6A626; /* Text color */
+        animation: blink 1s step-start infinite;
+        font-size: 24px; /* Adjust the text size */
+        font-weight: bold;
+    }
+    
+    /* Keyframes for blinking effect */
+    @keyframes blink {
+        50% {
+            opacity: 0; /* Blink by toggling visibility */
+        }
+    }
+    </style>
 
 
 <!-- Projects -->
@@ -1054,10 +1069,14 @@
     <div class="container ">
         <div class="">
             <div class="row g-4 align-items-end">
-                <div class="first-section">
-                    <h2 class="section-heading"><spam style="color:#C6A626; font-size: 30px; font-weight: bold;">|</spam> Project Overview</h2>
+                <div class="first-section d-flex justify-content-center align-items-center">
+                    <h2 class="section-heading d-flex align-items-center">
+                        <span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span>
+                        Project Overview -
+                        <span class="blinking-text ms-auto fs-4 fw-bold " style="padding: 2px; font-size: 30px;">200+ Projects</span>
+                    </h2>
+                    
                 </div>
-              
             </div>
         </div>
         <div class="training-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">
