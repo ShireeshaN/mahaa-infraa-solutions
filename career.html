@@ -95,7 +95,7 @@
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="career.html" class="nav-item nav-link  active">Career</a>
+                        <a href="career.html" class="nav-item nav-link">Careers</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
@@ -301,167 +301,140 @@
     </style>
 
 
-
-<!-- Gallery -->
-<div class="gallerygon-container container mt-5">
-    <div class="gallerygon-first-section">
-        <h2 class="gallerygon-heading pb-3"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Our Gallery</h2>
-    </div>
-    <div class="gallerygon-image-container">
-        <div class="gallerygon-image-row" id="row1">
-            <img src="img/projectsimg/1.png" alt="Image 1">
-            <img src="img/projectsimg/2.png" alt="Image 2">
-            <img src="img/projectsimg/3.png" alt="Image 3">
-        </div>
-        <div class="gallerygon-image-row" id="row2">
-            <img src="img/projectsimg/4.png" alt="Image 4">
-            <img src="img/projectsimg/5.png" alt="Image 5">
-            <img src="img/projectsimg/1.png" alt="Image 6">
-        </div>
-    </div>
-
-    <!-- Pagination (Bubbles and Arrows) -->
-    <div class="gallerygon-pagination">
-        <span class="gallerygon-arrow left">&#8249;</span>
-        <span class="gallerygon-bubble active" data-set="1">1</span>
-        <span class="gallerygon-bubble" data-set="2">2</span>
-        <span class="gallerygon-bubble" data-set="3">3</span>
-        <span class="gallerygon-bubble" data-set="4">4</span>
-        <span class="gallerygon-bubble" data-set="5">5</span>
-        <span class="gallerygon-arrow right">&#8250;</span>
-    </div>
+<div class="no-hiring-msg">
+    <p>Currently, we are not hiring. Stay tuned for future opportunities.</p>
+    <button id="openFormBtn" class="btn btn-primary">Get Notified When Hiring Opens</button>
 </div>
 
-<!-- Modals for Zooming -->
-<div class="gallerygon-modal" id="modal">
-    <div class="gallerygon-modal-content">
-        <span class="gallerygon-close">&times;</span>
-        <img id="zoomedImage" src="" alt="Zoomed Image">
-        <span class="gallerygon-arrow left" id="modalLeft">&#8249;</span>
-        <span class="gallerygon-arrow right" id="modalRight">&#8250;</span>
-    </div>
+<!-- Modal Background -->
+<div class="modal-bg" id="modalBg"></div>
+
+<!-- Form Popup -->
+<div class="popup-form" id="popupForm">
+    <h3>Job Application</h3>
+    <form id="applicationForm" onsubmit="return validateForm()">
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" required>
+        <input type="file" id="resume" name="resume" required>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 
 <style>
-    /* Reset any body margin or padding */
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .gallerygon-container {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .gallerygon-heading {
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .gallerygon-image-container {
-        max-width: 100%;
-        margin: auto;
-    }
-
-    .gallerygon-image-row {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
-    }
-
-    .gallerygon-image-row img {
-        width: 30%;
+    /* Styling for the form */
+    .popup-form {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        width: 300px; /* Narrow width */
+        height: 400px; /* Tall height */
         border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
     }
 
-    .gallerygon-image-row img:hover {
-        transform: scale(1.05);
+    .popup-form input[type="text"], .popup-form input[type="email"], .popup-form input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
 
-    .gallerygon-pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        position: relative; /* Ensure it stays above the footer */
-        z-index: 1;
+    .popup-form input[type="file"] {
+        padding: 5px;
+        margin: 10px 0;
     }
 
-    .gallerygon-bubble {
-        width: 30px;
-        height: 30px;
-        background-color: lightgray;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 5px;
+    .popup-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
         cursor: pointer;
     }
 
-    .gallerygon-bubble.active {
-        background-color: #C6A626;
-        color: black;
+    .popup-form button:hover {
+        background-color: #218838;
     }
 
-    .gallerygon-arrow {
-        font-size: 30px;
-        cursor: pointer;
-        margin: 0 10px;
+    /* Message styling */
+    .no-hiring-msg {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px 0;
     }
 
-    .gallerygon-modal {
+    /* Modal background */
+    .modal-bg {
         display: none;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 500;
     }
+</style>
 
-    .gallerygon-modal-content {
-        position: relative;
-        width: 80%;
-        max-width: 800px;
-    }
+<script>
+    // Show the form when the button is clicked
+    document.getElementById('openFormBtn').addEventListener('click', function() {
+        document.getElementById('popupForm').style.display = 'block';
+        document.getElementById('modalBg').style.display = 'block';
+    });
 
-    #zoomedImage {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
+    // Close the form when clicking outside the form
+    document.getElementById('modalBg').addEventListener('click', function() {
+        document.getElementById('popupForm').style.display = 'none';
+        document.getElementById('modalBg').style.display = 'none';
+    });
 
-    .gallerygon-close {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-    }
+    // Form validation
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
 
-    .gallerygon-modal .gallerygon-arrow {
-        position: absolute;
-        top: 50%;
-        font-size: 40px;
-        color: white;
-        cursor: pointer;
-    }
+        // Validate name (only letters)
+        var namePattern = /^[A-Za-z\s]+$/;
+        if (!namePattern.test(name)) {
+            alert("Please enter a valid name (letters only).");
+            return false;
+        }
 
-    #modalLeft {
-        left: 10px;
-    }
+        // Validate phone (10 digits)
+        var phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+        }
 
-    #modalRight {
-        right: 10px;
+        // Validate email (must contain @)
+        if (!email.includes("@")) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // If validation passes
+        alert("Form submitted successfully!");
+        return true;
     }
+</script>
+
+
+
+
+
+<style>
 
     /* Footer Styling */
     .footer {
@@ -504,79 +477,7 @@
     }
 </style>
 
-<script>
-    const imageSets = {
-        1: ['img/projectsimg/1.png', 'img/projectsimg/2.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png'],
-        2: ['img/projectsimg/1.png', 'img/projectsimg/4.png', 'img/projectsimg/3.png', 'img/projectsimg/2.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png'],
-        3: ['img/projectsimg/5.png', 'img/projectsimg/2.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/1.png', 'img/projectsimg/5.png'],
-        4: ['img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/2.png', 'img/projectsimg/1.png'],
-        5: ['img/projectsimg/1.png', 'img/projectsimg/1.png', 'img/projectsimg/3.png', 'img/projectsimg/4.png', 'img/projectsimg/5.png', 'img/projectsimg/1.png']
-    };
 
-    let currentSet = 1;
-    let currentImageIndex = 0;
-
-    const updateImages = (setNumber) => {
-        const images = imageSets[setNumber];
-        document.querySelectorAll('.gallerygon-image-row img').forEach((img, index) => {
-            img.src = images[index];
-        });
-        document.querySelectorAll('.gallerygon-bubble').forEach(bubble => bubble.classList.remove('active'));
-        document.querySelector(`.gallerygon-bubble[data-set="${setNumber}"]`).classList.add('active');
-        currentSet = setNumber;
-    };
-
-    document.querySelectorAll('.gallerygon-bubble').forEach(bubble => {
-        bubble.addEventListener('click', () => {
-            const setNumber = parseInt(bubble.getAttribute('data-set'));
-            updateImages(setNumber);
-        });
-    });
-
-    document.querySelector('.gallerygon-arrow.left').addEventListener('click', () => {
-        currentSet = currentSet > 1 ? currentSet - 1 : 5;
-        updateImages(currentSet);
-    });
-
-    document.querySelector('.gallerygon-arrow.right').addEventListener('click', () => {
-        currentSet = currentSet < 5 ? currentSet + 1 : 1;
-        updateImages(currentSet);
-    });
-
-    const modal = document.getElementById('modal');
-    const zoomedImage = document.getElementById('zoomedImage');
-    const closeModal = document.querySelector('.gallerygon-close');
-    const modalLeft = document.getElementById('modalLeft');
-    const modalRight = document.getElementById('modalRight');
-
-    document.querySelectorAll('.gallerygon-image-row img').forEach((img, index) => {
-        img.addEventListener('click', () => {
-            zoomedImage.src = img.src;
-            currentImageIndex = index;
-            modal.style.display = 'flex';
-        });
-    });
-
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    modalLeft.addEventListener('click', () => {
-        currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : 5;
-        zoomedImage.src = imageSets[currentSet][currentImageIndex];
-    });
-
-    modalRight.addEventListener('click', () => {
-        currentImageIndex = currentImageIndex < 5 ? currentImageIndex + 1 : 0;
-        zoomedImage.src = imageSets[currentSet][currentImageIndex];
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-</script>
     
     
     
@@ -587,20 +488,7 @@
      
 
 
-        <!-- Team Start -->
-        <!-- <div class="container-fluid team py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Team</h4>
-                    <h1 class="display-4">Our Investa Company Dedicated Team Member</h1>
-                </div>
-
-
-
-               
-            </div>
-        </div> -->
-        <!-- Team End -->
+       
 
         
       <!-- Footer Start -->
