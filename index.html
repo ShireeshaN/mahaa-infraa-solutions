@@ -131,62 +131,54 @@
      <!-- Full Screen Container Start -->
 <div class="carousel-container">
     <!-- Background Images Carousel Start -->
-    <div class="header-carousel owl-carousel ">
+    <div class="header-carousel owl-carousel">
         <div class="header-carousel-item">
             <img src="img/mahabanners/1.png" class="carousel-bg" alt="Image 1">
         </div>
         <div class="header-carousel-item">
             <img src="img/mahabanners/2.png" class="carousel-bg" alt="Image 2">
         </div>
-        <div class="header-carousel-item">
-            <img src="img/mahabanners/3.png" class="carousel-bg" alt="Image 3">
+        <div class="header-carousel-item" id="special-slide">
+            <img src="img/mahabanners/7.png" class="carousel-bg" alt="Image 3">
         </div>
     </div>
     <!-- Background Images Carousel End -->
 
     <!-- Left Heading and Text, Right Form Start -->
-    <div class="content-container">
+    <div class="content-container" id="main-content">
         <!-- Left Side Heading and Text -->
-       
-        <!-- Right Side Form -->
-        <div class="carousel-container">
-            <div class="header-carousel owl-carousel">
-               
-            </div>
-            <div class="content-container ">
-                <div class="left-content wow fadeInRight">
-                    <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors and Architects</spam></h1>
-                    <!-- <p style="text-align: start;">Your descriptive text goes here. Explain the purpose of the form and any relevant details.</p> -->
-                </div>
-                <div class="right-form wow fadeInLeft">
-                    <form>
-                       
-                        <div class="mb-3 text-start">
-                            <label for="name" class="form-label" >Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="mb-3 text-start">
-                            <label for="phone" class="form-label text-white">Phone Number</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
-                        </div>
-                        <div class="mb-3 text-start">
-                            <label for="site-location" class="form-label text-white">Site Location</label>
-                            <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
-                        </div>
-                        <div class="text-start">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                        
-                    </form>
-                </div>
-            </div>
+        <div class="left-content wow fadeInRight">
+            <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors and Architects</spam></h1>
         </div>
-        
-        
-        
+
+        <!-- Right Side Form -->
+        <div class="right-form wow fadeInLeft">
+            <form>
+                <div class="mb-3 text-start">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="phone" class="form-label text-white">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="site-location" class="form-label text-white">Site Location</label>
+                    <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
+                </div>
+                <div class="text-start">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <!-- Left Heading and Text, Right Form End -->
+
+    <!-- Button in the center for special slide -->
+    <div id="special-button" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">
+        <button class="btn btn-primary">Click Here</button>
+    </div>
 </div>
+
 <!-- Full Screen Container End -->
 
 <style>
@@ -395,30 +387,37 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var dropdownToggle = document.getElementById('dropdownMenuButton');
-        var dropdownMenu = dropdownToggle.nextElementSibling;
+        var mainContent = document.getElementById('main-content');
+        var specialButton = document.getElementById('special-button');
+        var carousel = $('.header-carousel');
 
-        dropdownToggle.addEventListener('click', function () {
-            dropdownMenu.classList.toggle('show-dropdown');
+        carousel.owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false
         });
 
-        document.addEventListener('click', function (event) {
-            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.remove('show-dropdown');
+        carousel.on('changed.owl.carousel', function(event) {
+            var currentIndex = event.item.index;
+            var currentSlide = event.relatedTarget.$stage.children().eq(currentIndex).find('.carousel-bg').attr('src');
+
+            // Check if the active image is 'img/mahabanners/7.png'
+            if (currentSlide === 'img/mahabanners/7.png') {
+                mainContent.style.display = 'none';  // Hide the main content (heading and form)
+                specialButton.style.display = 'block';  // Show the special button
+            } else {
+                mainContent.style.display = 'flex';  // Show the main content again
+                specialButton.style.display = 'none';  // Hide the special button
             }
         });
     });
-
-    $('.header-carousel').owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: false,
-        items: 1,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: false
-    });
 </script>
+
+
 
 
 
