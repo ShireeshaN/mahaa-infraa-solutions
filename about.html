@@ -22,6 +22,7 @@
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
         <!-- Customized Bootstrap Stylesheet -->
@@ -126,33 +127,128 @@
         </div>
         <!-- Header End -->
 
-        <section class="container mt-3 " style="background-color: white; padding: 50px;">
-        <div class="gallerygon-first-section">
-            <h2 class="gallerygon-heading pb-3 text-center"><span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> Awards & Rewards</h2>
-        </div>
-
-
-        <div class="container">
-            <div class="content-section">
-              <div class="left-column wow fadeInRight">
-                <img src="img/santhosh-sir.png" alt="Left Image" class="left-image">
-              </div>
-        
-              <div class="right-column wow fadeInLeft">
-                <img src="img/santhoshsir2.png" alt="Right Image" class="right-image">
-              </div>
+        <section class="container mt-3">
+            <div class="gallerygon-first-section">
+                <h2 class="gallerygon-heading pb-3 text-center">
+                    <span style="color:#C6A626; font-size: 30px; font-weight: bold;">|</span> 
+                    Awards & Rewards
+                </h2>
             </div>
         
-            <div class="content">
-                <h2>Achievements that Define Success</h2>
-                <p>The Mahaa Infraa Founder Awards recognize outstanding contributions to the architecture, construction, and infrastructure sectors. These awards honor the vision, dedication, and leadership that have transformed dreams into realities, shaping landscapes and creating sustainable, innovative developments across the region.
-                    As we honor the achievements of the past, the Mahaa Infraa Founder Awards also set the stage for future innovation. They inspire the next generation of architects, builders, and designers to dream bigger, create smarter, and build stronger foundations for tomorrow.
-                </p>
+            <div class="container">
+                <div class="content-section">
+                    <div class="left-column wow animate__animated animate__fadeInLeft">
+                        <img src="img/santhosh-sir.png" alt="Left Image" class="left-image">
+                    </div>
+        
+                    <div class="right-column wow animate__animated animate__fadeInRight">
+                        <img src="img/santhoshsir2.png" alt="Right Image" class="right-image">
+                    </div>
+                </div>
+        
+                <div class="content wow animate__animated animate__bounceInUp">
+                    <h2>Achievements that Define Success</h2>
+                    <p>The Mahaa Infraa Founder Awards recognize outstanding contributions to the architecture, construction, and infrastructure sectors. These awards honor the vision, dedication, and leadership that have transformed dreams into realities, shaping landscapes and creating sustainable, innovative developments across the region.</p>
+                    <p>As we honor the achievements of the past, the Mahaa Infraa Founder Awards also set the stage for future innovation. They inspire the next generation of architects, builders, and designers to dream bigger, create smarter, and build stronger foundations for tomorrow.</p>
+                </div>
             </div>
-        </div>
-
-
         </section>
+
+        <style>
+
+    .gallerygon-heading {
+        font-family: 'Arial Black', sans-serif;
+        color: #C6A626;
+        text-transform: uppercase;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .left-column, .right-column {
+        flex: 1;
+        margin: 20px;
+        position: relative;
+    }
+
+    .left-image, .right-image {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .left-image:hover, .right-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .content {
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .content h2 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .content p {
+        font-size: 18px;
+        color: #666;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Animations */
+    .wow {
+        visibility: hidden;
+    }
+
+    .fadeInLeft {
+        animation-name: fadeInLeft;
+    }
+
+    .fadeInRight {
+        animation-name: fadeInRight;
+    }
+
+    @keyframes fadeInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate__animated.animate__bounceInUp {
+        --animate-duration: 1.5s;
+    }
+</style>
 
         <style>
             
@@ -512,6 +608,10 @@ p {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
     </body>
 
 </html>
