@@ -115,16 +115,28 @@
 <div class="carousel-container">
     <!-- Background Images Carousel Start -->
     <div class="header-carousel owl-carousel">
+        <!-- First carousel item with a video -->
         <div class="header-carousel-item">
-            <img src="img/mahabanners/1.png" class="carousel-bg" alt="Image 1">
+            <video class="carousel-bg" autoplay muted loop>
+                <source src="model/banner2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+    
+        <!-- Second carousel item with a video -->
         <div class="header-carousel-item">
-            <img src="img/mahabanners/2.png" class="carousel-bg" alt="Image 2">
+            <video class="carousel-bg" autoplay muted loop>
+                <source src="model/banner2.2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+    
+        <!-- Third carousel item with an image (as it is) -->
         <div class="header-carousel-item" id="special-slide">
-            <img src="img/mahabanners/7.png" class="carousel-bg" alt="Image 3">
+            <img src="img/mahabanners/banner4.png" class="carousel-bg" alt="Image 3">
         </div>
     </div>
+    
     <!-- Background Images Carousel End -->
 
     <!-- Left Heading and Text, Right Form Start -->
@@ -387,7 +399,7 @@
             nav: false,
             items: 1,
             autoplay: true,
-            autoplayTimeout: 3000,
+            autoplayTimeout: 10000,
             autoplayHoverPause: false
         });
 
@@ -396,7 +408,7 @@
             var currentSlide = event.relatedTarget.$stage.children().eq(currentIndex).find('.carousel-bg').attr('src');
 
             // Check if the active image is 'img/mahabanners/7.png'
-            if (currentSlide === 'img/mahabanners/7.png') {
+            if (currentSlide === 'img/mahabanners/banner4.png') {
                 mainContent.style.display = 'none';  // Hide the main content (heading and form)
                 specialButton.style.display = 'block';  // Show the special button
             } else {
