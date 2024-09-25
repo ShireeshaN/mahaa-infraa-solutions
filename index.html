@@ -421,41 +421,34 @@
 
 
 
-
-
 <div class="icons-section wow fadeInRight">
     <div class="icons-container">
         <img src="img/heroico/ico1.jpg" alt="Icon 1" class="icons">
-        <div class="icons-text text-primary">Modern
-            Interior Design</div>
+        <div class="icons-text text-primary">Modern Interior Design</div>
     </div>
     <div class="icons-container">
         <img src="img/heroico/ico2.jpg" alt="Icon 2" class="icons">
-        <div class="icons-text text-primary">Customised
-            To Your Taste</div>
+        <div class="icons-text text-primary">Customised To Your Taste</div>
     </div>
     <div class="icons-container">
         <img src="img/heroico/ico3.jpg" alt="Icon 3" class="icons">
-        <div class="icons-text text-primary">Free Consultation
-            & Budgeting</div>
+        <div class="icons-text text-primary">Free Consultation & Budgeting</div>
     </div>
     <div class="icons-container">
         <img src="img/heroico/ico4.jpg" alt="Icon 4" class="icons">
-        <div class="icons-text text-primary">Transparent
-            Material Pricing</div>
+        <div class="icons-text text-primary">Transparent Material Pricing</div>
     </div>
     <div class="icons-container">
         <img src="img/heroico/ico5.jpg" alt="Icon 5" class="icons">
-        <div class="icons-text text-primary">Professionally-led
-            Execution</div>
+        <div class="icons-text text-primary">Professionally-led Execution</div>
     </div>
     <div class="icons-container">
         <img src="img/heroico/ico6.jpg" alt="Icon 6" class="icons">
-        <div class="icons-text text-primary">On-time
-            Delivery</div>
+        <div class="icons-text text-primary">On-time Delivery</div>
     </div>
     <div class="icons-container">
-        <img src="img/heroico/pmc.gif" alt="Icon 5" class="icons">
+        <!-- Replace gif with a static image or apply hover effect -->
+        <img src="img/heroico/pmc.png" alt="Icon 7" class="icons last-icon">
         <div class="icons-text text-primary">Project Management Consultant</div>
     </div>
 </div>
@@ -495,6 +488,18 @@
     transform: rotate(360deg); /* Rotate icon 360 degrees */
 }
 
+/* Prevent the last icon (.gif) from auto-animating */
+.last-icon {
+    animation: none;
+    transform: rotate(0); /* Ensure no initial rotation */
+}
+
+/* Apply rotation only on hover for .gif */
+.icons-container:hover .last-icon {
+    transform: rotate(360deg); /* Rotate icon 360 degrees on hover */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
 /* Mobile alignment */
 @media (max-width: 768px) {
     .icons-section {
@@ -518,8 +523,6 @@
         font-size: 12px; /* Adjust text size for mobile */
     }
 }
-
-
 </style>
 
 
