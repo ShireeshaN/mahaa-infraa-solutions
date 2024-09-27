@@ -130,16 +130,17 @@
        
 
        
-       <!-- Team Start -->
+      <!-- Team Start -->
 <div class="container-fluid team py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
             <h4 class="text-primary">Industrial</h4>
-            
-            <div class="first-section wow fadeInLeft text-center p-3"></div>
-                <h2 class="section-heading "><spam style="color:#C6A626; font-size: 30px; font-weight: bold; ">|</spam> Innovative Design Solutions for Industrial Interiors</h2>
+            <div class="first-section wow fadeInLeft text-center p-3">
+                <h2 class="section-heading "><spam style="color:#C6A626; font-size: 30px; font-weight: bold; ">|</spam>  Innovative Design Solutions for Industrial Interiors</h2>
             </div>
+           
         </div>
+       
 
         <!-- First Row: 3 Static Images -->
         <div class="static-images">
@@ -148,11 +149,11 @@
                 <div class="static-image-text">Industrial</div>
             </div>
             <div class="static-image-wrapper">
-                <img src="img/project-images/i3.png" alt="Image 2">
+                <img src="img/project-images/i2.png" alt="Image 2">
                 <div class="static-image-text">Industrial</div>
             </div>
             <div class="static-image-wrapper">
-                <img src="img/project-images/i6.png" alt="Image 3">
+                <img src="img/project-images/i3.png" alt="Image 3">
                 <div class="static-image-text">Industrial</div>
             </div>
         </div>
@@ -162,29 +163,29 @@
             <span class="carousel-icon left" onclick="moveLeft()">&#10094;</span>
             <div class="carousel">
                 <img src="img/project-images/i1.png" alt="Image 4" class="carousel-image">
-                <img src="img/project-images/i2.png" alt="Image 5" class="carousel-image">
-                <img src="img/project-images/i3.png" alt="Image 6" class="carousel-image">
-                <img src="img/project-images/i4.png" alt="Image 7" class="carousel-image">
+                <img src="img/project-images/i2.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/i3.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/i4.png" alt="Image 4" class="carousel-image">
                 <img src="img/project-images/i5.png" alt="Image 4" class="carousel-image">
-                <img src="img/project-images/i6.png" alt="Image 5" class="carousel-image">
-                <img src="img/project-images/i7.png" alt="Image 6" class="carousel-image">
-                <img src="img/project-images/i8.png" alt="Image 7" class="carousel-image">
-                <img src="img/project-images/i9.png" alt="Image 7" class="carousel-image">
+                <img src="img/project-images/i6.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/i7.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/i8.png" alt="Image 4" class="carousel-image">
+                <img src="img/project-images/i9.png" alt="Image 4" class="carousel-image">
             </div>
             <span class="carousel-icon right" onclick="moveRight()">&#10095;</span>
         </div>
 
         <div class="static-images">
             <div class="static-image-wrapper">
-                <img src="img/project-images/i7.png" alt="Image 1">
+                <img src="img/project-images/i4.png" alt="Image 1">
                 <div class="static-image-text">Industrial</div>
             </div>
             <div class="static-image-wrapper">
-                <img src="img/project-images/i8.png" alt="Image 2">
+                <img src="img/project-images/i5.png" alt="Image 2">
                 <div class="static-image-text">Industrial</div>
             </div>
             <div class="static-image-wrapper">
-                <img src="img/project-images/i9.png" alt="Image 3">
+                <img src="img/project-images/i6.png" alt="Image 3">
                 <div class="static-image-text">Industrial</div>
             </div>
         
@@ -193,57 +194,35 @@
 
 
        
-               
+             
                 </div>
             </div>
         </div>
         <!-- Team End -->
 
-
-        <style>
-            /***project-page ***/
-
-/* Main Heading */
-.main-heading {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 20px 0;
-}
-
-/* First row with static images */
-.static-images {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.static-images img {
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Second row carousel */
-.carousel-container {
+<style>
+    /* Main Carousel Container */
+    .carousel-container {
     position: relative;
-    width: 50%;
+    max-width: 100%; /* Make sure the container spans the full width */
     margin: 0 auto;
     overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
 .carousel-image {
-    width: 100%; /* Only one image visible at a time */
+    width: 100%;
     height: auto;
-    display: none;
-}
-
-.carousel-image.active {
-    display: block;
+    margin: 0 10px;
 }
 
 /* Carousel icons */
@@ -255,22 +234,22 @@
     color: gold;
     cursor: pointer;
     padding: 10px;
-    
     border-radius: 50%;
     user-select: none;
     z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a background for better visibility */
 }
 
 .carousel-icon.left {
-    left: 10px;
+    left: 20px;
 }
 
 .carousel-icon.right {
-    right: 10px;
+    right: 20px;
 }
 
- /* Static Images Styling */
- .static-images {
+/* Static Images */
+.static-images {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -311,45 +290,18 @@
     opacity: 1;
 }
 
-/* Carousel Styling */
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-   
-    text-align: center;
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .carousel-image {
+        width: 100%;
+    }
+    .carousel-icon.left, .carousel-icon.right {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-image {
-    width: 100%;
-    
-    height: auto;
-    margin: 0 10px;
-}
-
-.carousel-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    color: gold;
-    user-select: none;
-}
-
-.carousel-icon.left {
-    left: 10px;
-}
-
-
-
-        </style>
+</style>
 
         <style>
             /* Media Query for Mobile View */
