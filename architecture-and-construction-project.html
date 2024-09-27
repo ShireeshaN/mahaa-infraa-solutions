@@ -198,6 +198,110 @@
             </div>
         </div>
         <!-- Team End -->
+         <style>
+            <style>
+    /* Main Carousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Make sure the container spans the full width */
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Carousel icons */
+.carousel-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: gold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a background for better visibility */
+}
+
+.carousel-icon.left {
+    left: 50px;
+}
+
+.carousel-icon.right {
+    right: 50px;
+}
+
+/* Static Images */
+.static-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.static-image-wrapper {
+    position: relative;
+    width: 30%;
+    margin: 0 10px;
+}
+
+.static-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.static-image-wrapper:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.static-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #DEBB3B;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.static-image-wrapper:hover .static-image-text {
+    opacity: 1;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .carousel-image {
+        width: 100%;
+    }
+    .carousel-icon.left, .carousel-icon.right {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+</style>
+         </style>
 
         <style>
             
