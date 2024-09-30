@@ -134,9 +134,7 @@
     .contact-item div {
         flex-direction: column;
     }
-    .contact-item div i {
-        margin-bottom: 10px;
-    }
+   
     .navbar-brand img {
         max-width: 150px;
     }
@@ -200,7 +198,7 @@
                             <div class="d-flex align-items-center mb-4">
                                 <a href="https://maps.app.goo.gl/KvHPmr39vAoQ66577" target="_blank">
                                 <div class="bg-dark btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
-                                <div class="ms-4">
+                                <div class="contact-add">
                                     
                                     <h4 >Address</h4>
                                     
@@ -211,7 +209,7 @@
                             <div class="d-flex align-items-center mb-4">
                                 <a href="tel:9441917441" target="_blank">
                                 <div class="bg-dark btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
-                                <div class="ms-4">
+                                <div class="contact-add">
                                     <h4 class="mb-0">Mobile</h4>
                                     <p class="mb-0" style="color:#818181">+91 9441917441</p></a>
                                 </div>
@@ -219,13 +217,27 @@
                             <div class="d-flex align-items-center mb-4">
                                 <a href="mailto:mahaainfraasolutions@gmail.com" target="_blank">
                                 <div class="bg-dark btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
-                                <div class="ms-4">
+                                <div class="contact-add">
                                     <h4 class="mb-0">Email</h4>
                                     <p class="mb-0" style="color:#818181">mahaainfraasolutions@gmail.com</p></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <style>
+                        .contact-add{
+                            margin-left: 1.5rem;
+                        }
+                        @media(
+                            max-width:992px
+                        ){
+                            .contact-add{
+                                margin-left: 0;
+                            }
+                        }
+
+
+                    </style>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
                         <form>
                             <div class="row g-3">
