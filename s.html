@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Awards Scroll</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="awards-container">
+    <button class="scroll-left"></button>
+
+    <div class="scroll-wrapper">
+      <div class="awards-item"><img src="img/team-2.jpg" alt="Award 1"></div>
+      <div class="awards-item"><img src="img/team-2.jpg" alt="Award 2"></div>
+      <div class="awards-item"><img src="img/team-2.jpg" alt="Award 3"></div>
+      <div class="awards-item"><img src="img/team-2.jpg" alt="Award 4"></div>
+      <div class="awards-item"><img src="img/team-3.jpg" alt="Award 1"></div>
+      <div class="awards-item"><img src="img/team-3.jpg" alt="Award 2"></div>
+      <div class="awards-item"><img src="img/team-4.jpg" alt="Award 3"></div>
+      <div class="awards-item"><img src="img/team-1.jpg" alt="Award 4"></div>
+      <!-- Add more images as needed -->
+    </div>
+
+    <button class="scroll-right"></button>
+  </div>
+
+  <!-- Modal for Zoom View -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="zoom-nav">
+      <button id="prevZoom">&lt;</button>
+      <button id="nextZoom">&gt;</button>
+    </div>
+  </div>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.awards-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.awards-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 400px;
+  transition: transform 0.3s ease;
+}
+
+.awards-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+
+/* Modal Styling for Zoom */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Zoom navigation buttons placed correctly */
+.zoom-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zoom-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#prevZoom {
+  position: absolute;
+  left: 10px;
+}
+
+#nextZoom {
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .awards-item {
+    width: 150px;
+    height: 150px;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .zoom-nav button {
+    font-size: 2rem;
+  }
+}
+
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const scrollWrapper = document.querySelector('.scroll-wrapper');
+  const scrollLeft = document.querySelector('.scroll-left');
+  const scrollRight = document.querySelector('.scroll-right');
+  const items = document.querySelectorAll('.awards-item');
+  let autoScroll;
+  let clonedItems = [];
+
+  // Function to clone items for infinite scrolling effect
+  function cloneItems() {
+    const totalWidth = scrollWrapper.scrollWidth;
+    let wrapperWidth = scrollWrapper.clientWidth;
+
+    while (wrapperWidth < totalWidth * 2) {
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        scrollWrapper.appendChild(clone);
+        clonedItems.push(clone);
+      });
+      wrapperWidth = scrollWrapper.scrollWidth;
+    }
+  }
+
+  cloneItems();
+
+  // Scroll left and right manually
+  scrollLeft.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+  });
+
+  scrollRight.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+
+  // Automatic continuous scrolling
+  function startAutoScroll() {
+    autoScroll = setInterval(() => {
+      scrollWrapper.scrollBy({ left: 1, behavior: 'smooth' });
+
+      if (scrollWrapper.scrollLeft >= scrollWrapper.scrollWidth / 2) {
+        scrollWrapper.scrollLeft = 0; // Reset to start for infinite loop
+      }
+    }, 20); // Adjust speed here
+  }
+
+  startAutoScroll();
+
+  // Pause on hover
+  scrollWrapper.addEventListener('mouseenter', () => clearInterval(autoScroll));
+  scrollWrapper.addEventListener('mouseleave', startAutoScroll);
+
+  // Modal functionality
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const closeModal = document.querySelector('.close');
+  const modalPrev = document.getElementById('prevZoom');
+  const modalNext = document.getElementById('nextZoom');
+  let currentIndex = 0;
+
+  function openModal(index) {
+    modal.style.display = 'block';
+    currentIndex = index;
+    modalImage.src = items[currentIndex].querySelector('img').src;
+  }
+
+  items.forEach((item, index) => {
+    item.querySelector('img').addEventListener('click', () => openModal(index));
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modalPrev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    modalImage.src = items[currentIndex].querySelector('img').src;
+  });
+
+  modalNext.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    modalImage.src = items[currentIndex].querySelector('img').src;
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
