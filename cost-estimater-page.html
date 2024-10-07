@@ -135,8 +135,8 @@
 
 
 
-        <div class="containersss mb-5">
-          <h1>Select Your Package</h1>
+        <div class="containersss mb-5 mt-5 mb-5" style="background-color: black; border-radius: 10px;">
+          <h1 class="text-white">Select Your Package</h1>
           <div class="packages">
             <button class="package-btn" onclick="showPackage('basic')">Basic</button>
             <button class="package-btn1" onclick="showPackage('standard')">Standard</button>
@@ -144,12 +144,12 @@
             <button class="package-btn3" onclick="showPackage('premium')">Premium</button>
             <button class="package-btn4" onclick="showPackage('luxury')">Luxury</button>
             <button class="package-btn5" onclick="showPackage('imperia')">Imperia</button>
-            <button class="package-btn6" onclick="showPackage('custom')">Custom</button>
+            <button class="package-btn6 " onclick="showPackage('custom')">Custom</button>
           </div>
       
       
           <!-- Basic Package -->
-      <div id="basic" class="package-section" style="background-color:#85857f;">
+      <div id="basic" class="package-section" style="background-color:#FFFDBA;">
         <h2 class="text-white">Basic Package ₹1,890/sq.ft (Incl. GST)</h2>
         
         <!-- Designs & Drawings Section -->
@@ -381,7 +381,7 @@
       
       
          <!-- Standard Package -->
-      <div id="standard" class="package-section" style="background-color:#eded3e;">
+      <div id="standard" class="package-section" style="background-color:#FCF4A6  ;">
         <h2>Standard Package ₹2,050/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -623,7 +623,7 @@
       
       
       <!--standard+-->
-      <div id="standard-plus" class="package-section" style="background-color:#d9a84c;">
+      <div id="standard-plus" class="package-section" style="background-color:#F7EB93;">
         <h2>Standard+ Package ₹2,440/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -872,7 +872,7 @@
       
       
       <!-- Premium Package -->
-      <div id="premium" class="package-section" style="background-color:#1ec35b;">
+      <div id="premium" class="package-section" style="background-color:#F2E281  ;">
         <h2>Premium Package ₹2,660/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -1163,7 +1163,7 @@
       
       
       <!-- Luxury Package -->
-      <div id="luxury" class="package-section" style="background-color:#cf39b4;">
+      <div id="luxury" class="package-section" style="background-color:#ECD96E  ;">
         <h2>Luxury Package ₹3,920/sq.ft (Incl. GST)</h2>
       
         <!-- Designs & Drawings Section -->
@@ -1495,7 +1495,7 @@
       
       
       <!-- Imperia Package -->
-      <div id="imperia" class="package-section" style="background-color:#e77123;">
+      <div id="imperia" class="package-section" style="background-color:#E6D05C ;">
         <h2>Imperia Package ₹4,990/sq.ft (Incl. GST)</h2>
         
         <!-- Designs & Drawings Section -->
@@ -1881,7 +1881,7 @@
       
       
       <!-- Custom Package -->
-      <div id="custom" class="package-section" style="background-color:#3919c9;">
+      <div id="custom" class="package-section" style="background-color:#E0C44A;">
         <h2 style="color: white;">Custom Package - Price on Request</h2>
         
         <!-- Contact Us Button -->
@@ -1931,6 +1931,7 @@
       margin: 0 auto;
       padding: 50px 20px;
       text-align: center;
+     
     }
      h1 {
       font-size: 2.5rem;
@@ -1941,8 +1942,8 @@
       margin-bottom: 40px;
     }
     .package-btn {
-      background-color: #85857f;
-      color: white;
+      background-color: #FFFDBA;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -1953,8 +1954,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn1 {
-      background-color: #eded3e;
-      color: white;
+      background-color: #FCF4A6 ;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -1965,8 +1966,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn2 {
-      background-color: #d9a84c;
-      color: white;
+      background-color: #F7EB93 ;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -1977,8 +1978,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn3 {
-      background-color:#1ec35b;
-      color: white;
+      background-color:#F2E281;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -1989,8 +1990,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn4 {
-      background-color: #cf39b4 ;
-      color: white;
+      background-color:#ECD96E  ;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -2001,8 +2002,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn5 {
-      background-color:#e77123 ;
-      color: white;
+      background-color:#E6D05C  ;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -2013,8 +2014,8 @@
       transition: background-color 0.3s ease;
     }
     .package-btn6 {
-      background-color: #3919c9;
-      color: white;
+      background-color: #E0C44A;
+      color: black;
       padding: 10px 20px;
       font-weight: bold;
       margin: 10px;
@@ -2026,7 +2027,7 @@
     }
     
     .package-btn:hover {
-      background-color: rgb(110, 115, 116);
+      background-color: black;
       color:white;
     }
     .package-section {
@@ -2106,7 +2107,7 @@
 
 
 <!-- Footer Start -->
-<div class="container-fluid footer  wow fadeIn" data-wow-delay="0.2s">
+<div class="container-fluid footer  wow fadeIn pt-5" data-wow-delay="0.2s">
   <div class="container ">
       <div class="row g-5">
           <div class="col-md-6 col-lg-6 col-xl-3">
