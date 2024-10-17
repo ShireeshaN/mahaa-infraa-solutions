@@ -1023,6 +1023,7 @@
 /*** Footer Start ***/
 .footer {
     background: var(--bs-dark);
+    padding-block: 3rem;
 }
 .footer .footer-item a {
     line-height: 35px;
@@ -1214,6 +1215,7 @@
 .footerlogo {
     height: 120px;
     width: 100%;
+    object-fit: scale-down;
 }
 
 /* Media query for mobile view */
