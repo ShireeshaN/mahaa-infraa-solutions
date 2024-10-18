@@ -15,32 +15,43 @@
   new WOW().init();
   // new code start
   $(document).ready(function () {
-    $(".header-carousel").owlCarousel({
-      loop: true, // Enables continuous loop
-      autoplay: true, // Auto-plays the carousel
-      autoplayTimeout: 5000, // Time between auto-slide
-      autoplayHoverPause: true, // Pause on hover
-      items: 1, // Number of items per view
-      nav: true, // Enables the left and right arrows
-      navText: [
-        '<i class="fa fa-chevron-left"></i>', // Left arrow
-        '<i class="fa fa-chevron-right"></i>', // Right arrow
-      ],
-      dots: true, // Enables dots navigation
-      video: true, // Support for video slides
-      responsive: {
-        0: {
-          items: 1, // One item for smaller screens
+    var carousel = $(".header-carousel").owlCarousel({
+        loop: true, // Enables continuous loop
+        autoplay: true, // Auto-plays the carousel
+        autoplayTimeout: 5000, // Time between auto-slide
+        items: 1, // Number of items per view
+        nav: true, // Enables the left and right arrows
+        navText: [
+            '<i class="fa fa-chevron-left"></i>', // Left arrow
+            '<i class="fa fa-chevron-right"></i>', // Right arrow
+        ],
+        dots: true, // Enables dots navigation
+        video: true, // Support for video slides
+        responsive: {
+            0: {
+                items: 1, // One item for smaller screens
+            },
+            600: {
+                items: 1, // One item for medium screens
+            },
+            1000: {
+                items: 1, // One item for larger screens
+            },
         },
-        600: {
-          items: 1, // One item for medium screens
-        },
-        1000: {
-          items: 1, // One item for larger screens
-        },
-      },
     });
-  });
+
+    // Stop autoplay on mouseover for the content container
+    $("#main-content").on('mouseover', function() {
+        carousel.trigger('stop.owl.autoplay'); // Stop autoplay
+    });
+
+    // Resume autoplay on mouseout for the content container
+    $("#main-content").on('mouseout', function() {
+        carousel.trigger('play.owl.autoplay'); // Resume autoplay
+    });
+});
+
+
 
   // new code end
   // Sticky Navbar
