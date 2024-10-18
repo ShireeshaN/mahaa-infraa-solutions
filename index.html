@@ -495,37 +495,7 @@
         }
     </style>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var mainContent = document.getElementById('main-content');
-            var specialButton = document.getElementById('special-button');
-            var carousel = $('.header-carousel');
 
-            carousel.owlCarousel({
-                loop: true,
-                margin: 0,
-                nav: false,
-                items: 1,
-                autoplay: true,
-                autoplayTimeout: 10000,
-                autoplayHoverPause: false
-            });
-
-            carousel.on('changed.owl.carousel', function (event) {
-                var currentIndex = event.item.index;
-                var currentSlide = event.relatedTarget.$stage.children().eq(currentIndex).find('.carousel-bg').attr('src');
-
-                // Check if the active image is 'img/mahabanners/7.png'
-                if (currentSlide === 'img/mahabanners/banner4.png') {
-                    mainContent.style.display = 'none';  // Hide the main content (heading and form)
-                    specialButton.style.display = 'block';  // Show the special button
-                } else {
-                    mainContent.style.display = 'flex';  // Show the main content again
-                    specialButton.style.display = 'none';  // Hide the special button
-                }
-            });
-        });
-    </script>
 
 
 
