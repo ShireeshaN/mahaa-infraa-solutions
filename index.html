@@ -285,18 +285,22 @@
         /* Flexbox layout for content */
         .content-container {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            width: 90%;
             height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 2;
-            /* Above the carousel */
+            z-index: 1;
+            transform: translate(-50%,-50%);
             padding: 0 50px;
         }
-
+@media(max-width:992px){
+    .content-container{
+        width: 70%;
+    }
+}
         /* Left content (heading and text) */
         .left-content {
             flex: 1;
@@ -450,14 +454,15 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #C6A626;
             /* Semi-transparent background */
             color: #fff;
             border-radius: 50%;
-            padding: 10px;
+            padding: 4px 8px;
             font-size: 24px;
             cursor: pointer;
-            z-index: 2;
+            z-index: 2 !important;
+          
         }
 
         .owl-nav .owl-prev {
