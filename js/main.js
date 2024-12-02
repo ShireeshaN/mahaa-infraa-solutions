@@ -22,8 +22,8 @@
         items: 1, // Number of items per view
         nav: true, // Enables the left and right arrows
         navText: [
-            '<i class="fa fa-chevron-left"></i>', // Left arrow
-            '<i class="fa fa-chevron-right"></i>', // Right arrow
+          '<i class="bi bi-arrow-left"></i>',
+          '<i class="bi bi-arrow-right"></i>',
         ],
         dots: true, // Enables dots navigation
         video: true, // Support for video slides
@@ -73,21 +73,7 @@
     }
   });
 
-  // Hero Header carousel
-  $(".header-carousel").owlCarousel({
-    items: 1,
-    autoplay: true,
-    smartSpeed: 2000,
-    center: false,
-    dots: false,
-    loop: true,
-    margin: 0,
-    nav: true,
-    navText: [
-      '<i class="bi bi-arrow-left"></i>',
-      '<i class="bi bi-arrow-right"></i>',
-    ],
-  });
+
 
   // Project carousel
   $(".project-carousel").owlCarousel({
