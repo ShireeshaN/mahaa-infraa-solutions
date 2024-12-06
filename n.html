@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards & Achievements</title>
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff7c9; /* Light yellow background */
+            color: #000;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #ffe066; /* Card yellow */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card .title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card .description {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Continuous scroll effect */
+        .scroll-container {
+            display: flex;
+            animation: scroll-left 50s linear infinite;
+            gap: 20px;
+        }
+
+        .card {
+            flex-shrink: 0;
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Keyframes for automatic scrolling */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scroll-container:hover {
+            animation-play-state: paused; /* Stop the scrolling when hovering */
+        }
+
+        /* Lightbox custom styling */
+        .lightbox-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            height: 100vh;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 15px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            background: #ffe066;
+            border: none;
+            
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .arrow.left {
+            left: 10px;
+            padding-bottom: 5px;
+        }
+
+        .arrow.right {
+            right: 10px;
+            
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            background: #ffe066;
+            
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Awards & Achievements</h1>
+    <div class="cards">
+        <!-- Scroll container for automatic scrolling -->
+        <div class="scroll-container">
+            <div class="card" data-lightbox="awards" data-title="AMAZON SAMBHAV 2022">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 2.56.45 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 2.56.45 PM.jpeg" alt="Amazon Smbhav 2022">
+                </a>
+                <p class="description">AMAZON SAMBHAV 2022</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.41 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.41 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.42 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.42 PM.jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="AMAZON SAMBHAV 2022">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.09.05 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.09.05 PM.jpeg" alt="Amazon Smbhav 2022">
+                </a>
+                <p class="description">AMAZON SAMBHAV 2022</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.17 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.17 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.18 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.18 PM.jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="AMAZON SAMBHAV 2022">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.19 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.19 PM.jpeg" alt="Amazon Smbhav 2022">
+                </a>
+                <p class="description">AMAZON SAMBHAV 2022</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.32.45 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.32.45 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.32.46 PM (1).jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.32.46 PM (1).jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="AMAZON SAMBHAV 2022">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.56 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.56 PM.jpeg" alt="Amazon Smbhav 2022">
+                </a>
+                <p class="description">AMAZON SAMBHAV 2022</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.57 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.57 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.58 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.46.58 PM.jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="AMAZON SAMBHAV 2022">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 2.58.03 PM (1).jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 2.58.03 PM (1).jpeg" alt="Amazon Smbhav 2022">
+                </a>
+                <p class="description">AMAZON SAMBHAV 2022</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 2.58.03 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 2.58.03 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.42 PM (1).jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.05.42 PM (1).jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="MAHARASHTRA STARTUP WEEK">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.09.04 PM.jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.09.04 PM.jpeg" alt="Maharashtra Startup Week">
+                </a>
+                <p class="description">MAHARASHTRA STARTUP WEEK</p>
+            </div>
+            <div class="card" data-lightbox="awards" data-title="SURGE'16 BY WEB SUMMIT, GOOGLE">
+                <div class="title">WINNER</div>
+                <a href="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.18 PM (1).jpeg">
+                    <img src="img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.18 PM (1).jpeg" alt="Surge by Web Summit">
+                </a>
+                <p class="description">SURGE'16 BY WEB SUMMIT, GOOGLE</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional Lightbox modal -->
+<div id="lightbox-modal" class="lightbox-container">
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <button class="arrow left" id="prev-btn">&#8249;</button>
+        <button class="arrow right" id="next-btn">&#8250;</button>
+        <button class="close-lightbox" id="close-btn">&#10006;</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+<script>
+    // Lightbox image change functionality
+    let currentIndex = 0;
+    const images = [
+        "img/mahaaa/WhatsApp Image 2024-12-04 at 2.56.45 PM.jpeg",
+        "img/mahaaa/WhatsApp Image 2024-12-04 at 2.58.03 PM.jpeg",
+        "img/mahaaa/WhatsApp Image 2024-12-04 at 3.24.17 PM.jpeg"
+    ];
+
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const closeBtn = document.getElementById('close-btn');
+
+    document.querySelectorAll('.card a').forEach((card, index) => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = index;
+            lightboxImg.src = images[currentIndex];
+            lightboxModal.style.display = 'flex';
+        });
+    });
+
+    // Previous and Next buttons for the Lightbox
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        lightboxImg.src = images[currentIndex];
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        lightboxImg.src = images[currentIndex];
+    });
+
+    // Close lightbox modal
+    closeBtn.addEventListener('click', () => {
+        lightboxModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the image
+    lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+            lightboxModal.style.display = 'none';
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+</body>
+</html>
