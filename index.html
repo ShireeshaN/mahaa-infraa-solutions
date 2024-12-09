@@ -138,74 +138,113 @@
 
     <!-- Full Screen Container Start -->
     <div class="carousel-container">
-        <!-- Background Images Carousel Start -->
+        <!-- Header Carousel -->
         <div class="header-carousel owl-carousel">
-            <!-- First carousel item with a video -->
+            <!-- First Carousel Slide -->
             <div class="header-carousel-item">
                 <video class="carousel-bg" autoplay muted loop>
                     <source src="model/banner2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                
+                    <div class="content-container" id="main-content">
+                        <!-- Left Side Heading and Text -->
+                        <div class="left-content wow fadeInRight">
+                            <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in
+                                Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
+                                    and Architects</spam>
+                            </h1>
+                        </div>
+            
+                        <!-- Right Side Form -->
+                        <div class="right-form wow fadeInLeft">
+                            <form>
+                                <div class="mb-3 text-start">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="phone" class="form-label text-white">Phone Number</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="site-location" class="form-label text-white">Site Location</label>
+                                    <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
+                                </div>
+                                <div class="text-start">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            
+            
+              
             </div>
-
-            <!-- Second carousel item with a video -->
+    
+            <!-- Second Carousel Slide -->
             <div class="header-carousel-item">
-                <video class="carousel-bg" autoplay muted loop>
-                    <source src="model/banner2.2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <!-- Third carousel item with an image (as it is) -->
-            <div class="header-carousel-item" id="special-slide">
-                <img src="img/mahabanners/banner4.png" class="carousel-bg" alt="Image 3">
-            </div>
-        </div>
-
-        <!-- Background Images Carousel End -->
-
-        <!-- Left Heading and Text, Right Form Start -->
-        <div class="content-container" id="main-content">
-            <!-- Left Side Heading and Text -->
-            <div class="left-content wow fadeInRight">
-                <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in
-                    Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
-                        and Architects</spam>
-                </h1>
-            </div>
-
-            <!-- Right Side Form -->
-            <div class="right-form wow fadeInLeft">
-                <form>
-                    <div class="mb-3 text-start">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <img src="img/mahabanners/1.png" class="carousel-bg" alt="Slide 2">
+                
+                    <div class="content-container" id="main-content">
+                        <!-- Left Side Heading and Text -->
+                        <div class="left-content wow fadeInRight">
+                            <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in
+                                Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
+                                    and Architects</spam>
+                            </h1>
+                        </div>
+            
+                        <!-- Right Side Form -->
+                        <div class="right-form wow fadeInLeft">
+                            <form>
+                                <div class="mb-3 text-start">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="phone" class="form-label text-white">Phone Number</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="site-location" class="form-label text-white">Site Location</label>
+                                    <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
+                                </div>
+                                <div class="text-start">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="mb-3 text-start">
-                        <label for="phone" class="form-label text-white">Phone Number</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="mb-3 text-start">
-                        <label for="site-location" class="form-label text-white">Site Location</label>
-                        <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
-                    </div>
-                    <div class="text-start">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
+                
             </div>
-        </div>
-
-        <!-- Button in the center for special slide -->
-        <div id="special-button"
-            style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">
-            <a href="about.html"><button class="btn btn-primary specialss">Click Here</button></a>
+    
+            <!-- Third Carousel Slide -->
+            <div class="header-carousel-item">
+                <img src="img/mahabanners/banner4.png" class="carousel-bg" alt="Slide 3">
+                <!-- <div class="carousel-content">
+                    <h1>Slide 3: Excellence in Architecture</h1>
+                    <p>Creating spaces that stand the test of time.</p>
+                </div> -->
+            </div>
         </div>
     </div>
+    
+    
 
     <!-- Full Screen Container End -->
 
     <style>
+        .header-carousel-item{
+            position: relative;
+        }
+        .header-carousel-item .carousel-content{
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+
+        }
         .specialss {
             height: 50px;
             width: 100px;
@@ -292,6 +331,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+          
             z-index: 1;
             transform: translate(-50%,-50%);
             padding: 0 50px;

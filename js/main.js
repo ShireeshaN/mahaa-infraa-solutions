@@ -15,15 +15,20 @@
   new WOW().init();
   // new code start
   $(document).ready(function () {
-    var carousel = $(".header-carousel").owlCarousel({
+    // Initialize the main carousel
+    
+    const carousell = $(".header-carousel");
+
+    // Main header carousel initialization
+    carousell.owlCarousel({
         loop: true, // Enables continuous loop
         autoplay: true, // Auto-plays the carousel
         autoplayTimeout: 5000, // Time between auto-slide
         items: 1, // Number of items per view
         nav: true, // Enables the left and right arrows
         navText: [
-          '<i class="bi bi-arrow-left"></i>',
-          '<i class="bi bi-arrow-right"></i>',
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>',
         ],
         dots: true, // Enables dots navigation
         video: true, // Support for video slides
@@ -39,19 +44,22 @@
             },
         },
     });
+
   
-    var carousel = $(".award-carousel").owlCarousel({
+
+    // Award carousel initialization
+    const awardCarousel = $(".award-carousel");
+    awardCarousel.owlCarousel({
         loop: true, // Enables continuous loop
         autoplay: true, // Auto-plays the carousel
         autoplayTimeout: 5000, // Time between auto-slide
         items: 6, // Number of items per view
         nav: true, // Enables the left and right arrows
         navText: [
-          '<i class="bi bi-arrow-left"></i>',
-          '<i class="bi bi-arrow-right"></i>',
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>',
         ],
         dots: true, // Enables dots navigation
-        video: true, // Support for video slides
         responsive: {
             0: {
                 items: 1, // One item for smaller screens
@@ -60,21 +68,22 @@
                 items: 1, // One item for medium screens
             },
             1000: {
-                items: 6, // One item for larger screens
+                items: 6, // Six items for larger screens
             },
         },
     });
 
     // Stop autoplay on mouseover for the content container
-    $("#main-content").on('mouseover', function() {
-        carousel.trigger('stop.owl.autoplay'); // Stop autoplay
+    $("#main-content").on('mouseover', function () {
+        carousell.trigger('stop.owl.autoplay'); // Stop autoplay for header-carousel
     });
 
     // Resume autoplay on mouseout for the content container
-    $("#main-content").on('mouseout', function() {
-        carousel.trigger('play.owl.autoplay'); // Resume autoplay
+    $("#main-content").on('mouseout', function () {
+        carousell.trigger('play.owl.autoplay'); // Resume autoplay for header-carousel
     });
 });
+
 
 
 
