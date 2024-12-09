@@ -220,7 +220,7 @@
             </div>
     
             <!-- Third Carousel Slide -->
-            <div class="header-carousel-item">
+            <div class="header-carousel-item ban">
                 <img src="img/mahabanners/banner4.png" class="carousel-bg desktop" alt="Slide 3">
                 <img src="img/award2.jpg" class="carousel-bg mobile" alt="Slide 3">
                <div class="carousel-content">
@@ -238,6 +238,7 @@
         .header-carousel-item{
             position: relative;
         }
+       
         .header-carousel-item .carousel-content{
            position: absolute;
            top: 50%;
@@ -333,7 +334,15 @@ object-fit: scale-down;
             height: 100vh;
             object-fit: cover;
         }
-
+@media(max-width:992px){
+    .carousel-container{
+        height: 50vh;
+    }
+    .header-carousel-item.ban img.mobile{
+            height: 70vh;
+            width: 100%;
+        }
+}
         /* Flexbox layout for content */
         .content-container {
             position: absolute;
