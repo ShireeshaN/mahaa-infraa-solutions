@@ -1,0 +1,183 @@
+<!-- Awards and Rewards Section -->
+<section id="awards-rewards">
+    <h2>Awards and Rewards</h2>
+    <div class="image-scroll">
+        <!-- Original images -->
+        <img src="img/awardsrewards/1.jpg" alt="Award 1">
+        <img src="img/awardsrewards/2.jpg" alt="Award 2">
+        <img src="img/awardsrewards/3.jpg" alt="Award 3">
+        <img src="img/awardsrewards/4.jpg" alt="Award 4">
+        <img src="img/awardsrewards/5.jpg" alt="Award 5">
+        <img src="img/awardsrewards/1.jpg" alt="Award 6">
+        <img src="img/awardsrewards/2.jpg" alt="Award 7">
+        <img src="img/awardsrewards/3.jpg" alt="Award 8">
+        <img src="img/awardsrewards/4.jpg" alt="Award 9">
+        <img src="img/awardsrewards/5.jpg" alt="Award 10">
+        <img src="img/awardsrewards/1.jpg" alt="Award 11">
+        <img src="img/awardsrewards/2.jpg" alt="Award 12">
+        <img src="img/awardsrewards/3.jpg" alt="Award 13">
+        <img src="img/awardsrewards/4.jpg" alt="Award 14">
+        <img src="img/awardsrewards/5.jpg" alt="Award 15">
+        
+        <!-- Duplicate images for seamless scrolling -->
+        <img src="img/awardsrewards/1.jpg" alt="Award 1">
+        <img src="img/awardsrewards/2.jpg" alt="Award 2">
+        <img src="img/awardsrewards/3.jpg" alt="Award 3">
+        <img src="img/awardsrewards/4.jpg" alt="Award 4">
+        <img src="img/awardsrewards/5.jpg" alt="Award 5">
+        <img src="img/awardsrewards/1.jpg" alt="Award 6">
+        <img src="img/awardsrewards/2.jpg" alt="Award 7">
+        <img src="img/awardsrewards/3.jpg" alt="Award 8">
+        <img src="img/awardsrewards/4.jpg" alt="Award 9">
+        <img src="img/awardsrewards/5.jpg" alt="Award 10">
+        <img src="img/awardsrewards/1.jpg" alt="Award 11">
+        <img src="img/awardsrewards/2.jpg" alt="Award 12">
+        <img src="img/awardsrewards/3.jpg" alt="Award 13">
+        <img src="img/awardsrewards/4.jpg" alt="Award 14">
+        <img src="img/awardsrewards/5.jpg" alt="Award 15">
+    </div>
+</section>
+
+<style>
+    /* General Styling */
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Awards and Rewards Section */
+    #awards-rewards {
+        padding: 50px 0;
+        background-color: #f9f9f9;
+    }
+
+    .image-scroll {
+        display: flex;
+        gap: 20px;
+        animation: scrollImages 30s linear infinite;
+        width: fit-content;
+    }
+
+    @keyframes scrollImages {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); /* Scroll half the width of the images */
+        }
+    }
+
+    .image-scroll img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Pause on hover */
+    .image-scroll:hover {
+        animation-play-state: paused;
+    }
+
+    /* Media Queries for Mobile */
+    @media (max-width: 768px) {
+        .image-scroll img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+</style>
+
+<!-- Image and Text Section -->
+<section id="image-text">
+    <div class="image-text-item">
+        <img src="img/mahaaa/1 (1).jpeg" alt="Image 1">
+        <p>Text 1</p>
+    </div>
+    <div class="image-text-item">+
+        <img src="img/mahaaa/1 (17).jpeg" alt="Image 2">
+        <p>Text 2</p>
+    </div>
+    <div class="image-text-item">
+        <img src="img/mahaaa/1 (17).jpeg" alt="Image 3">
+        <p>Text 3</p>
+    </div>
+    <div class="image-text-item">
+        <img src="img/mahaaa/1 (17).jpeg" alt="Image 4">
+        <p>Text 4</p>
+    </div>
+    <div class="image-text-item">
+        <img src="img/mahaaa/1 (17).jpeg" alt="Image 5">
+        <p>Text 5</p>
+    </div>
+    
+</section>
+
+<style>
+    /* General Styling */
+
+
+
+/* Image and Text Section */
+#image-text {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-text-item {
+    display: none;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.image-text-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.image-text-item p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Display one image-text item at a time */
+.image-text-item.active {
+    display: block;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .image-scroll img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+</style>
+
+<script>
+   let currentIndex = 0;
+const items = document.querySelectorAll('.image-text-item');
+
+function showNextImage() {
+    items.forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === currentIndex) {
+            item.classList.add('active');
+        }
+    });
+    currentIndex = (currentIndex + 1) % items.length;
+}
+
+// Show next image every 3 seconds
+setInterval(showNextImage, 3000);
+
+
+</script>

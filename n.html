@@ -1,16 +1,4 @@
-<!-- Awards and Rewards Section -->
-<section id="awards-rewards">
-    <h2>Awards and Rewards</h2>
-    <div class="image-scroll">
-        <img src="img/awardsrewards/1.jpg" alt="Award 1">
-        <img src="img/awardsrewards/2.jpg" alt="Award 2">
-        <img src="img/awardsrewards/3.jpg" alt="Award 3">
-        <img src="img/awardsrewards/4.jpg" alt="Award 4">
-        <img src="img/awardsrewards/5.jpg" alt="Award 5">
-       
-       
-    </div>
-</section>
+
 
 <!-- Image and Text Section -->
 <section id="image-text">
@@ -40,43 +28,7 @@
 <style>
     /* General Styling */
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-/* Awards and Rewards Section */
-#awards-rewards {
-    padding: 50px 0;
-}
-
-.image-scroll {
-    display: flex;
-    overflow-x: hidden;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    animation: scrollImages 15s linear infinite;
-    transition: animation 0s; /* Pause animation on hover */
-
-}
-
-/* Pause animation when hovering over the container */
-.image-scroll:hover {
-    animation-play-state: paused;
-}
-
-/* Scroll Image Animation */
-@keyframes scrollImages {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-.image-scroll img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
 
 /* Image and Text Section */
 #image-text {

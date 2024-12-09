@@ -39,6 +39,31 @@
             },
         },
     });
+  
+    var carousel = $(".award-carousel").owlCarousel({
+        loop: true, // Enables continuous loop
+        autoplay: true, // Auto-plays the carousel
+        autoplayTimeout: 5000, // Time between auto-slide
+        items: 6, // Number of items per view
+        nav: true, // Enables the left and right arrows
+        navText: [
+          '<i class="bi bi-arrow-left"></i>',
+          '<i class="bi bi-arrow-right"></i>',
+        ],
+        dots: true, // Enables dots navigation
+        video: true, // Support for video slides
+        responsive: {
+            0: {
+                items: 1, // One item for smaller screens
+            },
+            600: {
+                items: 1, // One item for medium screens
+            },
+            1000: {
+                items: 6, // One item for larger screens
+            },
+        },
+    });
 
     // Stop autoplay on mouseover for the content container
     $("#main-content").on('mouseover', function() {
