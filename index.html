@@ -219,13 +219,17 @@
                 
             </div>
     
-            <!-- Third Carousel Slide -->
-            <div class="header-carousel-item">
-                <img src="img/mahabanners/banner4.png" class="carousel-bg" alt="Slide 3">
-               <div class="carousel-content">
-                   <a href="about.html"><button class="btn btn-dark text-white">View More</button></a> 
-                </div> 
-            </div>
+           <!-- Third Carousel Slide -->
+<div class="header-carousel-item">
+    <!-- Default image for desktop -->
+    <img src="img/mahabanners/banner4.png" class="carousel-bg desktop-image" alt="Slide 3">
+    <!-- Alternate image for mobile -->
+    <img src="img/awards/WhatsApp Image 2024-11-06 at 11.40.03 AM (1).jpeg" class="carousel-bg mobile-image" alt="Slide 3">
+    <div class="carousel-content">
+        <a href="about.html"><button class="btn btn-dark text-white">View More</button></a>
+    </div>
+</div>
+
         </div>
     </div>
     
@@ -538,7 +542,25 @@
             /* Active dot color */
         }
     </style>
+<style>
+    /* Hide mobile image on larger screens */
+.mobile-image {
+    display: none;
+}
 
+/* Hide desktop image and show mobile image on smaller screens */
+@media (max-width: 768px) {
+    .desktop-image {
+        display: none;
+    }
+    .mobile-image {
+        display: block;
+        width: 100%; /* Adjust width as needed */
+        height: auto;
+    }
+}
+
+</style>
 
 
 
