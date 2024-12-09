@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -70,7 +71,7 @@
                             class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i
                                 class="fab fa-facebook-f text-white"></i></a>
                         <a href="#" class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i
-                                class="fab fa-twitter text-white"></i></a>
+                                class="fab fa-x-twitter text-white"></i></a>
                         <a href="https://www.instagram.com/mahaainfraasolutions/"
                             class="btn btn-dark btn-square rounded-circle nav-fill me-3"><i
                                 class="fab fa-instagram text-white"></i></a>
@@ -150,15 +151,17 @@
                     <div class="content-container" id="main-content">
                         <!-- Left Side Heading and Text -->
                         <div class="left-content wow fadeInRight">
-                            <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in
-                                Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
+                            <h1 style="text-align: start; color:white;">
+                                <!-- Designing Spaces, Building Dreams – Excellence in
+                                Architecture and Interiors  -->
+                                <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
                                     and Architects</spam>
                             </h1>
                         </div>
             
                         <!-- Right Side Form -->
                         <div class="right-form wow fadeInLeft">
-                            <form>
+                            <form class="desktop">
                                 <div class="mb-3 text-start">
                                     <label for="name" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -189,15 +192,17 @@
                     <div class="content-container" id="main-content">
                         <!-- Left Side Heading and Text -->
                         <div class="left-content wow fadeInRight">
-                            <h1 style="text-align: start; color:white;">Designing Spaces, Building Dreams – Excellence in
-                                Architecture and Interiors <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
+                            <h1 style="text-align: start; color:white;">
+                                <!-- Designing Spaces, Building Dreams – Excellence in
+                                Architecture and Interiors -->
+                                 <spam style="color: #DEBB3B;">Mahaa Infraa Solutions / Dhruva Interiors
                                     and Architects</spam>
                             </h1>
                         </div>
             
                         <!-- Right Side Form -->
                         <div class="right-form wow fadeInLeft">
-                            <form>
+                            <form class="desktop">
                                 <div class="mb-3 text-start">
                                     <label for="name" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -231,7 +236,25 @@
     </div>
     
     
-
+<div class="container py-5">
+    <form class="mobile">
+        <div class="mb-3 text-start">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3 text-start">
+            <label for="phone" class="form-label text-white">Phone Number</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="mb-3 text-start">
+            <label for="site-location" class="form-label text-white">Site Location</label>
+            <input type="text" class="form-control" id="site-location" placeholder="Enter site location">
+        </div>
+        <div class="text-start">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
     <!-- Full Screen Container End -->
 
     <style>
@@ -334,13 +357,24 @@ object-fit: scale-down;
             height: 100vh;
             object-fit: cover;
         }
+        form.mobile{
+            display: none;
+        }
 @media(max-width:992px){
     .carousel-container{
-        height: 50vh;
+        height: 100vh;
     }
+    form.mobile{
+        display: block;
+    }
+    form.desktop{
+        display: none;
+    }
+
     .header-carousel-item.ban img.mobile{
-            height: 70vh;
+            height: 100%;
             width: 100%;
+            object-fit: scale-down;
         }
 }
         /* Flexbox layout for content */
@@ -2500,7 +2534,7 @@ object-fit: scale-down;
                                 <a class="btn btn-light btn-md-square me-2"
                                     href="https://www.facebook.com/mahaainfraasolutions/?paipv=0&eav=Afb-qZV8ouu1ArnNLIgWF62eMkzZQ0Hc2mEmfDAkTyGIQPOzEfaKRiXckQ9J--LLxMI&_rdr"
                                     target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-light btn-md-square me-2"
                                     href="https://www.instagram.com/mahaainfraasolutions/" target="_blank"><i
                                         class="fab fa-instagram"></i></a>
