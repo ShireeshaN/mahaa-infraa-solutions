@@ -221,7 +221,8 @@
     
             <!-- Third Carousel Slide -->
             <div class="header-carousel-item">
-                <img src="img/mahabanners/banner4.png" class="carousel-bg" alt="Slide 3">
+                <img src="img/mahabanners/banner4.png" class="carousel-bg desktop" alt="Slide 3">
+                <img src="img/award2.jpg" class="carousel-bg mobile" alt="Slide 3">
                <div class="carousel-content">
                    <a href="about.html"><button class="btn btn-dark text-white">View More</button></a> 
                 </div> 
@@ -243,6 +244,19 @@
            left: 50%;
            transform: translate(-50%,-50%);
 
+        }
+      
+        .header-carousel-item .carousel-bg.mobile{
+display: none;
+        }
+        @media(max-width:992px){
+            .header-carousel-item .carousel-bg.desktop{
+display: none;
+}
+.header-carousel-item .carousel-bg.mobile{
+display: block;
+object-fit: scale-down;
+}
         }
         .specialss {
             height: 50px;
